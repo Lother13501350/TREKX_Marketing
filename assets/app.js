@@ -84,27 +84,30 @@ function defaultState() {
       { id: uid(), metric: "分享", target: "", actual: "", owner: "", notes: "public_link_shared" }
     ],
     campaigns: [
-      blank("campaigns", { campaign: "請填 campaign id", channel: "IG", status: "待辦" }),
-      blank("campaigns", { campaign: "請填 campaign id", channel: "SEO", status: "待辦" }),
-      blank("campaigns", { campaign: "請填 campaign id", channel: "KOL", status: "待聯絡" })
+      blank("campaigns", { campaign: "web_landing_hero", channel: "SEO", status: "已發布", next: "把 https://chillout-marketing-dashboard.vercel.app 放到所有 bio / 私訊 / 貼文 CTA。" }),
+      blank("campaigns", { campaign: "threads_founder_post", channel: "Threads", status: "待辦", next: "發布創辦人式貼文，留言目的地的人 24 小時內回覆 prompt。" }),
+      blank("campaigns", { campaign: "ig_story_poll", channel: "IG", status: "待辦", next: "用投票/問題貼紙問：你手機裡是不是也存一堆旅行景點？" }),
+      blank("campaigns", { campaign: "kol_micro_outreach_01", channel: "KOL", status: "待聯絡", next: "先找 10 位 1k-20k 粉的旅行/生活創作者，邀請真實測試。" })
     ],
     experiments: [
       blank("experiments", { name: "App Store 第一屏改版", channel: "ASO", hypothesis: "如果第一屏主打 IG 靈感轉行程，下載後生成率會提升。", status: "待辦", decision: "未決" }),
       blank("experiments", { name: "5 支短影音 demo", channel: "TikTok", hypothesis: "如果前 3 秒直接演出收藏混亂，會提高收藏與點擊。", status: "待辦", decision: "未決" })
     ],
     content: [
-      blank("content", { platform: "IG", topic: "IG 收藏救援 Demo", status: "待辦" }),
-      blank("content", { platform: "TikTok", topic: "3 分鐘排行程", status: "待辦" }),
-      blank("content", { platform: "Threads", topic: "留言目的地幫排一版", status: "待辦" })
+      blank("content", { platform: "IG", topic: "限動投票：你是不是也存一堆 IG 旅行景點？", campaign: "ig_story_poll", status: "待辦" }),
+      blank("content", { platform: "Threads", topic: "創辦人貼文：旅行規劃最痛的是資料太散", campaign: "threads_founder_post", status: "待辦" }),
+      blank("content", { platform: "TikTok", topic: "30 秒 demo：十幾個分頁變一趟東京五天四夜", campaign: "short_demo_01", status: "待辦" }),
+      blank("content", { platform: "Dcard", topic: "求測試文：有人也覺得排行程比旅行累嗎？", campaign: "dcard_feedback_post", status: "待辦" })
     ],
     assets: [
-      blank("assets", { item: "App Store 前 3 張截圖", type: "App 截圖", status: "待辦" }),
-      blank("assets", { item: "東京/首爾/台南 Demo 螢幕錄影", type: "短影音", status: "待辦" }),
-      blank("assets", { item: "Landing page 上線稿", type: "Landing", status: "待辦" })
+      blank("assets", { item: "公開下載 landing page", type: "Landing", status: "已發布", link: "https://chillout-marketing-dashboard.vercel.app" }),
+      blank("assets", { item: "第一波分享素材 launch-kit", type: "Landing", status: "已發布", link: "https://chillout-marketing-dashboard.vercel.app/launch-kit.html" }),
+      blank("assets", { item: "App Store 截圖素材", type: "App 截圖", status: "完成", link: "assets/screenshots/" }),
+      blank("assets", { item: "東京/首爾/台南 Demo 螢幕錄影", type: "短影音", status: "待辦" })
     ],
     partners: [
-      blank("partners", { name: "請填 KOL / 合作方名稱", type: "KOL", status: "待聯絡" }),
-      blank("partners", { name: "請填旅行社 / 店家名稱", type: "旅行社", status: "待聯絡" })
+      blank("partners", { name: "10 位微型旅行創作者名單", type: "KOL", status: "待聯絡", next: "用 launch-kit 的 KOL Outreach 文案逐一手寫私訊。" }),
+      blank("partners", { name: "3 位近期要出國的朋友", type: "其他", status: "待聯絡", next: "邀請下載並完成一次貼連結與生成行程。" })
     ]
   };
 }

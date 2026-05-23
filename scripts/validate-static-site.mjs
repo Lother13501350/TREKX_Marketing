@@ -4,11 +4,14 @@ import path from "node:path";
 const root = process.cwd();
 const requiredFiles = [
   "index.html",
+  "ops.html",
+  "launch-kit.html",
   "calendar.html",
   "library.html",
   "plans.html",
   "metrics.html",
   "assets/app.js",
+  "assets/launch.js",
   "assets/styles.css",
   "vercel.json",
 ];

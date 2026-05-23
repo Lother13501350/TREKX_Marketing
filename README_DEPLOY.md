@@ -1,8 +1,24 @@
 # ChillOut Marketing Dashboard
 
-這是一個可直接部署的靜態 HTML 行銷營運工作台，不需要後端，也不需要 build。
+這是一個可直接部署的靜態 HTML 專案，不需要後端，也不需要 build。首頁是對外導下載 landing page，內部行銷營運工作台在 `/ops.html`。
 
-## 這一版是可操作工作台
+## 對外下載入口
+
+Production URL：
+
+```text
+https://chillout-marketing-dashboard.vercel.app
+```
+
+首頁主 CTA 會導到 App Store：
+
+```text
+https://apps.apple.com/tw/app/chillout/id6760571567
+```
+
+`launch-kit.html` 內有第一波 IG、Threads、Dcard、LINE、KOL 與短影音素材。
+
+## 這一版保留可操作工作台
 
 - KPI、Campaign、實驗、內容排程、素材、合作 pipeline 都可以在頁面上新增、刪除、編輯。
 - 變更會保存在使用者自己的瀏覽器 `localStorage`。
