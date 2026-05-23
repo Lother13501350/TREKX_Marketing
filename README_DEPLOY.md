@@ -25,13 +25,19 @@ http://localhost:4173
 
 ## CI/CD
 
-這個 repo 已設定 GitHub Actions：
+這個 repo 已設定兩段式 CI/CD：
 
 - PR：執行靜態網站驗證。
-- push 到 `main`：先驗證，再部署到 Vercel production。
-- 手動執行：可在 GitHub Actions 頁面用 `workflow_dispatch` 重新部署。
+- push 到 `main`：GitHub Actions 先驗證，Vercel Git Integration 再自動部署 production。
+- 手動驗證：可在 GitHub Actions 頁面用 `workflow_dispatch` 重新跑 CI。
 
-部署需要在 GitHub repository secrets 設定：
+目前 production URL：
+
+```text
+https://chillout-marketing-dashboard.vercel.app
+```
+
+目前不需要把 Vercel token 放進 GitHub Secrets，因為 Vercel project 已直接連接 GitHub repository。若未來要改成 GitHub Actions 控制部署，再設定以下 secrets：
 
 - `VERCEL_TOKEN`
 - `VERCEL_ORG_ID`
