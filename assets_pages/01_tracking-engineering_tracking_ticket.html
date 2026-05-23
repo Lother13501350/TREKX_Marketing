@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工程埋點 Ticket｜ChillOut 行銷控制台</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  
+</head>
+<body class="">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">C</span>
+        <span><strong>ChillOut</strong><small>Marketing OS</small></span>
+      </a>
+      <nav><a class="nav-link " href="../index.html">儀表板</a>
+<a class="nav-link active" href="../library.html">資產庫</a>
+<a class="nav-link " href="../plans.html">100 份計畫</a>
+<a class="nav-link " href="../calendar.html">30 天排程</a>
+<a class="nav-link " href="../metrics.html">數據規格</a></nav>
+      <div class="sidebar-note">
+        <strong>作業原則</strong>
+        <span>只放大能帶來首次生成行程的活動，不只看下載。</span>
+      </div>
+    </aside>
+    <main class="main">
+      
+<header class="page-header compact">
+  <div>
+    <p class="eyebrow">追蹤與數據 / MD</p>
+    <h1>工程埋點 Ticket</h1>
+    <p class="muted">01_tracking\engineering_tracking_ticket.md</p>
+  </div>
+  <a class="btn ghost" href="../library.html">回資產庫</a>
+</header>
+<article class="doc-card"><h1>工程埋點 Ticket</h1>
+<h2>目的</h2>
+<p>讓所有行銷活動都能追到下載後的核心行為，避免只看下載數。</p>
+<h2>Scope</h2>
+<p>請實作事件規格 CSV 中列出的核心事件，第一期至少完成：</p>
+<ul>
+<li>app_open</li>
+<li>signup_complete</li>
+<li>ig_link_pasted</li>
+<li>spot_saved</li>
+<li>trip_brief_created</li>
+<li>itinerary_generated</li>
+<li>itinerary_generation_failed</li>
+<li>itinerary_edited</li>
+<li>travel_book_created</li>
+<li>memory_book_created</li>
+<li>public_link_created</li>
+<li>public_link_shared</li>
+</ul>
+<h2>Campaign Attribution</h2>
+<p>App 首次開啟時需保存 campaign_id、source、medium、content、term。若使用者從公開行程頁或 landing page 點擊 App Store，該頁也需把 campaign 參數傳到可追蹤鏈路。</p>
+<h2>驗收標準</h2>
+<ol>
+<li>1. 測試帳號完成一次完整流程，事件能在後台看到。</li>
+<li>2. 同一位使用者從不同 campaign 來，first touch 與 last touch 不混淆。</li>
+<li>3. 生成失敗也要記錄，不能只記成功。</li>
+<li>4. 分享事件需記錄 share_channel。</li>
+<li>5. 所有事件不得存入完整 IG 私密內容或不必要個資。</li>
+</ol>
+<h2>QA 測試流程</h2>
+<ol>
+<li>1. 用 campaign <code>qa-manual-test-001</code> 開 App。</li>
+<li>2. 完成登入。</li>
+<li>3. 貼上一個公開 IG/景點連結。</li>
+<li>4. 收藏 3 個景點。</li>
+<li>5. 生成 3 天行程。</li>
+<li>6. 編輯 1 個景點。</li>
+<li>7. 生成旅遊手冊。</li>
+<li>8. 建立公開連結並分享。</li>
+<li>9. 打開數據後台確認事件順序與參數。</li>
+</ol></article>
+
+    </main>
+  </div>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

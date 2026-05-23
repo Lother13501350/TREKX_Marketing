@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChillOut 內容排程工作區</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span><strong>ChillOut</strong><small>Marketing OS</small></span>
+      </a>
+      <nav>
+        <a class="nav-link" href="index.html">工作台</a>
+        <a class="nav-link active" href="calendar.html">內容排程</a>
+        <a class="nav-link" href="library.html">資產庫</a>
+        <a class="nav-link" href="plans.html">100 份計畫</a>
+        <a class="nav-link" href="metrics.html">數據規格</a>
+      </nav>
+      <div class="sidebar-note">
+        <strong>排程原則</strong>
+        <span>排程可以改、可以刪、可以新增；不要被初始模板綁住。</span>
+      </div>
+    </aside>
+
+    <main class="main" data-ops-page="calendar">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Editable Content Calendar</p>
+          <h1>內容排程工作區</h1>
+          <p>這裡是可操作的內容排程，不是寫死的 30 天表。行銷組可以自己安排日期、平台、腳本、素材、owner、狀態與成效。</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn primary" data-add-row="content">新增內容</button>
+          <button class="btn ghost" data-export-json>匯出 JSON</button>
+          <label class="btn ghost file-btn">匯入 JSON<input type="file" accept="application/json" data-import-json></label>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>內容排程表</h2>
+            <p>建議每週只安排 5-8 個主要內容，其他先放 backlog。每則內容都要連到 KPI，不要只排發布。</p>
+          </div>
+        </div>
+        <div data-table="content"></div>
+      </section>
+
+      <section class="grid two">
+        <section class="panel">
+          <h2>內容驗收標準</h2>
+          <ul class="ops-list">
+            <li>第一秒有痛點或結果，不用 logo 開場。</li>
+            <li>每則內容都有 campaign id。</li>
+            <li>iOS 先行必須講清楚。</li>
+            <li>發布後 2 小時內檢查留言與連結。</li>
+            <li>第 7 天要填：曝光、點擊、下載、首次生成行程。</li>
+          </ul>
+        </section>
+        <section class="panel">
+          <h2>內容決策規則</h2>
+          <div class="decision-grid">
+            <div><strong>放大</strong><p>收藏率、點擊、首次生成行程都有訊號。</p></div>
+            <div><strong>修改</strong><p>曝光高但點擊低，改 Hook 或 CTA。</p></div>
+            <div><strong>停止</strong><p>連續兩週只有互動，沒有核心行為。</p></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

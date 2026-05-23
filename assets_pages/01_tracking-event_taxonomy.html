@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Taxonomy｜ChillOut 行銷控制台</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  
+</head>
+<body class="">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">C</span>
+        <span><strong>ChillOut</strong><small>Marketing OS</small></span>
+      </a>
+      <nav><a class="nav-link " href="../index.html">儀表板</a>
+<a class="nav-link active" href="../library.html">資產庫</a>
+<a class="nav-link " href="../plans.html">100 份計畫</a>
+<a class="nav-link " href="../calendar.html">30 天排程</a>
+<a class="nav-link " href="../metrics.html">數據規格</a></nav>
+      <div class="sidebar-note">
+        <strong>作業原則</strong>
+        <span>只放大能帶來首次生成行程的活動，不只看下載。</span>
+      </div>
+    </aside>
+    <main class="main">
+      
+<header class="page-header compact">
+  <div>
+    <p class="eyebrow">追蹤與數據 / CSV</p>
+    <h1>Event Taxonomy</h1>
+    <p class="muted">01_tracking\event_taxonomy.csv</p>
+  </div>
+  <a class="btn ghost" href="../library.html">回資產庫</a>
+</header>
+<article class="doc-card"><h1>Event Taxonomy</h1><div class='table-tools'><input data-table-search placeholder='搜尋表格...'></div><div class='table-wrap'><table class='data-table'><thead><tr><th>event_name</th><th>中文名稱</th><th>觸發時機</th><th>parameters</th><th>用途</th></tr></thead><tbody><tr><td>app_open</td><td>App 被開啟</td><td>每次開啟</td><td>user_id, anonymous_id, campaign_id, source, medium, app_version, device, locale</td><td>所有渠道啟動基礎</td></tr><tr><td>signup_started</td><td>開始註冊/登入</td><td>點擊登入按鈕</td><td>method, campaign_id</td><td>找出下載到登入斷點</td></tr><tr><td>signup_complete</td><td>完成註冊/登入</td><td>登入成功</td><td>method, campaign_id, new_user</td><td>啟用漏斗第二步</td></tr><tr><td>ig_link_pasted</td><td>貼上 IG/社群連結</td><td>貼上連結並送出</td><td>link_domain, destination_guess, campaign_id</td><td>ChillOut 核心差異化前置行為</td></tr><tr><td>spot_saved</td><td>收藏景點</td><td>加入景點到旅程</td><td>spot_id, spot_name, destination, source</td><td>判斷靈感整理是否成立</td></tr><tr><td>trip_brief_created</td><td>建立旅程條件</td><td>填入目的地/天數/預算/偏好</td><td>destination, days, travelers, budget_range, tags</td><td>判斷使用者需求</td></tr><tr><td>itinerary_generated</td><td>AI 行程生成成功</td><td>產出可查看行程</td><td>trip_id, destination, days, input_source_count, generation_time_sec</td><td>北極星前置核心</td></tr><tr><td>itinerary_generation_failed</td><td>AI 行程生成失敗</td><td>生成失敗或逾時</td><td>error_code, destination, input_source_count</td><td>找出產品與可靠性問題</td></tr><tr><td>itinerary_edited</td><td>使用者編輯行程</td><td>新增/刪除/調整任一行程項</td><td>trip_id, edit_type, item_count_after</td><td>判斷 AI 初稿是否被使用</td></tr><tr><td>map_or_navigation_opened</td><td>開啟地圖/導航</td><td>點擊地圖或導航入口</td><td>trip_id, day_number, map_provider</td><td>判斷旅行中使用情境</td></tr><tr><td>travel_book_started</td><td>開始生成旅遊手冊/小書</td><td>點擊生成手冊</td><td>trip_id, template_id</td><td>手冊功能漏斗</td></tr><tr><td>travel_book_created</td><td>旅遊手冊生成完成</td><td>手冊可下載/分享</td><td>trip_id, template_id, page_count, generation_time_sec</td><td>輸出成果指標</td></tr><tr><td>memory_book_created</td><td>回憶錄生成完成</td><td>上傳照片後產出回憶錄</td><td>trip_id, photo_count, frame_count</td><td>行後留存與分享指標</td></tr><tr><td>public_link_created</td><td>公開分享連結建立</td><td>使用者主動產生公開連結</td><td>trip_id, privacy_scope</td><td>病毒循環指標</td></tr><tr><td>public_link_shared</td><td>分享公開連結/圖片</td><td>呼叫系統分享或複製連結</td><td>trip_id, share_channel, asset_type</td><td>每位用戶帶新流量的核心</td></tr><tr><td>public_link_opened</td><td>朋友打開公開連結</td><td>Web 或 App 內開啟公開頁</td><td>trip_id, referrer_user_id, source</td><td>衡量 K-factor</td></tr><tr><td>app_store_click</td><td>點擊 App Store</td><td>外部 landing 或公開頁點擊 App Store</td><td>campaign_id, source, page_type</td><td>外部導流至商店</td></tr><tr><td>review_prompt_shown</td><td>顯示評分請求</td><td>成功時刻觸發</td><td>trigger_event</td><td>建立早期評分</td></tr><tr><td>review_prompt_accepted</td><td>使用者點擊評分</td><td>點擊評分彈窗</td><td>trigger_event</td><td>評分漏斗</td></tr><tr><td>delete_account_or_data</td><td>刪除帳號/資料</td><td>隱私操作</td><td>reason_optional</td><td>信任與合規</td></tr></tbody></table></div></article>
+
+    </main>
+  </div>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+.git
+.github
+node_modules
+README_DEPLOY.md
+netlify.toml
+_headers

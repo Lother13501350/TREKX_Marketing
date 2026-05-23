@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChillOut 行銷營運工作台</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span><strong>ChillOut</strong><small>Marketing OS</small></span>
+      </a>
+      <nav>
+        <a class="nav-link active" href="index.html">工作台</a>
+        <a class="nav-link" href="calendar.html">內容排程</a>
+        <a class="nav-link" href="library.html">資產庫</a>
+        <a class="nav-link" href="plans.html">100 份計畫</a>
+        <a class="nav-link" href="metrics.html">數據規格</a>
+      </nav>
+      <div class="sidebar-note">
+        <strong>營運原則</strong>
+        <span>每個欄位都能由行銷組填寫、更新、匯出；不要只看展示數字。</span>
+      </div>
+    </aside>
+
+    <main class="main" data-ops-page="dashboard">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Editable Marketing Workspace</p>
+          <h1>ChillOut 行銷營運工作台</h1>
+          <p>這不是靜態排程表。行銷組可以在這裡填目標、owner、實際數字、狀態、備註與下一步；資料會保存在此瀏覽器，也可以匯出 JSON 備份。</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn primary" data-export-json>匯出 JSON</button>
+          <label class="btn ghost file-btn">匯入 JSON<input type="file" accept="application/json" data-import-json></label>
+          <button class="btn danger" data-reset-workspace>重置工作台</button>
+        </div>
+      </header>
+
+      <section class="panel ops-brief">
+        <div class="ops-grid four">
+          <label>週期開始日<input data-field="meta.weekStart" type="date"></label>
+          <label>Growth Owner<input data-field="meta.growthOwner" placeholder="例如：Ming / Marketing Lead"></label>
+          <label>本週主目標<input data-field="meta.weeklyGoal" placeholder="例如：完成 30 位 Activated Trip Creator"></label>
+          <label>目前階段
+            <select data-field="meta.stage">
+              <option value="setup">Setup：追蹤/素材建設</option>
+              <option value="test">Test：渠道測試</option>
+              <option value="scale">Scale：放大勝出渠道</option>
+              <option value="review">Review：結案檢討</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="metric-grid ops-metrics" data-kpi-summary></section>
+
+      <section class="grid two">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>北極星與漏斗</h2>
+              <p>行銷組每週填實際數字，系統會自動計算幾個基本轉換率。</p>
+            </div>
+          </div>
+          <div class="funnel editable-funnel" data-funnel-summary></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>週會決策區</h2>
+              <p>每週只做三種決策：放大、修改、停止。</p>
+            </div>
+          </div>
+          <div class="ops-grid one">
+            <label>本週要放大的事<textarea data-field="meta.scaleDecision" placeholder="哪個渠道/素材要放大？為什麼？"></textarea></label>
+            <label>本週要修改的事<textarea data-field="meta.modifyDecision" placeholder="曝光高但啟用低的地方，下一步怎麼改？"></textarea></label>
+            <label>本週要停止的事<textarea data-field="meta.stopDecision" placeholder="哪些只有按讚/下載，沒有生成行程？"></textarea></label>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>KPI 工作表</h2>
+            <p>先填目標，再每週填實際數字。重點是 Activated Trip Creator，不是單純下載。</p>
+          </div>
+          <button class="btn ghost" data-add-row="kpis">新增 KPI</button>
+        </div>
+        <div data-table="kpis"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Campaign Tracker</h2>
+            <p>每一個貼文、KOL、SEO 頁、廣告組、合作 QR 都要有自己的 campaign row。</p>
+          </div>
+          <button class="btn ghost" data-add-row="campaigns">新增 Campaign</button>
+        </div>
+        <div data-table="campaigns"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>實驗 Backlog</h2>
+            <p>用 ICE 分數排序，但真正放大前一定要看首次生成行程。</p>
+          </div>
+          <button class="btn ghost" data-add-row="experiments">新增實驗</button>
+        </div>
+        <div data-table="experiments"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>內容排程工作區</h2>
+            <p>不是固定 30 天死排程。行銷組可以自行新增、改日期、換平台、換腳本、改狀態。</p>
+          </div>
+          <div class="panel-actions">
+            <a class="btn ghost" href="calendar.html">打開完整排程頁</a>
+            <button class="btn ghost" data-add-row="content">新增內容</button>
+          </div>
+        </div>
+        <div data-table="content" data-limit="8"></div>
+      </section>
+
+      <section class="grid two">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>素材 / 資產 Checklist</h2>
+              <p>把要交給設計、剪輯、工程、BD 的素材狀態放這裡。</p>
+            </div>
+            <button class="btn ghost" data-add-row="assets">新增素材</button>
+          </div>
+          <div data-table="assets"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>合作 / KOL Pipeline</h2>
+              <p>給 BD 與社群人員追合作對象，不把「待聯絡」講成「已合作」。</p>
+            </div>
+            <button class="btn ghost" data-add-row="partners">新增對象</button>
+          </div>
+          <div data-table="partners"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

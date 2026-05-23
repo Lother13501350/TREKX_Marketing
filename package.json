@@ -1,0 +1,13 @@
+{
+  "name": "chillout-marketing-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static HTML marketing dashboard and execution library for ChillOut.",
+  "scripts": {
+    "validate": "node scripts/validate-static-site.mjs",
+    "preview": "python -m http.server 4173",
+    "deploy:vercel": "vercel deploy --prod --yes",
+    "deploy:netlify": "netlify deploy --prod --dir=."
+  },
+  "devDependencies": {}
+}

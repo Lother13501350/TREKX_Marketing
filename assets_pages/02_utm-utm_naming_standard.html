@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UTM 與 Campaign 命名規範｜ChillOut 行銷控制台</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  
+</head>
+<body class="">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">C</span>
+        <span><strong>ChillOut</strong><small>Marketing OS</small></span>
+      </a>
+      <nav><a class="nav-link " href="../index.html">儀表板</a>
+<a class="nav-link active" href="../library.html">資產庫</a>
+<a class="nav-link " href="../plans.html">100 份計畫</a>
+<a class="nav-link " href="../calendar.html">30 天排程</a>
+<a class="nav-link " href="../metrics.html">數據規格</a></nav>
+      <div class="sidebar-note">
+        <strong>作業原則</strong>
+        <span>只放大能帶來首次生成行程的活動，不只看下載。</span>
+      </div>
+    </aside>
+    <main class="main">
+      
+<header class="page-header compact">
+  <div>
+    <p class="eyebrow">UTM 與連結 / MD</p>
+    <h1>UTM 與 Campaign 命名規範</h1>
+    <p class="muted">02_utm\utm_naming_standard.md</p>
+  </div>
+  <a class="btn ghost" href="../library.html">回資產庫</a>
+</header>
+<article class="doc-card"><h1>UTM 與 Campaign 命名規範</h1>
+<h2>命名原則</h2>
+<p>格式：</p>
+<p><code>chillout-{channel}-{content_type}-{destination}-{angle}-{date}-{version}</code></p>
+<p>範例：</p>
+<ul>
+<li><code>chillout-ig-reel-tokyo-savedposts-20260523-v01</code></li>
+<li><code>chillout-dcard-post-japan-firsttrip-20260523-v01</code></li>
+<li><code>chillout-meta-ad-seoul-cafe-20260523-v03</code></li>
+</ul>
+<h2>UTM 欄位定義</h2>
+<div class='table-wrap'><table><thead><tr><th>欄位</th><th>定義</th><th>範例</th></tr></thead><tbody><tr><td>utm_source</td><td>平台或合作方</td><td>instagram, tiktok, dcard, creator_name</td></tr><tr><td>utm_medium</td><td>形式</td><td>organic_social, paid_social, seo, partnership, referral</td></tr><tr><td>utm_campaign</td><td>活動主題</td><td>ig_to_itinerary, sakura_trip, seoul_cafe</td></tr><tr><td>utm_content</td><td>具體素材</td><td>reel_001_hook_a, carousel_003, story_qr</td></tr><tr><td>utm_term</td><td>關鍵字或受眾</td><td>japan_itinerary, taiwan_ios_20_35</td></tr></tbody></table></div>
+<h2>不可接受的命名</h2>
+<ul>
+<li><code>test</code></li>
+<li><code>ig1</code></li>
+<li><code>new_campaign</code></li>
+<li><code>kol</code></li>
+<li><code>ad</code></li>
+</ul>
+<p>這些命名會讓後續無法知道哪個素材有效。</p>
+<h2>每週檢查</h2>
+<ol>
+<li>1. 是否所有對外連結都有 campaign id。</li>
+<li>2. 是否有重複命名。</li>
+<li>3. 是否有渠道流量無來源。</li>
+<li>4. 是否有下載但沒有 app_open 的異常。</li>
+<li>5. 是否有 app_open 但沒有 signup 的斷點。</li>
+</ol></article>
+
+    </main>
+  </div>
+  <script src="../assets/app.js"></script>
+</body>
+</html>
