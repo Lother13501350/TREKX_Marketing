@@ -6,6 +6,7 @@ const requiredFiles = [
   "index.html",
   "ops.html",
   "launch-kit.html",
+  "ig-travel-planner.html",
   "calendar.html",
   "library.html",
   "plans.html",
