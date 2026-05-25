@@ -3,93 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>小鎮氛圍雷達｜ChillOut 旅行小工具</title>
-  <meta name="description" content="找出更適合你心情的小鎮。依安靜度、交通與氛圍，配對小鎮旅行玩法。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="小鎮氛圍雷達｜ChillOut 旅行小工具">
-  <meta property="og:description" content="找出更適合你心情的小鎮。">
+  <title>小鎮氛圍雷達｜ChillOut 旅行小工具 T046</title>
+  <meta name="description" content="T046 手寫版。比較 2 到 5 個候選小鎮的交通、安靜度、食物、風景、雨天備案與末班車風險，選出最適合此刻心情的小鎮玩法。">
+  <meta property="og:title" content="小鎮氛圍雷達｜ChillOut 旅行小工具 T046">
+  <meta property="og:description" content="不是每個小鎮都適合你今天的狀態。輸入候選小鎮，產生排名、玩法與 ChillOut prompt。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/small-town-mood.html">
-  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/small-town-mood.svg">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/small-town-mood-manual.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/small-town-mood.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/small-town-mood.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-4 mode-decision" style="--tool-accent:#2F9E44">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="st-app">
+  <header class="st-nav">
+    <a class="st-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="st-mark">C</span>
+      <span><strong>ChillOut</strong><small>T046 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_small-town-mood_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_small_town_mood_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T046 · 避開人潮與繞路</p>
-        <h1>小鎮氛圍雷達</h1>
-        <p class="product-lead">找出更適合你心情的小鎮。</p>
-        <div class="product-pills">
-          <span>小鎮</span><span>慢旅</span><span>氛圍</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/small-town-mood.svg" alt="小鎮氛圍雷達 互動工具視覺">
+    <section class="st-hero">
+      <figure class="st-map">
+        <img src="../assets/tool-posters/small-town-mood-manual.svg" alt="小鎮氛圍雷達視覺">
       </figure>
-    </section>
-
-    <section class="product-workbench" aria-label="小鎮氛圍雷達 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>依安靜度、交通與氛圍，配對小鎮旅行玩法。</h2>
-        <p>不想只去首都或大城市的人可以在 30 秒內得到一張可分享的結果卡。把人潮、時間與期待值算成去、改、跳過三種決策。最後把結果丟進 ChillOut 生成完整行程。</p>
+      <div class="st-hero-copy">
+        <p class="st-kicker">T046 / Small town mood radar</p>
+        <h1>選小鎮，不是選名字，是選今天的空氣。</h1>
+        <p>把候選小鎮放進來，調整交通、安靜、食物、風景、雨天備案與末班車風險，雷達會找出最符合你這次心情的小鎮，並把玩法丟回 ChillOut 延伸成完整行程。</p>
       </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_small-town-mood_result">丟進 ChillOut</a>
-          </div>
-        </div>
-      </aside>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="st-control" aria-label="旅行心情設定">
+      <div>
+        <p class="st-kicker">Trip mood</p>
+        <h2>先定義這趟小鎮旅行想要什麼</h2>
+      </div>
+      <label>出發地
+        <input data-origin value="台北" placeholder="例如：台北、首爾、福岡、墨爾本">
+      </label>
+      <label>今天想得到
+        <select data-goal>
+          <option value="quiet" selected>安靜補血</option>
+          <option value="food">食物小旅行</option>
+          <option value="visual">漂亮散步</option>
+          <option value="culture">書店與老街</option>
+          <option value="family">親子低壓</option>
+        </select>
+      </label>
+      <label>可接受單程交通
+        <select data-max-transfer>
+          <option value="40">40 分鐘內</option>
+          <option value="70" selected>70 分鐘內</option>
+          <option value="100">100 分鐘內</option>
+          <option value="140">140 分鐘內</option>
+        </select>
+      </label>
+      <label>天氣
+        <select data-weather>
+          <option value="clear" selected>天氣穩定</option>
+          <option value="rain">可能下雨</option>
+          <option value="hot">很熱</option>
+          <option value="cold">偏冷</option>
+        </select>
+      </label>
+      <button type="button" data-sample>帶入範例</button>
+    </section>
+
+    <section class="st-workbench" aria-label="候選小鎮比較">
+      <div class="st-town-head">
+        <div>
+          <p class="st-kicker">Town candidates</p>
+          <h2>候選小鎮</h2>
+        </div>
+        <div class="st-actions">
+          <button type="button" data-add-town>新增小鎮</button>
+          <button type="button" class="st-primary" data-generate>產生雷達結果</button>
+        </div>
+      </div>
+      <div class="st-town-grid" data-towns></div>
+    </section>
+
+    <section class="st-output" data-output aria-live="polite">
+      <div class="st-empty">
+        <p class="st-kicker">Result</p>
+        <h2>先放入至少兩個候選小鎮，再讓雷達挑出最適合的一個。</h2>
+        <p>結果會包含排名、選擇理由、當日玩法、避雷條件、社群分享文與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"small-town-mood","category":"detour","name":"小鎮氛圍雷達","tagline":"找出更適合你心情的小鎮。","audience":"不想只去首都或大城市的人","mechanic":"依安靜度、交通與氛圍，配對小鎮旅行玩法。","result":"小鎮不一定無聊，它只是需要對的人。","chips":["小鎮","慢旅","氛圍"],"mode":"decision","modeLabel":"值得去判斷","modeVariant":"雷達圖","interfaceTitle":"小鎮氛圍雷達操作台","actionLabel":"算出取捨建議","resultName":"去留決策卡","modePromise":"把人潮、時間與期待值算成去、改、跳過三種決策。","shareLead":"我用工具判斷這個旅遊選項值不值得","sampleItems":["交通轉乘","替代小巷","附近咖啡","備案公園","熱門景點","排隊名店","人潮路口"],"scoreSeed":76,"executionPack":{"actions":["先判斷 小鎮 值不值得，不值得就切 慢旅。","把人潮與移動成本轉成 go / change / skip。","把替代玩法丟進 ChillOut 找附近低壓路線。"],"hooks":["不是所有爆紅都值得排。","花 30 秒省掉半天踩雷。","這個點到底去不去，先用工具算一次。"],"qa":["結果要有去/改/跳過","替代方案不可空白","Prompt 要能生成備案"]},"playSteps":["輸入 交通轉乘 或這次最想解決的旅行條件。","調整 小鎮、慢旅 與 氛圍 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"target","label":"要判斷的選項","placeholder":"例如：交通轉乘、替代小巷"},{"type":"range","key":"crowd","label":"可忍受人潮","min":1,"max":100,"value":33,"left":"完全不要","right":"可以排隊"},{"type":"choice","key":"backup","label":"偏好的替代方向","choices":["附近咖啡","備案公園","熱門景點","排隊名店","人潮路口"]},{"type":"range","key":"effort","label":"願意多花的移動成本","min":1,"max":100,"value":46,"left":"越近越好","right":"繞路也行"}],"id":"T046","categoryLabel":"避開人潮與繞路","categoryTone":"把爆紅景點旁邊更舒服、更像自己的選項挖出來。","primary":"#2F9E44","accent":"#2F9E44","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_small-town-mood","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/small-town-mood.html"}</script>
-  <script src="../assets/tool-scripts/small-town-mood.js?v=20260525d"></script>
+  <div class="st-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/small-town-mood.js?v=20260525manual1"></script>
 </body>
 </html>

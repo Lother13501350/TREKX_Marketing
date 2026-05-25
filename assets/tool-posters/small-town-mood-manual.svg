@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">小鎮氛圍雷達</title>
+  <desc id="desc">以小鎮地圖、雷達軸線、街區和路線組成的旅行選點工具視覺。</desc>
+  <rect width="1200" height="840" fill="#f2f5f0"/>
+  <path d="M110 140h980M110 280h980M110 420h980M110 560h980M110 700h980M200 74v692M360 74v692M520 74v692M680 74v692M840 74v692M1000 74v692" stroke="#dbe0d8" stroke-width="2"/>
+  <rect x="112" y="82" width="976" height="676" rx="34" fill="#ffffff" stroke="#dbe0d8" stroke-width="3"/>
+  <path d="M192 610c74-118 138-176 224-172 92 4 126 78 212 76 96-2 134-114 238-106 70 5 116 60 150 104" fill="none" stroke="#52614f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M224 212l144-70 144 70 144-70 144 70 144-70" fill="none" stroke="#dbe0d8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="192" cy="610" r="23" fill="#171a16"/>
+  <circle cx="416" cy="438" r="23" fill="#52614f"/>
+  <circle cx="628" cy="514" r="23" fill="#52614f"/>
+  <circle cx="866" cy="408" r="23" fill="#52614f"/>
+  <circle cx="1016" cy="512" r="23" fill="#171a16"/>
+  <g transform="translate(458 190)">
+    <circle cx="142" cy="142" r="126" fill="#f2f5f0" stroke="#dbe0d8" stroke-width="4"/>
+    <path d="M142 16v252M16 142h252M52 52l180 180M232 52L52 232" stroke="#dbe0d8" stroke-width="3"/>
+    <path d="M142 42l82 74-20 94-102 20-60-88z" fill="#52614f" opacity=".78"/>
+    <circle cx="142" cy="142" r="10" fill="#171a16"/>
+  </g>
+  <text x="170" y="164" fill="#52614f" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">T046 / SMALL TOWN MOOD RADAR</text>
+  <text x="170" y="264" fill="#171a16" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="900">QUIET</text>
+  <text x="170" y="346" fill="#171a16" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="900">FOOD</text>
+  <text x="170" y="428" fill="#171a16" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="900">SCENERY</text>
+  <rect x="790" y="184" width="214" height="70" rx="18" fill="#f2f5f0" stroke="#dbe0d8" stroke-width="3"/>
+  <text x="826" y="229" fill="#52614f" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">MATCH 86</text>
+  <rect x="790" y="282" width="214" height="70" rx="18" fill="#f2f5f0" stroke="#dbe0d8" stroke-width="3"/>
+  <text x="826" y="327" fill="#52614f" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">RAIN READY</text>
+  <rect x="790" y="380" width="214" height="70" rx="18" fill="#52614f"/>
+  <text x="826" y="425" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">GO SLOW</text>
+</svg>
