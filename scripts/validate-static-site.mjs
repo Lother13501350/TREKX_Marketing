@@ -18,6 +18,7 @@ const requiredFiles = [
   "assets/ig-chaos.js",
   "assets/independent-tools.js",
   "assets/independent-tool-runtime.js",
+  "assets/tool-products.css",
   "assets/styles.css",
   "vercel.json",
 ];
