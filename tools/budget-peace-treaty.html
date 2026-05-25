@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>預算和平協議｜ChillOut 旅行小工具</title>
+  <meta name="description" content="把錢講清楚，旅行才不尷尬。估算住宿、餐飲、交通與自由購物分區，生成預算邊界。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
+  <meta property="og:title" content="預算和平協議｜ChillOut 旅行小工具">
+  <meta property="og:description" content="把錢講清楚，旅行才不尷尬。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/budget-peace-treaty.html">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/budget-peace-treaty.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/budget-peace-treaty.html">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="tool-product-page" style="--tool-primary:#EF476F;--tool-accent:#4ECDC4;--tool-deep:#2A1018">
+  <header class="product-nav">
+    <a class="product-brand" href="../travel-microtools-100.html">
+      <span class="brand-mark">C</span>
+      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="../travel-microtools-100.html">100 小工具</a>
+      <a href="../ig-chaos-index.html">混亂指數</a>
+      <a href="../ig-travel-planner.html">IG 排行程</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_budget-peace-treaty_nav">下載 App</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-hero">
+      <div class="product-copy">
+        <p class="product-kicker">T026 · 搭子與關係工具</p>
+        <h1>預算和平協議</h1>
+        <p class="product-lead">把錢講清楚，旅行才不尷尬。</p>
+        <div class="product-pills">
+          <span>預算共識</span><span>花費邊界</span><span>分帳提示</span>
+        </div>
+      </div>
+      <figure class="product-poster">
+        <img src="../assets/tool-posters/budget-peace-treaty.svg" alt="預算和平協議 互動工具視覺">
+      </figure>
+    </section>
+
+    <section class="product-workbench" aria-label="預算和平協議 互動操作區">
+      <div class="workbench-intro">
+        <p class="product-kicker">玩法</p>
+        <h2>估算住宿、餐飲、交通與自由購物分區，生成預算邊界。</h2>
+        <p>預算差異大的旅伴可以在 30 秒內得到一張可分享的結果卡，再把結果丟進 ChillOut 生成完整行程。</p>
+      </div>
+      <div class="tool-console" data-tool-console></div>
+      <aside class="result-panel" data-result-panel>
+        <div class="result-card" data-result-card>
+          <span>Result Card</span>
+          <strong data-result-score>--</strong>
+          <h2 data-result-title>先完成左側設定</h2>
+          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
+          <div class="result-chip-row" data-result-chips></div>
+          <div class="result-prompt">
+            <small>ChillOut Prompt</small>
+            <p data-result-prompt>完成後自動產生。</p>
+          </div>
+          <div class="result-actions">
+            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
+            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_budget-peace-treaty_result">丟進 ChillOut</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="product-usage">
+      <article>
+        <span>01</span>
+        <h2>社群鉤子</h2>
+        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>App 導流</h2>
+        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>行銷組操作</h2>
+        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
+      </article>
+    </section>
+  </main>
+
+  <script type="application/json" id="tool-data">{"slug":"budget-peace-treaty","category":"group","name":"預算和平協議","tagline":"把錢講清楚，旅行才不尷尬。","audience":"預算差異大的旅伴","mechanic":"估算住宿、餐飲、交通與自由購物分區，生成預算邊界。","result":"先談預算，不是掃興，是讓大家玩得自在。","chips":["預算共識","花費邊界","分帳提示"],"id":"T026","categoryLabel":"搭子與關係工具","categoryTone":"把旅行前最容易吵的事情變成可以討論、投票、截圖分享的協議。","primary":"#EF476F","accent":"#4ECDC4","deep":"#2A1018","inputs":[{"type":"text","key":"people","label":"旅伴名單","placeholder":"例如：我、阿哲、小雯、Mia"},{"type":"range","key":"budgetGap","label":"預算差距","min":1,"max":100,"value":52,"left":"很一致","right":"落差很大"},{"type":"choice","key":"conflict","label":"最容易吵的點","choices":["早起","拍照","吃什麼","花多少","走太多"]},{"type":"range","key":"alone","label":"各自放風需求","min":1,"max":100,"value":46,"left":"全程黏著","right":"需要獨處"}],"appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_budget-peace-treaty","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/budget-peace-treaty.html"}</script>
+  <script src="../assets/independent-tool-runtime.js"></script>
+</body>
+</html>

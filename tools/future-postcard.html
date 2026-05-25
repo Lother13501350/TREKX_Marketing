@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>未來明信片｜ChillOut 旅行小工具</title>
+  <meta name="description" content="寫一張寄給下一趟自己的明信片。輸入這趟最想記住的畫面，生成未來明信片文案。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
+  <meta property="og:title" content="未來明信片｜ChillOut 旅行小工具">
+  <meta property="og:description" content="寫一張寄給下一趟自己的明信片。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/future-postcard.html">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/future-postcard.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/future-postcard.html">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="tool-product-page" style="--tool-primary:#845EC2;--tool-accent:#00C9A7;--tool-deep:#18102A">
+  <header class="product-nav">
+    <a class="product-brand" href="../travel-microtools-100.html">
+      <span class="brand-mark">C</span>
+      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="../travel-microtools-100.html">100 小工具</a>
+      <a href="../ig-chaos-index.html">混亂指數</a>
+      <a href="../ig-travel-planner.html">IG 排行程</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_future-postcard_nav">下載 App</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-hero">
+      <div class="product-copy">
+        <p class="product-kicker">T095 · 回憶、分享與內容化</p>
+        <h1>未來明信片</h1>
+        <p class="product-lead">寫一張寄給下一趟自己的明信片。</p>
+        <div class="product-pills">
+          <span>明信片</span><span>未來</span><span>文字</span>
+        </div>
+      </div>
+      <figure class="product-poster">
+        <img src="../assets/tool-posters/future-postcard.svg" alt="未來明信片 互動工具視覺">
+      </figure>
+    </section>
+
+    <section class="product-workbench" aria-label="未來明信片 互動操作區">
+      <div class="workbench-intro">
+        <p class="product-kicker">玩法</p>
+        <h2>輸入這趟最想記住的畫面，生成未來明信片文案。</h2>
+        <p>喜歡情緒、文字與慢旅行的人可以在 30 秒內得到一張可分享的結果卡，再把結果丟進 ChillOut 生成完整行程。</p>
+      </div>
+      <div class="tool-console" data-tool-console></div>
+      <aside class="result-panel" data-result-panel>
+        <div class="result-card" data-result-card>
+          <span>Result Card</span>
+          <strong data-result-score>--</strong>
+          <h2 data-result-title>先完成左側設定</h2>
+          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
+          <div class="result-chip-row" data-result-chips></div>
+          <div class="result-prompt">
+            <small>ChillOut Prompt</small>
+            <p data-result-prompt>完成後自動產生。</p>
+          </div>
+          <div class="result-actions">
+            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
+            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_future-postcard_result">丟進 ChillOut</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="product-usage">
+      <article>
+        <span>01</span>
+        <h2>社群鉤子</h2>
+        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>App 導流</h2>
+        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>行銷組操作</h2>
+        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
+      </article>
+    </section>
+  </main>
+
+  <script type="application/json" id="tool-data">{"slug":"future-postcard","category":"memory","name":"未來明信片","tagline":"寫一張寄給下一趟自己的明信片。","audience":"喜歡情緒、文字與慢旅行的人","mechanic":"輸入這趟最想記住的畫面，生成未來明信片文案。","result":"最好的紀念品，是提醒自己還會再出發。","chips":["明信片","未來","文字"],"id":"T095","categoryLabel":"回憶、分享與內容化","categoryTone":"把旅行後的照片、標題、回憶與下一趟靈感變成可傳播的內容。","primary":"#845EC2","accent":"#00C9A7","deep":"#18102A","inputs":[{"type":"text","key":"memory","label":"最想留下的一幕","placeholder":"例如：雨中的咖啡店、夜市第一口、車窗風景"},{"type":"choice","key":"format","label":"分享格式","choices":["IG 貼文","限動","回憶錄","明信片","短影音"]},{"type":"range","key":"emotion","label":"情緒濃度","min":1,"max":100,"value":68,"left":"淡淡的","right":"很想哭"},{"type":"choice","key":"next","label":"下一趟線索","choices":["同城市","相反風格","更遠一點","帶朋友去","自己再去"]}],"appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_future-postcard","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/future-postcard.html"}</script>
+  <script src="../assets/independent-tool-runtime.js"></script>
+</body>
+</html>

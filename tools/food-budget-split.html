@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>美食預算切割｜ChillOut 旅行小工具</title>
+  <meta name="description" content="決定哪一餐該花錢，哪一餐該省。設定單日預算與重點餐，輸出早餐、午餐、晚餐、零食分配。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
+  <meta property="og:title" content="美食預算切割｜ChillOut 旅行小工具">
+  <meta property="og:description" content="決定哪一餐該花錢，哪一餐該省。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/food-budget-split.html">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/food-budget-split.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/food-budget-split.html">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="tool-product-page" style="--tool-primary:#F77F00;--tool-accent:#2EC4B6;--tool-deep:#251207">
+  <header class="product-nav">
+    <a class="product-brand" href="../travel-microtools-100.html">
+      <span class="brand-mark">C</span>
+      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="../travel-microtools-100.html">100 小工具</a>
+      <a href="../ig-chaos-index.html">混亂指數</a>
+      <a href="../ig-travel-planner.html">IG 排行程</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_food-budget-split_nav">下載 App</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-hero">
+      <div class="product-copy">
+        <p class="product-kicker">T077 · 美食與咖啡路線</p>
+        <h1>美食預算切割</h1>
+        <p class="product-lead">決定哪一餐該花錢，哪一餐該省。</p>
+        <div class="product-pills">
+          <span>預算</span><span>餐別</span><span>分配</span>
+        </div>
+      </div>
+      <figure class="product-poster">
+        <img src="../assets/tool-posters/food-budget-split.svg" alt="美食預算切割 互動工具視覺">
+      </figure>
+    </section>
+
+    <section class="product-workbench" aria-label="美食預算切割 互動操作區">
+      <div class="workbench-intro">
+        <p class="product-kicker">玩法</p>
+        <h2>設定單日預算與重點餐，輸出早餐、午餐、晚餐、零食分配。</h2>
+        <p>想吃好但預算有限的人可以在 30 秒內得到一張可分享的結果卡，再把結果丟進 ChillOut 生成完整行程。</p>
+      </div>
+      <div class="tool-console" data-tool-console></div>
+      <aside class="result-panel" data-result-panel>
+        <div class="result-card" data-result-card>
+          <span>Result Card</span>
+          <strong data-result-score>--</strong>
+          <h2 data-result-title>先完成左側設定</h2>
+          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
+          <div class="result-chip-row" data-result-chips></div>
+          <div class="result-prompt">
+            <small>ChillOut Prompt</small>
+            <p data-result-prompt>完成後自動產生。</p>
+          </div>
+          <div class="result-actions">
+            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
+            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_food-budget-split_result">丟進 ChillOut</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="product-usage">
+      <article>
+        <span>01</span>
+        <h2>社群鉤子</h2>
+        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>App 導流</h2>
+        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>行銷組操作</h2>
+        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
+      </article>
+    </section>
+  </main>
+
+  <script type="application/json" id="tool-data">{"slug":"food-budget-split","category":"food","name":"美食預算切割","tagline":"決定哪一餐該花錢，哪一餐該省。","audience":"想吃好但預算有限的人","mechanic":"設定單日預算與重點餐，輸出早餐、午餐、晚餐、零食分配。","result":"美食預算不是平均分，是投資重點。","chips":["預算","餐別","分配"],"id":"T077","categoryLabel":"美食與咖啡路線","categoryTone":"用吃喝作為旅行主線，排出不只是餐廳清單的移動節奏。","primary":"#F77F00","accent":"#2EC4B6","deep":"#251207","inputs":[{"type":"text","key":"craving","label":"今天想吃喝什麼","placeholder":"咖啡、甜點、市場、辣、早餐、宵夜"},{"type":"range","key":"queue","label":"排隊耐受度","min":1,"max":100,"value":42,"left":"零排隊","right":"名店也等"},{"type":"choice","key":"flavor","label":"味覺主題","choices":["清爽","重口味","甜食","在地","精緻"]},{"type":"range","key":"budget","label":"單日美食預算","min":1,"max":100,"value":55,"left":"省一點","right":"吃好一點"}],"appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_food-budget-split","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/food-budget-split.html"}</script>
+  <script src="../assets/independent-tool-runtime.js"></script>
+</body>
+</html>

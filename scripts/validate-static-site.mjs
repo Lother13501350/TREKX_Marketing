@@ -16,7 +16,8 @@ const requiredFiles = [
   "assets/app.js",
   "assets/launch.js",
   "assets/ig-chaos.js",
-  "assets/microtools.js",
+  "assets/independent-tools.js",
+  "assets/independent-tool-runtime.js",
   "assets/styles.css",
   "vercel.json",
 ];
@@ -42,6 +43,14 @@ function walk(dir) {
 }
 
 const htmlFiles = walk(root).filter((file) => file.endsWith(".html"));
+const toolPagesDir = path.join(root, "tools");
+const toolPages = fs.existsSync(toolPagesDir)
+  ? fs.readdirSync(toolPagesDir).filter((file) => file.endsWith(".html"))
+  : [];
+
+if (toolPages.length !== 100) {
+  failures.push(`Expected exactly 100 independent tool pages in tools/, found ${toolPages.length}`);
+}
 
 if (htmlFiles.length < 100) {
   failures.push(`Expected at least 100 HTML files, found ${htmlFiles.length}`);
