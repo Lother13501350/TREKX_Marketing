@@ -3,93 +3,114 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>機場人格測驗｜ChillOut 旅行小工具</title>
-  <meta name="description" content="從你到機場的行為看出旅行人格。用報到時間、免稅店、登機焦慮與候機習慣生成角色。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="機場人格測驗｜ChillOut 旅行小工具">
-  <meta property="og:description" content="從你到機場的行為看出旅行人格。">
+  <title>機場人格測驗｜ChillOut 旅行小工具 T014</title>
+  <meta name="description" content="用 8 個機場情境測出你的出發人格，產生登機前求生策略、候機節奏與可丟進 ChillOut 的出發日 prompt。">
+  <meta property="og:title" content="機場人格測驗｜ChillOut">
+  <meta property="og:description" content="機場已經暴露你整趟旅行的樣子。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/airport-archetype.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/airport-archetype.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/airport-archetype.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/airport-archetype.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-2 mode-quiz" style="--tool-accent:#7C5CFF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="airport-app">
+  <header class="aa-topbar">
+    <a class="aa-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="aa-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T014 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_airport-archetype_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_airport_archetype_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T014 · 旅行人格測驗</p>
-        <h1>機場人格測驗</h1>
-        <p class="product-lead">從你到機場的行為看出旅行人格。</p>
-        <div class="product-pills">
-          <span>機場角色</span><span>出發前</span><span>限動素材</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/airport-archetype.svg" alt="機場人格測驗 互動工具視覺">
-      </figure>
+  <main class="aa-page">
+    <section class="aa-hero">
+      <p class="aa-eyebrow">Airport departure type</p>
+      <h1>機場已經暴露你整趟旅行的樣子。</h1>
+      <p>用 8 個出發情境測出你的機場人格。結果不是只給綽號，還會把你的候機節奏、焦慮來源、出發日行程密度轉成可以給 ChillOut 使用的 prompt。</p>
     </section>
 
-    <section class="product-workbench" aria-label="機場人格測驗 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>用報到時間、免稅店、登機焦慮與候機習慣生成角色。</h2>
-        <p>出國前會興奮發限動的人可以在 30 秒內得到一張可分享的結果卡。用幾個選擇題產生可分享的人格結果與第一版行程方向。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_airport-archetype_result">丟進 ChillOut</a>
-          </div>
+    <section class="aa-gate" aria-label="機場人格測驗操作區">
+      <form class="aa-form" data-form>
+        <div class="aa-progress">
+          <span data-progress-text>0 / 8 已選</span>
+          <div><i data-progress-bar></i></div>
         </div>
-      </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+        <fieldset class="aa-question">
+          <legend>你會提前多久到機場？</legend>
+          <button type="button" data-choice data-key="arrival" data-value="control">三小時起跳，越早越安心</button>
+          <button type="button" data-choice data-key="arrival" data-value="flow">差不多就好，照建議時間</button>
+          <button type="button" data-choice data-key="arrival" data-value="chaos">壓線也不是第一次</button>
+        </fieldset>
+
+        <fieldset class="aa-question">
+          <legend>報到櫃台排隊時你在做什麼？</legend>
+          <button type="button" data-choice data-key="checkin" data-value="control">重看證件和行李規定</button>
+          <button type="button" data-choice data-key="checkin" data-value="social">幫大家拍出發照</button>
+          <button type="button" data-choice data-key="checkin" data-value="comfort">先找最近的咖啡</button>
+        </fieldset>
+
+        <fieldset class="aa-question">
+          <legend>過安檢前你最在意？</legend>
+          <button type="button" data-choice data-key="security" data-value="control">液體、電腦、外套都先整理好</button>
+          <button type="button" data-choice data-key="security" data-value="chaos">到前面才開始翻包</button>
+          <button type="button" data-choice data-key="security" data-value="flow">跟著隊伍節奏走</button>
+        </fieldset>
+
+        <fieldset class="aa-question">
+          <legend>免稅店對你來說是？</legend>
+          <button type="button" data-choice data-key="dutyfree" data-value="social">補伴手禮和限動素材</button>
+          <button type="button" data-choice data-key="dutyfree" data-value="comfort">看一下，但休息比較重要</button>
+          <button type="button" data-choice data-key="dutyfree" data-value="control">先確認登機門再逛</button>
+        </fieldset>
+
+        <fieldset class="aa-question">
+          <legend>登機門還沒開，你會？</legend>
+          <button type="button" data-choice data-key="gate" data-value="comfort">坐好、充電、補水</button>
+          <button type="button" data-choice data-key="gate" data-value="social">拍登機口或跟朋友聊天</button>
+          <button type="button" data-choice data-key="gate" data-value="chaos">到處走，差點錯過廣播</button>
+        </fieldset>
+
+        <fieldset class="aa-question">
+          <legend>航班延誤 40 分鐘，你第一反應？</legend>
+          <button type="button" data-choice data-key="delay" data-value="control">立刻重算轉機與抵達時間</button>
+          <button type="button" data-choice data-key="delay" data-value="comfort">剛好吃點東西休息</button>
+          <button type="button" data-choice data-key="delay" data-value="chaos">反正旅行就是這樣</button>
+        </fieldset>
+
+        <fieldset class="aa-question">
+          <legend>登機後你最想先做？</legend>
+          <button type="button" data-choice data-key="boarding" data-value="control">整理座位、確認落地交通</button>
+          <button type="button" data-choice data-key="boarding" data-value="comfort">戴耳機準備睡</button>
+          <button type="button" data-choice data-key="boarding" data-value="social">拍窗景、發出發限動</button>
+        </fieldset>
+
+        <fieldset class="aa-question">
+          <legend>落地後第一站你偏好？</legend>
+          <button type="button" data-choice data-key="landing" data-value="control">先到住宿放行李</button>
+          <button type="button" data-choice data-key="landing" data-value="comfort">先吃東西或咖啡</button>
+          <button type="button" data-choice data-key="landing" data-value="social">直接去漂亮街區開拍</button>
+        </fieldset>
+
+        <div class="aa-actions">
+          <button class="aa-button" type="button" data-sample>套用典型旅人</button>
+          <button class="aa-button aa-primary" type="submit">產生登機人格</button>
+        </div>
+      </form>
+
+      <section class="aa-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"airport-archetype","category":"quiz","name":"機場人格測驗","tagline":"從你到機場的行為看出旅行人格。","audience":"出國前會興奮發限動的人","mechanic":"用報到時間、免稅店、登機焦慮與候機習慣生成角色。","result":"機場已經暴露你整趟旅行的樣子。","chips":["機場角色","出發前","限動素材"],"mode":"quiz","modeLabel":"人格測驗","modeVariant":"雷達圖","interfaceTitle":"機場人格測驗操作台","actionLabel":"測出我的旅行角色","resultName":"旅行人格卡","modePromise":"用幾個選擇題產生可分享的人格結果與第一版行程方向。","shareLead":"我剛測出自己的旅行人格","sampleItems":["朋友一起玩","慢慢晃","一天塞滿","拍照優先","餐廳優先","突然改行程","安靜探索"],"scoreSeed":71,"executionPack":{"actions":["用 機場角色 結果決定行程第一順位。","把 出發前 與社交能量轉成每日密度。","把人格結果丟進 ChillOut 生成角色式行程。"],"hooks":["我的 機場人格測驗 結果居然是這個。","你不是難搞，你只是旅行設定很明確。","把你的結果貼出來，看誰最適合一起旅行。"],"qa":["每個選項會改變分數","結果要有角色名稱","Prompt 要保留人格條件"]},"playSteps":["輸入 朋友一起玩 或這次最想解決的旅行條件。","調整 機場角色、出發前 與 限動素材 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"choice","key":"pace","label":"旅行節奏","choices":["慢慢晃","重點精準","一天塞滿","看心情改"]},{"type":"choice","key":"anchor","label":"最在意的錨點","choices":["朋友一起玩","慢慢晃","一天塞滿","拍照優先","餐廳優先"]},{"type":"choice","key":"risk","label":"臨時改行程接受度","choices":["完全不行","可接受一點","越即興越好"]},{"type":"range","key":"social","label":"社交能量","min":1,"max":100,"value":59,"left":"安靜旅行","right":"認識新朋友"}],"id":"T014","categoryLabel":"旅行人格測驗","categoryTone":"用輕量測驗讓使用者得到可分享的旅行角色與第一版行程。","primary":"#7C5CFF","accent":"#7C5CFF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_airport-archetype","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/airport-archetype.html"}</script>
-  <script src="../assets/tool-scripts/airport-archetype.js?v=20260525d"></script>
+  <div class="aa-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/airport-archetype.js?v=20260525manual1"></script>
 </body>
 </html>
