@@ -3,93 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>深夜甜點雷達｜ChillOut 旅行小工具</title>
-  <meta name="description" content="把晚餐後的空白變成甜點任務。用城市與甜點類型，產生深夜甜點、散步與拍照組合。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="深夜甜點雷達｜ChillOut 旅行小工具">
-  <meta property="og:description" content="把晚餐後的空白變成甜點任務。">
+  <title>深夜甜點雷達｜ChillOut 旅行小工具 T034</title>
+  <meta name="description" content="把晚餐後的空白變成一條可執行的深夜甜點路線。輸入城市、回程時間、排隊忍耐度與甜點候選點，生成今晚甜點任務卡、分享文與 ChillOut prompt。">
+  <meta property="og:title" content="深夜甜點雷達｜ChillOut 旅行小工具 T034">
+  <meta property="og:description" content="用候選甜點店、步行距離、排隊時間與營業時間，排出一條不狼狽的深夜甜點路線。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/late-night-dessert.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/late-night-dessert.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/late-night-dessert.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/late-night-dessert.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-4 mode-nightRoute" style="--tool-accent:#4D96FF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="ld-app">
+  <header class="ld-nav">
+    <a class="ld-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="ld-mark">C</span>
+      <span><strong>ChillOut</strong><small>T034 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_late-night-dessert_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_late_night_dessert_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T034 · 夜旅與 Noctourism</p>
-        <h1>深夜甜點雷達</h1>
-        <p class="product-lead">把晚餐後的空白變成甜點任務。</p>
-        <div class="product-pills">
-          <span>甜點</span><span>宵夜</span><span>散步</span>
-        </div>
+    <section class="ld-hero">
+      <div class="ld-hero-copy">
+        <p class="ld-kicker">T034 · Noctourism dessert planner</p>
+        <h1>晚餐後還想吃甜點，就先把店、路、回程排乾淨。</h1>
+        <p>深夜甜點不是臨時起意亂走。這個工具會用營業時間、排隊忍耐度、步行上限與拍照氛圍，幫你選出今晚主甜點、散步段與備案。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/late-night-dessert.svg" alt="深夜甜點雷達 互動工具視覺">
+      <figure class="ld-visual">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1000&q=80" alt="深夜甜點盤與咖啡">
+        <figcaption>甜點任務卡會把結果導回 ChillOut 生成完整行程。</figcaption>
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="深夜甜點雷達 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>用城市與甜點類型，產生深夜甜點、散步與拍照組合。</h2>
-        <p>旅行中永遠還想吃甜點的人可以在 30 秒內得到一張可分享的結果卡。把晚上安全、交通與氣氛排成不硬撐的三段式夜遊。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_late-night-dessert_result">丟進 ChillOut</a>
-          </div>
+    <section class="ld-workbench" aria-label="深夜甜點雷達操作區">
+      <aside class="ld-settings" aria-label="今晚條件">
+        <div class="ld-panel-head">
+          <p class="ld-kicker">Tonight settings</p>
+          <h2>今晚條件</h2>
+        </div>
+        <label>
+          城市
+          <input data-city value="首爾" placeholder="例如：東京、台南、曼谷">
+        </label>
+        <label>
+          住宿區域
+          <input data-hotel value="弘大入口站" placeholder="例如：中山站、難波、明洞">
+        </label>
+        <div class="ld-two">
+          <label>
+            出發
+            <input data-leave type="time" value="21:20">
+          </label>
+          <label>
+            回到住宿前
+            <input data-return type="time" value="23:40">
+          </label>
+        </div>
+        <label>
+          今晚想吃
+          <select data-mood>
+            <option value="cream">奶油蛋糕</option>
+            <option value="fruit">水果清爽</option>
+            <option value="warm">熱甜湯</option>
+            <option value="bakery">烘焙麵包</option>
+            <option value="ice">冰品</option>
+          </select>
+        </label>
+        <label class="ld-range">
+          <span>步行上限 <strong data-walk-label>18 分鐘</strong></span>
+          <input data-walk type="range" min="6" max="35" value="18">
+        </label>
+        <label class="ld-range">
+          <span>排隊忍耐 <strong data-line-label>14 分鐘</strong></span>
+          <input data-line type="range" min="0" max="45" value="14">
+        </label>
+        <label class="ld-check">
+          <input data-rain type="checkbox">
+          <span>今晚可能下雨，優先室內或近站點</span>
+        </label>
+        <div class="ld-settings-actions">
+          <button type="button" data-sample>載入範例</button>
+          <button type="button" data-add-stop>新增甜點點</button>
         </div>
       </aside>
+
+      <section class="ld-stops-area" aria-label="甜點候選點">
+        <div class="ld-panel-head ld-stops-head">
+          <div>
+            <p class="ld-kicker">Dessert candidates</p>
+            <h2>甜點候選點</h2>
+          </div>
+          <button type="button" class="ld-primary" data-generate>生成甜點雷達</button>
+        </div>
+        <div class="ld-stop-list" data-stops></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="ld-output" data-output aria-live="polite">
+      <div class="ld-empty">
+        <p class="ld-kicker">Result</p>
+        <h2>先填候選店，這裡會生成今晚甜點任務卡。</h2>
+        <p>結果會包含主甜點、散步段、備案、點餐句子、社群分享文與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"late-night-dessert","category":"night","name":"深夜甜點雷達","tagline":"把晚餐後的空白變成甜點任務。","audience":"旅行中永遠還想吃甜點的人","mechanic":"用城市與甜點類型，產生深夜甜點、散步與拍照組合。","result":"甜點不是加餐，是夜晚的句點。","chips":["甜點","宵夜","散步"],"mode":"nightRoute","modeLabel":"夜遊路線","modeVariant":"時間線","interfaceTitle":"深夜甜點雷達操作台","actionLabel":"排出夜晚節奏","resultName":"夜晚節奏表","modePromise":"把晚上安全、交通與氣氛排成不硬撐的三段式夜遊。","shareLead":"我排了一條不踩雷的夜遊路線","sampleItems":["雨備室內點","末班車時間","日落前集合","晚餐後散步","夜景拍照","宵夜收尾","安全返程"],"scoreSeed":64,"executionPack":{"actions":["把 甜點 排在晚間主段，不連續硬塞。","先決定安全返程，再決定宵夜。","把夜晚路線丟進 ChillOut 補交通與備案。"],"hooks":["夜遊不是熬夜，是有節奏地走。","這條路線先保命，再浪漫。","把城市晚上排成三段，不會玩到崩。"],"qa":["要輸出 3 個以上時段","要有安全收尾","Prompt 要包含城市與時段"]},"playSteps":["輸入 雨備室內點 或這次最想解決的旅行條件。","調整 甜點、宵夜 與 散步 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"city","label":"目的地城市","placeholder":"例如：首爾、東京、台南、曼谷"},{"type":"choice","key":"time","label":"出門時段","choices":["日落前","晚餐後","午夜前","清晨前"]},{"type":"choice","key":"nightMood","label":"夜晚主題","choices":["雨備室內點","末班車時間","日落前集合","晚餐後散步","夜景拍照"]},{"type":"range","key":"safety","label":"安全保守度","min":1,"max":100,"value":73,"left":"敢冒險","right":"保守安全"}],"id":"T034","categoryLabel":"夜旅與 Noctourism","categoryTone":"跟上夜遊、日落、深夜甜點與城市霓虹的旅行趨勢。","primary":"#4D96FF","accent":"#4D96FF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_late-night-dessert","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/late-night-dessert.html"}</script>
-  <script src="../assets/tool-scripts/late-night-dessert.js?v=20260525d"></script>
+  <div class="ld-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/late-night-dessert.js?v=20260525manual1"></script>
 </body>
 </html>
