@@ -1,0 +1,373 @@
+:root {
+  --bc-accent: #b24d6a;
+  --bc-ink: #181817;
+  --bc-muted: #66635e;
+  --bc-line: rgba(24, 24, 23, 0.14);
+  --bc-soft: #f6f5f1;
+  --bc-paper: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.contract-app {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--bc-ink);
+  background: var(--bc-soft);
+  font-family: Inter, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  letter-spacing: 0;
+}
+
+.bc-topbar {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px clamp(20px, 5vw, 64px);
+  border-bottom: 1px solid var(--bc-line);
+}
+
+.bc-brand,
+.bc-topbar nav {
+  display: flex;
+  align-items: center;
+}
+
+.bc-brand {
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.bc-logo {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--bc-accent);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.bc-brand strong,
+.bc-brand small {
+  display: block;
+}
+
+.bc-brand strong {
+  font-size: 17px;
+}
+
+.bc-brand small {
+  margin-top: 3px;
+  color: var(--bc-muted);
+  font-size: 12px;
+}
+
+.bc-topbar nav {
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.bc-topbar nav a {
+  color: var(--bc-ink);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.bc-page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 44px 0 64px;
+}
+
+.bc-hero {
+  max-width: 870px;
+  padding: 20px 0 34px;
+}
+
+.bc-eyebrow {
+  margin: 0 0 18px;
+  color: var(--bc-accent);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bc-hero h1 {
+  margin: 0;
+  max-width: 860px;
+  font-size: clamp(44px, 7vw, 78px);
+  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.bc-hero p {
+  max-width: 790px;
+  margin: 22px 0 0;
+  color: var(--bc-muted);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.bc-tool {
+  display: grid;
+  grid-template-columns: 430px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.bc-form,
+.bc-result {
+  border: 1px solid var(--bc-line);
+  border-radius: 8px;
+  background: var(--bc-paper);
+  box-shadow: 0 18px 50px rgba(24, 24, 23, 0.08);
+}
+
+.bc-form {
+  padding: 22px;
+}
+
+.bc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.bc-field,
+.bc-range {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.bc-field span,
+.bc-range span {
+  color: var(--bc-muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.bc-range strong {
+  color: var(--bc-accent);
+}
+
+.bc-field input,
+.bc-field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 13px;
+  border: 1px solid var(--bc-line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--bc-ink);
+  font: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.bc-range input {
+  width: 100%;
+  accent-color: var(--bc-accent);
+}
+
+.bc-field input:focus,
+.bc-field select:focus {
+  border-color: var(--bc-accent);
+  box-shadow: 0 0 0 3px rgba(178, 77, 106, 0.13);
+}
+
+.bc-actions,
+.bc-result-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.bc-button {
+  min-height: 48px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--bc-line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--bc-ink);
+  font: inherit;
+  font-weight: 850;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bc-primary {
+  border-color: var(--bc-accent);
+  background: var(--bc-accent);
+  color: #fff;
+}
+
+.bc-result {
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.bc-contract {
+  padding: 28px;
+  border-bottom: 1px solid var(--bc-line);
+}
+
+.bc-contract small {
+  color: var(--bc-accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bc-contract h2 {
+  margin: 8px 0 0;
+  font-size: 38px;
+  line-height: 1.18;
+}
+
+.bc-contract p {
+  margin: 10px 0 0;
+  color: var(--bc-muted);
+  line-height: 1.65;
+}
+
+.bc-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.bc-people span {
+  border: 1px solid var(--bc-line);
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: var(--bc-accent);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.bc-clauses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid var(--bc-line);
+}
+
+.bc-clause {
+  padding: 22px;
+  border-right: 1px solid var(--bc-line);
+  border-bottom: 1px solid var(--bc-line);
+}
+
+.bc-clause:nth-child(2n) {
+  border-right: 0;
+}
+
+.bc-clause span {
+  color: var(--bc-accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bc-clause h3 {
+  margin: 10px 0 0;
+  font-size: 22px;
+}
+
+.bc-clause p {
+  margin: 8px 0 0;
+  color: var(--bc-muted);
+  line-height: 1.65;
+}
+
+.bc-prompt {
+  margin: 24px 28px;
+  padding: 18px;
+  border: 1px solid rgba(178, 77, 106, 0.28);
+  border-radius: 8px;
+  background: rgba(178, 77, 106, 0.06);
+}
+
+.bc-prompt small {
+  color: var(--bc-accent);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bc-prompt p {
+  margin: 10px 0 0;
+  line-height: 1.75;
+}
+
+.bc-result-actions {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 28px 28px;
+}
+
+.bc-toast {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--bc-ink);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+
+.bc-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1060px) {
+  .bc-tool {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .bc-page {
+    width: min(100% - 28px, 1180px);
+    padding-top: 28px;
+  }
+
+  .bc-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bc-hero h1 {
+    font-size: 42px;
+  }
+
+  .bc-grid,
+  .bc-clauses,
+  .bc-result-actions,
+  .bc-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .bc-clause,
+  .bc-clause:nth-child(2n) {
+    border-right: 0;
+  }
+}

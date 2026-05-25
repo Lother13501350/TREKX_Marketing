@@ -3,93 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>旅行搭子合約｜ChillOut 旅行小工具</title>
-  <meta name="description" content="出發前先講清楚，途中少吵一點。填旅伴、預算、作息與雷點，產生可截圖的旅行合約。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="旅行搭子合約｜ChillOut 旅行小工具">
-  <meta property="og:description" content="出發前先講清楚，途中少吵一點。">
+  <title>旅行搭子合約｜ChillOut 旅行小工具 T021</title>
+  <meta name="description" content="出發前整理旅伴名單、預算、作息、拍照、放風、決策權與分帳方式，產生可截圖旅行搭子合約。">
+  <meta property="og:title" content="旅行搭子合約｜ChillOut">
+  <meta property="og:description" content="好旅伴不是不吵架，是有事先說清楚。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/travel-buddy-contract.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/travel-buddy-contract.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/travel-buddy-contract.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/travel-buddy-contract.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-3 mode-pact" style="--tool-accent:#EF476F">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="contract-app">
+  <header class="bc-topbar">
+    <a class="bc-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="bc-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T021 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_travel-buddy-contract_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_travel_buddy_contract_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T021 · 搭子與關係工具</p>
-        <h1>旅行搭子合約</h1>
-        <p class="product-lead">出發前先講清楚，途中少吵一點。</p>
-        <div class="product-pills">
-          <span>搭子合約</span><span>截圖分享</span><span>出發前</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/travel-buddy-contract.svg" alt="旅行搭子合約 互動工具視覺">
-      </figure>
+  <main class="bc-page">
+    <section class="bc-hero">
+      <p class="bc-eyebrow">Travel buddy pact</p>
+      <h1>好旅伴不是不吵架，是有事先說清楚。</h1>
+      <p>把出發前最容易裝沒事、途中最容易爆炸的點先寫下來。這不是法律文件，是一張可以丟群組確認的旅行共識卡。</p>
     </section>
 
-    <section class="product-workbench" aria-label="旅行搭子合約 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>填旅伴、預算、作息與雷點，產生可截圖的旅行合約。</h2>
-        <p>朋友、情侶、家人一起出遊的人可以在 30 秒內得到一張可分享的結果卡。把出發前最容易吵的點變成可以截圖討論的協議。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_travel-buddy-contract_result">丟進 ChillOut</a>
-          </div>
-        </div>
-      </aside>
-    </section>
+    <section class="bc-tool" aria-label="旅行搭子合約操作區">
+      <form class="bc-form" data-form>
+        <label class="bc-field">
+          <span>旅伴名單</span>
+          <input data-people value="我、阿哲、小雨、Mia" autocomplete="off">
+        </label>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+        <div class="bc-grid">
+          <label class="bc-field">
+            <span>預算差距</span>
+            <select data-budget>
+              <option value="same">很一致</option>
+              <option value="some" selected>有一點落差</option>
+              <option value="large">落差很大</option>
+            </select>
+          </label>
+          <label class="bc-field">
+            <span>起床時間</span>
+            <select data-wake>
+              <option value="early">早起派</option>
+              <option value="normal" selected>正常出門</option>
+              <option value="late">睡飽再說</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="bc-grid">
+          <label class="bc-field">
+            <span>吃飯策略</span>
+            <select data-food>
+              <option value="budget">省錢為主</option>
+              <option value="balanced" selected>正常吃</option>
+              <option value="splurge">想吃好一點</option>
+            </select>
+          </label>
+          <label class="bc-field">
+            <span>分帳方式</span>
+            <select data-split>
+              <option value="equal" selected>平均分</option>
+              <option value="each">各付各的</option>
+              <option value="record">先記帳再結算</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="bc-range">
+          <span>拍照耐心 <strong data-value="photo">55</strong></span>
+          <input data-photo type="range" min="0" max="100" value="55">
+        </label>
+        <label class="bc-range">
+          <span>各自放風需求 <strong data-value="alone">64</strong></span>
+          <input data-alone type="range" min="0" max="100" value="64">
+        </label>
+
+        <div class="bc-grid">
+          <label class="bc-field">
+            <span>最後決策權</span>
+            <select data-decision>
+              <option value="vote" selected>投票</option>
+              <option value="owner">交給今日主揪</option>
+              <option value="rotate">每日輪流</option>
+            </select>
+          </label>
+          <label class="bc-field">
+            <span>最大雷點</span>
+            <select data-conflict>
+              <option value="late">有人遲到</option>
+              <option value="money" selected>錢講不清楚</option>
+              <option value="photo">拍照拖太久</option>
+              <option value="solo">有人想放風</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="bc-actions">
+          <button class="bc-button" type="button" data-sample>載入示範</button>
+          <button class="bc-button bc-primary" type="submit">產生合約</button>
+        </div>
+      </form>
+
+      <section class="bc-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"travel-buddy-contract","category":"group","name":"旅行搭子合約","tagline":"出發前先講清楚，途中少吵一點。","audience":"朋友、情侶、家人一起出遊的人","mechanic":"填旅伴、預算、作息與雷點，產生可截圖的旅行合約。","result":"好旅伴不是不吵架，是有事先說清楚。","chips":["搭子合約","截圖分享","出發前"],"mode":"pact","modeLabel":"旅伴協議","modeVariant":"任務板","interfaceTitle":"旅行搭子合約操作台","actionLabel":"產生旅伴共識","resultName":"旅伴協議書","modePromise":"把出發前最容易吵的點變成可以截圖討論的協議。","shareLead":"我做了一份旅行前共識協議","sampleItems":["最後決策權","早起時間","美食預算","拍照耐心","各自放風","交通分工","房型偏好"],"scoreSeed":78,"executionPack":{"actions":["先把 搭子合約 寫成旅伴共識，而不是出發後才吵。","把 截圖分享 設成行前必談條款。","把協議截圖丟群組，確認每個人都接受。"],"hooks":["旅行前先簽這張，不然出發後很容易爆。","真正的旅伴默契是先講清楚。","把最容易吵的點變成可以截圖的協議。"],"qa":["旅伴名單可空白也能生成","至少輸出 4 條協議","Prompt 要包含預算與放風需求"]},"playSteps":["輸入 最後決策權 或這次最想解決的旅行條件。","調整 搭子合約、截圖分享 與 出發前 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"people","label":"旅伴名單","placeholder":"例如：我、阿哲、小雨、Mia"},{"type":"range","key":"budgetGap","label":"預算差距","min":1,"max":100,"value":58,"left":"很一致","right":"落差很大"},{"type":"choice","key":"conflict","label":"最容易吵的點","choices":["最後決策權","早起時間","美食預算","拍照耐心","各自放風"]},{"type":"range","key":"aloneTime","label":"各自放風需求","min":1,"max":100,"value":55,"left":"全程黏著","right":"需要獨處"}],"id":"T021","categoryLabel":"搭子與關係工具","categoryTone":"把旅行前最容易吵的事情變成可以討論、投票、截圖分享的協議。","primary":"#EF476F","accent":"#EF476F","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_travel-buddy-contract","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/travel-buddy-contract.html"}</script>
-  <script src="../assets/tool-scripts/travel-buddy-contract.js?v=20260525d"></script>
+  <div class="bc-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/travel-buddy-contract.js?v=20260525manual1"></script>
 </body>
 </html>
