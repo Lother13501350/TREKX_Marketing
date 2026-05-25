@@ -26,6 +26,10 @@ const requiredFiles = [
   "assets/screenshot-route.js",
   "assets/creator-remix.css",
   "assets/creator-remix.js",
+  "assets/dupe-dream.css",
+  "assets/dupe-dream.js",
+  "assets/saved-cleanse.css",
+  "assets/saved-cleanse.js",
   "assets/styles.css",
   "vercel.json",
 ];

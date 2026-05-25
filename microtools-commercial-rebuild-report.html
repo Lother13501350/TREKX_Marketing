@@ -27,13 +27,14 @@
   <main class="report">
     <p class="product-kicker">Commercial rebuild report</p>
     <h1>100 個旅行小工具，從概念庫重做成 100 個獨立產品。</h1>
-    <p>本報告定義這批小工具的重做標準、驗收方式、差異化規則與第一個工具的正式執行方向。核心修正：不能再用同一套模板換文字，每個工具都必須有自己的問題、玩法、介面、資料輸入、結果邏輯、分享機制與 App 導流。</p>
+    <p>本報告定義這批小工具的重做標準、驗收方式、差異化規則與正式執行方向。核心修正：不能再用同一套模板換文字，每個工具都必須有自己的問題、玩法、介面、資料輸入、結果邏輯、分享機制與 App 導流。</p>
 
     <div class="badge-row">
       <span>每個工具獨立 URL</span>
       <span>每個工具獨立 UX</span>
       <span>每個工具獨立演算法</span>
       <span>每個工具獨立視覺語言</span>
+      <span>單一主題色</span>
       <span>每個工具導回 ChillOut</span>
     </div>
 
@@ -54,12 +55,13 @@
       <section class="report-card"><strong>2. 真正可操作</strong><p>至少有 3 種有效輸入或互動，輸入會改變結果，而不是永遠產生同一張卡。</p></section>
       <section class="report-card"><strong>3. 結果可執行</strong><p>結果必須能讓使用者下一步行動，例如整理收藏、排出路線、做出選擇、產出合約或分享文案。</p></section>
       <section class="report-card"><strong>4. 可分享</strong><p>每個工具要有可複製文案或可截圖區域，文案自然帶回 ChillOut。</p></section>
-      <section class="report-card"><strong>5. 獨立風格</strong><p>不能只換顏色。版面結構、互動方式、結果形式都要符合工具本身。</p></section>
+      <section class="report-card"><strong>5. 獨立風格</strong><p>不能只換顏色。版面結構、互動方式、結果形式都要符合工具本身；每個工具只使用一個主題色與中性色，避免花俏雜訊。</p></section>
       <section class="report-card"><strong>6. 導流可追蹤</strong><p>App Store 連結使用對應 ct 參數，例如 <code>ct=tool_save_sprint_route</code>。</p></section>
     </div>
 
     <h2>三、100 個工具的重做策略</h2>
     <p>重做順序不是一次套版產生，而是逐一產品化。每完成一個工具，就留下該工具的 PRD、功能說明、QA 截圖與可投放角度。總頁維持 100 個獨立連結，但每個連結背後會逐步替換成 bespoke 工具。</p>
+    <p><strong>目前基礎修正：</strong>所有尚未 bespoke 的工具頁已改成單一主題色、中性色介面、6 種版面骨架與單色 SVG 素材，先移除多色、深色、模板感過重的問題。接下來仍會逐一替換成完全獨立的玩法與演算法。</p>
 
     <h3>互動類型分配</h3>
     <table>
@@ -75,34 +77,35 @@
     </table>
 
     <h2>四、T001 IG 靈感急救室 PRD</h2>
-    <p><strong>主要功能：</strong>把使用者散落的 IG 收藏、景點筆記、朋友傳來的店名，轉成可操作的旅行靈感看板與第一版 ChillOut prompt。</p>
+    <p><strong>主要功能：</strong>把使用者散落的 IG 收藏、景點筆記、朋友傳來的店名，直接整理成一條今天可以先走的路線與第一版 ChillOut prompt。</p>
     <p><strong>核心使用者：</strong>IG 收藏很多、截圖很多、出發前仍然不知道怎麼排的人。</p>
-    <p><strong>核心流程：</strong>貼上素材 → 自動分類 → 產生四欄救援看板 → 產生一日路線 → 複製分享文案或丟進 ChillOut。</p>
+    <p><strong>核心流程：</strong>貼上收藏 → 選目的地與旅行感覺 → 產生第一版路線 → 複製分享文案或丟進 ChillOut。</p>
     <p><strong>商業用途：</strong>可做短影音「我把 30 個 IG 收藏變成一天路線」、Threads 互動文、Dcard 實用工具文、SEO 頁與廣告 landing page。</p>
 
     <h2>五、T001 驗收清單</h2>
     <ul>
       <li>可以貼上多行 IG/景點素材，沒有素材時提供示範資料。</li>
-      <li>每個素材會被分類、評分並進入不同欄位。</li>
-      <li>使用者可以新增單一靈感、切換旅行日數、預算、步調、城市。</li>
-      <li>會產生具體路線、備案、刪除建議、分享文案與 ChillOut prompt。</li>
+      <li>使用者只需要一個輸入框、目的地與旅行感覺，不再進入複雜看板。</li>
+      <li>會產生具體時間線、暫不排清單、分享文案與 ChillOut prompt。</li>
       <li>App Store 導流含工具專屬 ct 參數。</li>
       <li>瀏覽器實測截圖確認視覺與互動可用。</li>
     </ul>
 
     <h2>六、T002 三張截圖路線工坊 PRD</h2>
-    <p><strong>主要功能：</strong>把三張旅遊截圖或三段截圖描述，轉成三個路線節點，並依類型、起始時間、節奏與交通方式排出可出發的半日/一日路線。</p>
+    <p><strong>主要功能：</strong>把三張旅遊截圖代表的地點，轉成三個路線節點，並依類型與起始時間排出可出發的半日路線。</p>
     <p><strong>核心使用者：</strong>相簿裡存了一堆旅遊截圖，但不知道這些點能不能串在一起的人。</p>
-    <p><strong>核心流程：</strong>上傳或描述三張截圖 → 設定類型與氛圍 → 路線拼接台排序 → 產生時間線、分享文案與 ChillOut prompt。</p>
+    <p><strong>核心流程：</strong>輸入三個地點 → 選目的地與起始時間 → 產生半日順序 → 複製分享文案或丟進 ChillOut。</p>
     <p><strong>商業用途：</strong>可做「三張截圖變一趟旅行」短影音、相簿整理互動、IG 限動問答、SEO 頁與創作者貼文模板。</p>
 
     <h2>七、已完成產品化紀錄</h2>
     <table>
       <thead><tr><th>工具</th><th>獨立性</th><th>目前完成狀態</th><th>下一步</th></tr></thead>
       <tbody>
-        <tr><td>T001 IG 靈感急救室</td><td>獨立 HTML/CSS/JS、四欄救援看板、路線產生器</td><td>已完成本機與線上 QA</td><td>可進入素材投放測試</td></tr>
-        <tr><td>T002 三張截圖路線工坊</td><td>獨立 HTML/CSS/JS、三截圖編輯器、路線拼接台</td><td>已完成本機與線上 QA</td><td>可進入素材投放測試</td></tr>
+        <tr><td>T001 IG 靈感急救室</td><td>獨立 HTML/CSS/JS、單輸入框、第一版路線、暫不排清單</td><td>已完成本機 QA 截圖，待部署確認</td><td>可進入素材投放測試</td></tr>
+        <tr><td>T002 三張截圖路線工坊</td><td>獨立 HTML/CSS/JS、三地點輸入、半日順序、ChillOut prompt</td><td>已完成本機 QA 截圖，待部署確認</td><td>可進入素材投放測試</td></tr>
         <tr><td>T003 旅遊創作者路線 Remix</td><td>獨立 HTML/CSS/JS、before/after Remix 工作台、使用 Unsplash 情境素材</td><td>已完成本機 QA，待部署確認</td><td>部署後可進入素材投放測試</td></tr>
+        <tr><td>T004 爆紅景點值得嗎</td><td>獨立 HTML/CSS/JS、值得去決策器、替代玩法、ChillOut prompt</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做短影音與 Threads 測試</td></tr>
+        <tr><td>T005 收藏斷捨離</td><td>獨立 HTML/CSS/JS、逐張卡片清理、保留/備用/刪掉三桶結果</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做 IG 收藏清理挑戰</td></tr>
       </tbody>
     </table>
 
@@ -111,6 +114,18 @@
     <p><strong>核心使用者：</strong>看旅遊創作者內容會心動，但擔心照抄後太貴、太擠、太趕或不適合自己的人。</p>
     <p><strong>核心流程：</strong>貼上創作者路線 → 設定預算/步調/避開項目 → 工具標記保留、替換、升級、降級 → 產生 Remix 時間線、分享文案與 ChillOut prompt。</p>
     <p><strong>UI 規範更新：</strong>每個工具只使用一個主題色與中性色。T003 主題色為紫色，搭配深色中性色；背景使用 Unsplash 授權旅遊素材作為情境圖。</p>
+
+    <h2>九、T004 爆紅景點值得嗎 PRD</h2>
+    <p><strong>主要功能：</strong>輸入爆紅景點、期待值、人潮耐受、排隊成本與替代意願，判斷這個點應該值得去、改時段去，還是改找同氛圍替代點。</p>
+    <p><strong>核心使用者：</strong>看到 IG、TikTok 或小紅書爆紅景點心動，但又怕排隊、踩雷、浪費半天的人。</p>
+    <p><strong>核心流程：</strong>輸入景點 → 調整四個滑桿 → 取得分數與決策 → 複製 ChillOut prompt 生成附近半日路線。</p>
+    <p><strong>趨勢依據：</strong>對齊 2026 旅遊趨勢中的 detour/destination dupe、過度觀光避讓、個人化旅行決策與社群種草後的行程轉換需求。</p>
+
+    <h2>十、T005 收藏斷捨離 PRD</h2>
+    <p><strong>主要功能：</strong>把一長串旅行收藏逐張做「保留、備用、刪掉」決策，清出真正能進行程的清單。</p>
+    <p><strong>核心使用者：</strong>IG 收藏很多、但每次排程都被收藏數量拖住的人。</p>
+    <p><strong>核心流程：</strong>貼上收藏 → 每張卡片快速判斷 → 形成三桶清單 → 複製 ChillOut prompt 生成行程。</p>
+    <p><strong>商業用途：</strong>適合做「清掉 100 個旅行收藏」短影音、限動互動挑戰、Dcard 工具文與社群留言互動。</p>
   </main>
 </body>
 </html>

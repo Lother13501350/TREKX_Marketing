@@ -5,7 +5,7 @@ const root = process.cwd();
 const toolsDir = path.join(root, "tools");
 const posterDir = path.join(root, "assets", "tool-posters");
 const appStoreUrl = "https://apps.apple.com/tw/app/chillout/id6760571567";
-const bespokeToolSlugs = new Set(["save-sprint", "screenshot-to-route", "creator-trip-remix"]);
+const bespokeToolSlugs = new Set(["save-sprint", "screenshot-to-route", "creator-trip-remix", "dupe-or-dream", "saved-post-cleanse"]);
 
 const categories = {
   social: {
@@ -284,40 +284,29 @@ function escapeAttr(value) {
 function posterSvg(tool) {
   const chips = tool.chips.map((chip, i) => {
     const y = 322 + i * 40;
-    return `<rect x="62" y="${y}" width="${140 + i * 26}" height="25" rx="12.5" fill="rgba(255,255,255,.16)"/><text x="78" y="${y + 17}" font-size="13" fill="#F8FBFF" font-weight="700">${escapeHtml(chip)}</text>`;
+    return `<rect x="62" y="${y}" width="${140 + i * 26}" height="25" rx="12.5" fill="#FFFFFF"/><text x="78" y="${y + 17}" font-size="13" fill="${tool.primary}" font-weight="800">${escapeHtml(chip)}</text>`;
   }).join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="${escapeAttr(tool.name)}">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="${tool.deep}"/>
-      <stop offset=".52" stop-color="${tool.primary}"/>
-      <stop offset="1" stop-color="${tool.accent}"/>
-    </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="22"/>
-    </filter>
-  </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="980" cy="120" r="210" fill="rgba(255,255,255,.18)" filter="url(#soft)"/>
-  <circle cx="155" cy="760" r="250" fill="rgba(255,255,255,.12)" filter="url(#soft)"/>
-  <rect x="70" y="70" width="1060" height="760" rx="48" fill="rgba(8,14,24,.38)" stroke="rgba(255,255,255,.24)"/>
-  <text x="96" y="126" font-size="24" fill="#F8FBFF" font-weight="800" letter-spacing="2">${tool.id} · ${escapeHtml(tool.categoryLabel)}</text>
-  <text x="96" y="205" font-size="58" fill="#FFFFFF" font-weight="900">${escapeHtml(tool.name)}</text>
-  <text x="98" y="260" font-size="28" fill="rgba(255,255,255,.82)" font-weight="700">${escapeHtml(tool.tagline)}</text>
-  <rect x="760" y="155" width="270" height="520" rx="34" fill="rgba(255,255,255,.94)"/>
-  <rect x="788" y="194" width="214" height="42" rx="18" fill="${tool.deep}"/>
-  <rect x="790" y="266" width="186" height="16" rx="8" fill="${tool.primary}"/>
-  <rect x="790" y="298" width="126" height="16" rx="8" fill="rgba(9,20,34,.18)"/>
+  <rect width="1200" height="900" fill="#F6F3EE"/>
+  <rect x="70" y="70" width="1060" height="760" rx="44" fill="#FFFDF8" stroke="#DED6CA" stroke-width="3"/>
+  <rect x="70" y="70" width="1060" height="88" rx="44" fill="${tool.primary}"/>
+  <text x="96" y="126" font-size="24" fill="#FFFFFF" font-weight="850" letter-spacing="2">${tool.id} · ${escapeHtml(tool.categoryLabel)}</text>
+  <text x="96" y="235" font-size="58" fill="#1C1915" font-weight="900">${escapeHtml(tool.name)}</text>
+  <text x="98" y="290" font-size="28" fill="#716B63" font-weight="700">${escapeHtml(tool.tagline)}</text>
+  <rect x="760" y="190" width="270" height="470" rx="34" fill="#FFFFFF" stroke="#DED6CA" stroke-width="3"/>
+  <rect x="788" y="232" width="214" height="42" rx="18" fill="#1C1915"/>
+  <rect x="790" y="306" width="186" height="16" rx="8" fill="${tool.primary}"/>
+  <rect x="790" y="338" width="126" height="16" rx="8" fill="#DED6CA"/>
   <circle cx="895" cy="420" r="92" fill="${tool.primary}"/>
   <text x="895" y="440" font-size="58" text-anchor="middle" fill="#FFFFFF" font-weight="900">${70 + (Number(tool.id.slice(1)) % 26)}</text>
-  <rect x="815" y="552" width="160" height="46" rx="23" fill="${tool.accent}"/>
-  <text x="895" y="582" font-size="18" text-anchor="middle" fill="${tool.deep}" font-weight="900">Open ChillOut</text>
+  <rect x="815" y="552" width="160" height="46" rx="23" fill="${tool.primary}"/>
+  <text x="895" y="582" font-size="18" text-anchor="middle" fill="#FFFFFF" font-weight="900">Open ChillOut</text>
   ${chips}
-  <path d="M109 656 C236 596 325 742 460 666 S686 570 796 654" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="8" stroke-linecap="round"/>
-  <circle cx="110" cy="656" r="13" fill="${tool.accent}"/>
-  <circle cx="462" cy="666" r="13" fill="${tool.accent}"/>
-  <circle cx="796" cy="654" r="13" fill="${tool.accent}"/>
+  <path d="M109 656 C236 596 325 742 460 666 S686 570 796 654" fill="none" stroke="${tool.primary}" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+  <circle cx="110" cy="656" r="13" fill="${tool.primary}"/>
+  <circle cx="462" cy="666" r="13" fill="${tool.primary}"/>
+  <circle cx="796" cy="654" r="13" fill="${tool.primary}"/>
 </svg>`;
 }
 
@@ -325,6 +314,7 @@ function pageTemplate(tool) {
   const data = JSON.stringify(tool).replaceAll("</", "<\\/");
   const title = `${tool.name}｜ChillOut 旅行小工具`;
   const description = `${tool.tagline}${tool.mechanic} 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。`;
+  const layout = Number(tool.id.replace("T", "")) % 6;
   return `<!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -342,7 +332,7 @@ function pageTemplate(tool) {
   <link rel="stylesheet" href="../assets/styles.css?v=base">
   <link rel="stylesheet" href="../assets/tool-products.css?v=20260525b">
 </head>
-<body class="tool-product-page" style="--tool-primary:${tool.primary};--tool-accent:${tool.accent};--tool-deep:${tool.deep}">
+<body class="tool-product-page layout-${layout}" style="--tool-accent:${tool.primary}">
   <header class="product-nav">
     <a class="product-brand" href="../travel-microtools-100.html">
       <span class="brand-mark">C</span>

@@ -4,152 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IG 靈感急救室｜ChillOut 旅行小工具 T001</title>
-  <meta name="description" content="把 IG 收藏、截圖筆記與朋友傳來的景點整理成必排、順路、備案與刪除清單，並產生第一版 ChillOut 行程 prompt。">
-  <meta property="og:title" content="IG 靈感急救室｜把收藏救成行程">
-  <meta property="og:description" content="貼上 IG 收藏與景點筆記，30 秒整理成救援看板、一日路線與 ChillOut prompt。">
+  <meta name="description" content="貼上 IG 收藏清單，30 秒整理成一條簡單可出發的第一版路線，並產生 ChillOut prompt。">
+  <meta property="og:title" content="IG 靈感急救室">
+  <meta property="og:description" content="貼上收藏，得到一條先出發再微調的旅行路線。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/save-sprint.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/save-sprint.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/save-sprint.html">
-  <link rel="stylesheet" href="../assets/save-sprint.css?v=20260525a">
+  <link rel="stylesheet" href="../assets/save-sprint.css?v=20260525simple">
 </head>
 <body class="save-sprint-app">
-  <div class="ss-shell">
-    <header class="ss-topbar">
-      <a class="ss-brand" href="../travel-microtools-100.html">
-        <span class="ss-mark">C</span>
-        <span><strong>ChillOut</strong><small>T001 IG 靈感急救室</small></span>
-      </a>
-      <nav aria-label="主要導覽">
-        <a href="../travel-microtools-100.html">100 小工具</a>
-        <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
-        <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_save_sprint_nav">下載 App</a>
-      </nav>
-    </header>
+  <header class="ss-nav">
+    <a class="ss-brand" href="../travel-microtools-100.html">
+      <span class="ss-mark">C</span>
+      <span><strong>ChillOut</strong><small>T001 IG 靈感急救室</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="../travel-microtools-100.html">100 小工具</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_save_sprint_nav">下載 App</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="ss-hero">
-        <div>
-          <p class="ss-kicker">T001 · Social inspiration rescue</p>
-          <h1>IG 靈感急救室</h1>
-          <p class="ss-lead">把散落在 IG 收藏、截圖備註、朋友訊息裡的旅行靈感，整理成四欄救援看板、第一版路線與可以丟進 ChillOut 的 prompt。</p>
-          <div class="ss-actions">
-            <button class="ss-button primary" data-load-sample>載入示範收藏</button>
-            <a class="ss-button" href="#workspace">開始整理</a>
-            <a class="ss-button" href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_save_sprint_hero">下載 ChillOut</a>
-          </div>
+  <main class="ss-page">
+    <section class="ss-hero">
+      <div>
+        <p class="ss-kicker">T001 · One clear route</p>
+        <h1>把 IG 收藏變成一條路線。</h1>
+        <p>不用整理成大表格。貼上你收藏的店名或景點，它會直接挑出一條「今天可以先走」的路線，剩下的放備用。</p>
+      </div>
+      <aside class="ss-quick">
+        <strong data-count>0</strong>
+        <span>個收藏已整理</span>
+      </aside>
+    </section>
+
+    <section class="ss-tool">
+      <section class="ss-card">
+        <h2>1. 貼上收藏</h2>
+        <p class="ss-help">每行一個景點或店名。你也可以先載入示範。</p>
+        <label class="ss-field">
+          <span>收藏清單</span>
+          <textarea data-places placeholder="例如：弘大 rooftop bar 晚上拍照"></textarea>
+        </label>
+        <div class="ss-row">
+          <label class="ss-field">
+            <span>目的地</span>
+            <input data-city value="首爾">
+          </label>
+          <label class="ss-field">
+            <span>旅行感覺</span>
+            <select data-mood>
+              <option>好拍</option>
+              <option>美食</option>
+              <option>放空</option>
+              <option>在地</option>
+            </select>
+          </label>
         </div>
-
-        <div class="ss-demo" aria-label="工具成果預覽">
-          <div class="ss-phone">
-            <div class="ss-phone-head"><span>Saved</span><span>IG</span></div>
-            <div class="ss-searchbar"></div>
-            <div class="ss-saved-list">
-              <span>弘大 rooftop bar <i></i></span>
-              <span>延南洞咖啡甜點 <i></i></span>
-              <span>漢江野餐備案 <i></i></span>
-              <span>景福宮韓服拍照 <i></i></span>
-            </div>
-          </div>
-          <div class="ss-score-card">
-            <span>目前混亂指數</span>
-            <strong data-hero-score>--</strong>
-          </div>
+        <div class="ss-actions">
+          <button class="ss-button" data-sample>載入示範</button>
+          <button class="ss-button primary" data-generate>2. 產生路線</button>
         </div>
       </section>
 
-      <section class="ss-workspace" id="workspace">
-        <aside class="ss-control">
-          <div class="ss-section-title">
-            <h2>輸入素材</h2>
-            <small>每行一個收藏</small>
-          </div>
+      <section class="ss-result" data-result></section>
+    </section>
+  </main>
 
-          <label class="ss-field">
-            <span>IG 收藏、截圖備註、朋友傳來的店名</span>
-            <textarea data-raw-input placeholder="例如：弘大 rooftop bar 晚上拍照很漂亮"></textarea>
-          </label>
-
-          <div class="ss-grid-2">
-            <label class="ss-field">
-              <span>目的地</span>
-              <input data-city value="首爾" autocomplete="off">
-            </label>
-            <label class="ss-field">
-              <span>旅行天數</span>
-              <select data-days>
-                <option>1</option>
-                <option selected>2</option>
-                <option>3</option>
-                <option>5</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="ss-grid-2">
-            <label class="ss-field">
-              <span>預算感</span>
-              <select data-budget>
-                <option>省錢</option>
-                <option selected>中等</option>
-                <option>吃住好一點</option>
-              </select>
-            </label>
-            <label class="ss-field">
-              <span>步調</span>
-              <select data-pace>
-                <option>慢慢走</option>
-                <option selected>剛剛好</option>
-                <option>排滿一點</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="ss-field">
-            <span>這趟最想保留的氛圍</span>
-            <div class="ss-chip-row">
-              <button class="ss-chip active" data-mood="好拍">好拍</button>
-              <button class="ss-chip" data-mood="美食">美食</button>
-              <button class="ss-chip" data-mood="放空">放空</button>
-              <button class="ss-chip" data-mood="在地">在地</button>
-            </div>
-          </div>
-
-          <label class="ss-field">
-            <span>快速新增一個靈感</span>
-            <div class="ss-add-row">
-              <input data-add-name placeholder="例如：聖水洞香氛店">
-              <button class="ss-button" data-add-spot>新增</button>
-            </div>
-          </label>
-
-          <button class="ss-button primary full" data-analyze>整理成救援看板</button>
-          <button class="ss-button full" data-reset>清空重來</button>
-        </aside>
-
-        <section class="ss-output">
-          <div class="ss-section-title">
-            <h2>救援看板</h2>
-            <small>點卡片可移到下一欄</small>
-          </div>
-          <div class="ss-dashboard" data-metrics></div>
-          <div class="ss-board" data-board></div>
-
-          <div class="ss-plan-zone">
-            <section class="ss-timeline" data-timeline></section>
-            <aside class="ss-result" data-result></aside>
-          </div>
-        </section>
-      </section>
-    </main>
-
-    <footer class="ss-footer">
-      <span>用途：短影音實測、Threads 互動、Dcard 工具文、SEO landing page</span>
-      <a href="../travel-microtools-100.html">回 100 小工具</a>
-    </footer>
-  </div>
   <div class="ss-toast" data-toast role="status" aria-live="polite"></div>
-  <script src="../assets/save-sprint.js?v=20260525a"></script>
+  <script src="../assets/save-sprint.js?v=20260525simple"></script>
 </body>
 </html>
