@@ -22,6 +22,8 @@ const requiredFiles = [
   "assets/tool-products.css",
   "assets/save-sprint.css",
   "assets/save-sprint.js",
+  "assets/screenshot-route.css",
+  "assets/screenshot-route.js",
   "assets/styles.css",
   "vercel.json",
 ];
