@@ -3,93 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>離線旅行通行證｜ChillOut 旅行小工具</title>
-  <meta name="description" content="設計一段真的不需要一直滑手機的旅行。設定離線程度，輸出下載資料、紙本備份與離線任務。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="離線旅行通行證｜ChillOut 旅行小工具">
-  <meta property="og:description" content="設計一段真的不需要一直滑手機的旅行。">
+  <title>離線旅行通行證｜ChillOut 旅行小工具 T052</title>
+  <meta name="description" content="T052 手寫版。設定離線等級、安全需求與出門前資料備份，產生一張可執行的離線旅行通行證、任務卡與 ChillOut prompt。">
+  <meta property="og:title" content="離線旅行通行證｜ChillOut 旅行小工具 T052">
+  <meta property="og:description" content="離線不是失聯，是把注意力還給現場。用通行證檢查地圖、票券、翻譯、集合點與緊急備案。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/digital-detox-pass.html">
-  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/digital-detox-pass.svg">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/digital-detox-pass-manual.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/digital-detox-pass.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/digital-detox-pass.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-4 mode-wellnessPlan" style="--tool-accent:#00A896">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="dp-app">
+  <header class="dp-nav">
+    <a class="dp-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="dp-mark">C</span>
+      <span><strong>ChillOut</strong><small>T052 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_digital-detox-pass_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_digital_detox_pass_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T052 · JOMO 與療癒旅行</p>
-        <h1>離線旅行通行證</h1>
-        <p class="product-lead">設計一段真的不需要一直滑手機的旅行。</p>
-        <div class="product-pills">
-          <span>離線</span><span>任務卡</span><span>安心備份</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/digital-detox-pass.svg" alt="離線旅行通行證 互動工具視覺">
+    <section class="dp-hero">
+      <figure class="dp-visual">
+        <img src="../assets/tool-posters/digital-detox-pass-manual.svg" alt="離線旅行通行證視覺">
       </figure>
+      <div class="dp-copy">
+        <p class="dp-kicker">T052 / Digital detox pass</p>
+        <h1>離線不是失聯，是把注意力還給現場。</h1>
+        <p>想少滑手機，不能只靠意志力。你需要地圖、票券、翻譯、集合點與緊急備案先準備好，才有資格安心離線。</p>
+      </div>
     </section>
 
-    <section class="product-workbench" aria-label="離線旅行通行證 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>設定離線程度，輸出下載資料、紙本備份與離線任務。</h2>
-        <p>想降低螢幕時間的人可以在 30 秒內得到一張可分享的結果卡。先保護體力，再把城市安排成能恢復心情的節奏。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_digital-detox-pass_result">丟進 ChillOut</a>
-          </div>
+    <section class="dp-workbench" aria-label="離線旅行通行證操作台">
+      <aside class="dp-settings">
+        <p class="dp-kicker">Offline mode</p>
+        <h2>先設定離線邊界</h2>
+        <label>城市 / 今日路線<input data-route value="首爾聖水半日" placeholder="例如：京都東山半日、巴黎左岸散步"></label>
+        <label>離線模式
+          <select data-mode>
+            <option value="light">輕離線：只少滑社群</option>
+            <option value="deep" selected>深離線：只開導航與票券</option>
+            <option value="paper">紙本模式：手機只做緊急用途</option>
+          </select>
+        </label>
+        <label>同行狀態
+          <select data-party>
+            <option value="solo" selected>一個人</option>
+            <option value="friend">朋友同行</option>
+            <option value="family">家人/長輩同行</option>
+          </select>
+        </label>
+        <label class="dp-range"><span>想離線程度 <strong data-offline-label>84/100</strong></span><input data-offline type="range" min="1" max="100" value="84"></label>
+        <label class="dp-range"><span>迷路焦慮 <strong data-anxiety-label>52/100</strong></span><input data-anxiety type="range" min="1" max="100" value="52"></label>
+        <label class="dp-range"><span>安全需求 <strong data-safety-label>68/100</strong></span><input data-safety type="range" min="1" max="100" value="68"></label>
+        <label class="dp-check"><input data-roaming type="checkbox"><span>網路可能不穩，需要更完整的離線備份</span></label>
+        <div class="dp-actions">
+          <button type="button" data-sample>帶入範例</button>
+          <button type="button" data-add-item>新增準備項</button>
+          <button type="button" class="dp-primary" data-generate>生成通行證</button>
         </div>
       </aside>
+
+      <section class="dp-board">
+        <div class="dp-board-head">
+          <div>
+            <p class="dp-kicker">Prep checklist</p>
+            <h2>離線前準備項</h2>
+          </div>
+          <p>每一項都會影響你能不能安心離線。通行證不是口號，是出門前真的要做完的準備。</p>
+        </div>
+        <div class="dp-item-list" data-items></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="dp-output" data-output aria-live="polite">
+      <div class="dp-empty">
+        <p class="dp-kicker">Result</p>
+        <h2>先確認準備項，再生成你的離線旅行通行證。</h2>
+        <p>結果會包含離線分數、出門前必做、手機使用規則、現場任務、緊急備案、分享文與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"digital-detox-pass","category":"wellness","name":"離線旅行通行證","tagline":"設計一段真的不需要一直滑手機的旅行。","audience":"想降低螢幕時間的人","mechanic":"設定離線程度，輸出下載資料、紙本備份與離線任務。","result":"離線不是失聯，是把注意力還給現場。","chips":["離線","任務卡","安心備份"],"mode":"wellnessPlan","modeLabel":"低壓旅行","modeVariant":"票券介面","interfaceTitle":"離線旅行通行證操作台","actionLabel":"安排舒服的一天","resultName":"能量預算表","modePromise":"先保護體力，再把城市安排成能恢復心情的節奏。","shareLead":"我做了一份低壓旅行能量表","sampleItems":["自然散步","螢幕暫停","泡湯或按摩","安靜晚餐","提早回飯店","早上留白","咖啡恢復"],"scoreSeed":82,"executionPack":{"actions":["先保護能量，再安排 離線。","把 任務卡 變成恢復點，不當成打卡點。","用 ChillOut 補低壓交通與提早收尾方案。"],"hooks":["旅行不是把自己榨乾。","今天只排一件重要的事也可以。","把低電量旅行排得好看一點。"],"qa":["活動量要影響結果","結果要有恢復點","Prompt 要保留低壓條件"]},"playSteps":["輸入 自然散步 或這次最想解決的旅行條件。","調整 離線、任務卡 與 安心備份 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"choice","key":"energy","label":"目前能量","choices":["快沒電","想躺著","需要自然","可以慢慢走"]},{"type":"range","key":"screen","label":"想離線程度","min":1,"max":100,"value":75,"left":"照常滑","right":"想關機"},{"type":"choice","key":"comfort","label":"恢復來源","choices":["自然散步","螢幕暫停","泡湯或按摩","安靜晚餐","提早回飯店"]},{"type":"range","key":"activity","label":"每日活動量","min":1,"max":100,"value":45,"left":"只做一件事","right":"可以排滿一點"}],"id":"T052","categoryLabel":"JOMO 與療癒旅行","categoryTone":"反向對抗行程焦慮，做出低壓、舒服、可恢復能量的玩法。","primary":"#00A896","accent":"#00A896","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_digital-detox-pass","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/digital-detox-pass.html"}</script>
-  <script src="../assets/tool-scripts/digital-detox-pass.js?v=20260525d"></script>
+  <div class="dp-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/digital-detox-pass.js?v=20260525manual1"></script>
 </body>
 </html>

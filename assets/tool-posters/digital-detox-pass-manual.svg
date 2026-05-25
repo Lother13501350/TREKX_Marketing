@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">離線旅行通行證</title>
+  <desc id="desc">以離線通行證、手機規則、地圖與紙本備份構成的旅行準備工具視覺。</desc>
+  <rect width="1200" height="840" fill="#f2f5f6"/>
+  <path d="M0 150h1200M0 300h1200M0 450h1200M0 600h1200M0 750h1200M150 0v840M300 0v840M450 0v840M600 0v840M750 0v840M900 0v840M1050 0v840" stroke="#d9e0e2" stroke-width="2"/>
+  <rect x="112" y="92" width="976" height="656" rx="34" fill="#ffffff" stroke="#d9e0e2" stroke-width="3"/>
+  <text x="174" y="170" fill="#5a6f76" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">T052 / DIGITAL DETOX PASS</text>
+  <text x="174" y="276" fill="#15191a" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">OFFLINE</text>
+  <text x="174" y="366" fill="#15191a" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">READY</text>
+  <text x="174" y="456" fill="#15191a" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">PASS</text>
+  <rect x="680" y="168" width="278" height="414" rx="36" fill="#f2f5f6" stroke="#d9e0e2" stroke-width="4"/>
+  <rect x="716" y="224" width="206" height="78" rx="24" fill="#5a6f76"/>
+  <text x="754" y="274" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">AIRPLANE</text>
+  <path d="M728 370h180M728 430h134M728 490h180" stroke="#5a6f76" stroke-width="14" stroke-linecap="round"/>
+  <path d="M178 612c88-62 154-82 238-66 96 18 124 92 216 80 96-12 132-110 226-98 72 9 122 60 164 98" fill="none" stroke="#5a6f76" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="178" cy="612" r="21" fill="#15191a"/>
+  <circle cx="416" cy="546" r="21" fill="#5a6f76"/>
+  <circle cx="632" cy="626" r="21" fill="#5a6f76"/>
+  <circle cx="858" cy="528" r="21" fill="#5a6f76"/>
+  <circle cx="1022" cy="626" r="21" fill="#15191a"/>
+</svg>
