@@ -3,93 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>早晨空城玩法｜ChillOut 旅行小工具</title>
-  <meta name="description" content="在城市醒來前先玩一輪。依起床時間與想拍主題，排出早餐、散步與第一景點。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="早晨空城玩法｜ChillOut 旅行小工具">
-  <meta property="og:description" content="在城市醒來前先玩一輪。">
+  <title>早晨空城玩法｜ChillOut 旅行小工具 T049</title>
+  <meta name="description" content="T049 手寫版。用起床時間、日出時間、安全感、睡眠債與早晨候選點，生成一條在人潮醒來前完成的早餐、散步與第一景點路線。">
+  <meta property="og:title" content="早晨空城玩法｜ChillOut 旅行小工具 T049">
+  <meta property="og:description" content="願意早起的人，能拿到一座城市最安靜的兩小時。產生空城路線、睡過頭備案與 ChillOut prompt。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/hidden-morning.html">
-  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/hidden-morning.svg">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/hidden-morning-manual.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/hidden-morning.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/hidden-morning.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-1 mode-decision" style="--tool-accent:#2F9E44">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="hm-app">
+  <header class="hm-nav">
+    <a class="hm-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="hm-mark">C</span>
+      <span><strong>ChillOut</strong><small>T049 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hidden-morning_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hidden_morning_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T049 · 避開人潮與繞路</p>
-        <h1>早晨空城玩法</h1>
-        <p class="product-lead">在城市醒來前先玩一輪。</p>
-        <div class="product-pills">
-          <span>早晨</span><span>空城</span><span>早餐</span>
-        </div>
+    <section class="hm-hero">
+      <div class="hm-copy">
+        <p class="hm-kicker">T049 / Hidden morning route</p>
+        <h1>在城市醒來前，先把它玩一輪。</h1>
+        <p>早晨不是犧牲睡眠，而是換到安靜街道、第一籠早餐、沒有人的景點與最柔的光。把你的起床能力和候選點放進來，工具會排出一條不逞強的空城路線。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/hidden-morning.svg" alt="早晨空城玩法 互動工具視覺">
+      <figure class="hm-visual">
+        <img src="../assets/tool-posters/hidden-morning-manual.svg" alt="早晨空城玩法視覺">
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="早晨空城玩法 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>依起床時間與想拍主題，排出早餐、散步與第一景點。</h2>
-        <p>願意早起換安靜體驗的人可以在 30 秒內得到一張可分享的結果卡。把人潮、時間與期待值算成去、改、跳過三種決策。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hidden-morning_result">丟進 ChillOut</a>
-          </div>
+    <section class="hm-workbench" aria-label="早晨空城操作台">
+      <aside class="hm-settings">
+        <p class="hm-kicker">Morning setup</p>
+        <h2>先確認你起得來</h2>
+        <label>城市 / 住宿區<input data-city value="京都河原町" placeholder="例如：京都河原町、首爾鐘路、台南中西區"></label>
+        <div class="hm-two">
+          <label>願意起床
+            <select data-wake>
+              <option value="300">05:00</option>
+              <option value="330" selected>05:30</option>
+              <option value="360">06:00</option>
+              <option value="390">06:30</option>
+              <option value="420">07:00</option>
+            </select>
+          </label>
+          <label>日出時間
+            <select data-sunrise>
+              <option value="315">05:15</option>
+              <option value="345" selected>05:45</option>
+              <option value="375">06:15</option>
+              <option value="405">06:45</option>
+            </select>
+          </label>
+        </div>
+        <label>早晨主題
+          <select data-theme>
+            <option value="photo" selected>空景照片</option>
+            <option value="breakfast">早餐優先</option>
+            <option value="temple">神社寺廟</option>
+            <option value="market">市場開場</option>
+            <option value="water">河岸/海邊散步</option>
+          </select>
+        </label>
+        <label class="hm-range"><span>早晨能量 <strong data-energy-label>68/100</strong></span><input data-energy type="range" min="1" max="100" value="68"></label>
+        <label class="hm-range"><span>睡眠債 <strong data-sleep-label>38/100</strong></span><input data-sleep type="range" min="1" max="100" value="38"></label>
+        <label class="hm-range"><span>安全感要求 <strong data-safety-label>72/100</strong></span><input data-safety type="range" min="1" max="100" value="72"></label>
+        <label class="hm-check"><input data-solo type="checkbox" checked><span>一個人出門，避開太暗或太偏的路</span></label>
+        <div class="hm-actions">
+          <button type="button" data-sample>帶入範例</button>
+          <button type="button" data-add-stop>新增早晨點</button>
+          <button type="button" class="hm-primary" data-generate>生成空城路線</button>
         </div>
       </aside>
+
+      <section class="hm-board">
+        <div class="hm-board-head">
+          <div>
+            <p class="hm-kicker">Morning anchors</p>
+            <h2>早晨候選點</h2>
+          </div>
+          <p>把真正會開、走得到、早上有價值的點放進來。空城玩法不是塞景點，是搶在城市醒來前完成最值得的一段。</p>
+        </div>
+        <div class="hm-stop-list" data-stops></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="hm-output" data-output aria-live="polite">
+      <div class="hm-empty">
+        <p class="hm-kicker">Result</p>
+        <h2>先放入早晨候選點，再生成你的空城路線。</h2>
+        <p>結果會包含起床可行度、清晨時間表、早餐與第一景點、睡過頭備案、分享文和 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"hidden-morning","category":"detour","name":"早晨空城玩法","tagline":"在城市醒來前先玩一輪。","audience":"願意早起換安靜體驗的人","mechanic":"依起床時間與想拍主題，排出早餐、散步與第一景點。","result":"早晨是人潮最少的特權。","chips":["早晨","空城","早餐"],"mode":"decision","modeLabel":"值得去判斷","modeVariant":"極簡卡片","interfaceTitle":"早晨空城玩法操作台","actionLabel":"算出取捨建議","resultName":"去留決策卡","modePromise":"把人潮、時間與期待值算成去、改、跳過三種決策。","shareLead":"我用工具判斷這個旅遊選項值不值得","sampleItems":["備案公園","熱門景點","排隊名店","人潮路口","交通轉乘","替代小巷","附近咖啡"],"scoreSeed":79,"executionPack":{"actions":["先判斷 早晨 值不值得，不值得就切 空城。","把人潮與移動成本轉成 go / change / skip。","把替代玩法丟進 ChillOut 找附近低壓路線。"],"hooks":["不是所有爆紅都值得排。","花 30 秒省掉半天踩雷。","這個點到底去不去，先用工具算一次。"],"qa":["結果要有去/改/跳過","替代方案不可空白","Prompt 要能生成備案"]},"playSteps":["輸入 備案公園 或這次最想解決的旅行條件。","調整 早晨、空城 與 早餐 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"target","label":"要判斷的選項","placeholder":"例如：備案公園、熱門景點"},{"type":"range","key":"crowd","label":"可忍受人潮","min":1,"max":100,"value":36,"left":"完全不要","right":"可以排隊"},{"type":"choice","key":"backup","label":"偏好的替代方向","choices":["排隊名店","人潮路口","交通轉乘","替代小巷","附近咖啡"]},{"type":"range","key":"effort","label":"願意多花的移動成本","min":1,"max":100,"value":49,"left":"越近越好","right":"繞路也行"}],"id":"T049","categoryLabel":"避開人潮與繞路","categoryTone":"把爆紅景點旁邊更舒服、更像自己的選項挖出來。","primary":"#2F9E44","accent":"#2F9E44","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hidden-morning","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/hidden-morning.html"}</script>
-  <script src="../assets/tool-scripts/hidden-morning.js?v=20260525d"></script>
+  <div class="hm-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/hidden-morning.js?v=20260525manual1"></script>
 </body>
 </html>

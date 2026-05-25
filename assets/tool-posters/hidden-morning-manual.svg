@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">早晨空城玩法</title>
+  <desc id="desc">以黎明路線、時間刻度、城市街道和日出構成的早晨旅行工具視覺。</desc>
+  <rect width="1200" height="840" fill="#f1f5f4"/>
+  <path d="M0 150h1200M0 300h1200M0 450h1200M0 600h1200M0 750h1200M150 0v840M300 0v840M450 0v840M600 0v840M750 0v840M900 0v840M1050 0v840" stroke="#d8e0de" stroke-width="2"/>
+  <rect x="112" y="92" width="976" height="656" rx="34" fill="#ffffff" stroke="#d8e0de" stroke-width="3"/>
+  <circle cx="874" cy="234" r="90" fill="#f1f5f4" stroke="#d8e0de" stroke-width="4"/>
+  <path d="M784 234h180" stroke="#566b66" stroke-width="12" stroke-linecap="round"/>
+  <path d="M176 620c88-120 150-174 244-164 100 10 132 110 228 94 90-15 124-126 218-114 82 10 132 82 170 132" fill="none" stroke="#566b66" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="176" cy="620" r="21" fill="#151a19"/>
+  <circle cx="420" cy="456" r="21" fill="#566b66"/>
+  <circle cx="648" cy="550" r="21" fill="#566b66"/>
+  <circle cx="866" cy="436" r="21" fill="#566b66"/>
+  <circle cx="1036" cy="568" r="21" fill="#151a19"/>
+  <text x="176" y="172" fill="#566b66" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">T049 / HIDDEN MORNING</text>
+  <text x="176" y="276" fill="#151a19" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">05:30</text>
+  <text x="176" y="366" fill="#151a19" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">EMPTY</text>
+  <text x="176" y="456" fill="#151a19" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">CITY</text>
+  <rect x="734" y="402" width="260" height="92" rx="24" fill="#566b66"/>
+  <text x="778" y="460" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900">FIRST LIGHT</text>
+  <rect x="734" y="520" width="260" height="70" rx="22" fill="#f1f5f4" stroke="#d8e0de" stroke-width="3"/>
+  <text x="778" y="565" fill="#566b66" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">BREAKFAST READY</text>
+</svg>
