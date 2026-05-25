@@ -3,93 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>旅遊創作者路線 Remix｜ChillOut 旅行小工具</title>
-  <meta name="description" content="把創作者推薦改成自己的版本。輸入創作者路線與自己的偏好，重混成更符合預算與節奏的版本。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="旅遊創作者路線 Remix｜ChillOut 旅行小工具">
-  <meta property="og:description" content="把創作者推薦改成自己的版本。">
+  <title>旅遊創作者路線 Remix｜ChillOut 旅行小工具 T003</title>
+  <meta name="description" content="貼上創作者旅遊路線，依自己的預算、節奏與雷點重混成更適合自己的版本，產生 Remix 時間線與 ChillOut prompt。">
+  <meta property="og:title" content="旅遊創作者路線 Remix｜不要照抄，改成你的版本">
+  <meta property="og:description" content="保留創作者靈感，但避開人潮、預算不合與不適合你的點。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/creator-trip-remix.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/creator-trip-remix.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/creator-trip-remix.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525b">
+  <link rel="stylesheet" href="../assets/creator-remix.css?v=20260525a">
 </head>
-<body class="tool-product-page" style="--tool-primary:#08A7A0;--tool-accent:#F4C95D;--tool-deep:#071B26">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
-    </a>
-    <nav aria-label="主要導覽">
-      <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_creator-trip-remix_nav">下載 App</a>
-    </nav>
-  </header>
+<body class="creator-remix-app">
+  <div class="cr-shell">
+    <header class="cr-nav">
+      <a class="cr-brand" href="../travel-microtools-100.html">
+        <span class="cr-mark">C</span>
+        <span><strong>ChillOut</strong><small>T003 Creator Route Remix</small></span>
+      </a>
+      <nav aria-label="主要導覽">
+        <a href="../travel-microtools-100.html">100 小工具</a>
+        <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+        <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_creator_remix_nav">下載 App</a>
+      </nav>
+    </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T003 · 社群靈感轉行程</p>
-        <h1>旅遊創作者路線 Remix</h1>
-        <p class="product-lead">把創作者推薦改成自己的版本。</p>
-        <div class="product-pills">
-          <span>創作者靈感</span><span>預算修正</span><span>個人化</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/creator-trip-remix.svg" alt="旅遊創作者路線 Remix 互動工具視覺">
-      </figure>
-    </section>
-
-    <section class="product-workbench" aria-label="旅遊創作者路線 Remix 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>輸入創作者路線與自己的偏好，重混成更符合預算與節奏的版本。</h2>
-        <p>看 Reels、小紅書、TikTok 找靈感的人可以在 30 秒內得到一張可分享的結果卡，再把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_creator-trip-remix_result">丟進 ChillOut</a>
+    <main>
+      <section class="cr-hero">
+        <div>
+          <p class="cr-kicker">T003 · creator route remix</p>
+          <h1>旅遊創作者路線 Remix</h1>
+          <p class="cr-lead">看到創作者路線很心動，但不想照抄？貼上原路線，工具會依你的預算、步調與雷點標出保留、替換、降級與升級，變成自己的版本。</p>
+          <div class="cr-actions">
+            <button class="cr-button primary" data-demo>載入示範路線</button>
+            <a class="cr-button" href="#remix">開始 Remix</a>
+            <a class="cr-button" href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_creator_remix_hero">下載 ChillOut</a>
           </div>
         </div>
-      </aside>
-    </section>
+        <aside class="cr-media" aria-label="旅遊創作者素材照片">
+          <div class="cr-media-card">
+            <span>Web asset · Unsplash</span>
+            <strong>把創作者靈感保留，把不適合你的部分換掉。</strong>
+          </div>
+        </aside>
+      </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
-    </section>
-  </main>
+      <section class="cr-workbench" id="remix">
+        <aside class="cr-input">
+          <div class="cr-title">
+            <h2>貼上創作者路線</h2>
+            <small>每行一站</small>
+          </div>
 
-  <script type="application/json" id="tool-data">{"slug":"creator-trip-remix","category":"social","name":"旅遊創作者路線 Remix","tagline":"把創作者推薦改成自己的版本。","audience":"看 Reels、小紅書、TikTok 找靈感的人","mechanic":"輸入創作者路線與自己的偏好，重混成更符合預算與節奏的版本。","result":"你不需要照抄熱門路線，你需要自己的 Remix。","chips":["創作者靈感","預算修正","個人化"],"id":"T003","categoryLabel":"社群靈感轉行程","categoryTone":"把 IG、截圖、朋友傳來的靈感變成可以出發的路線。","primary":"#08A7A0","accent":"#F4C95D","deep":"#071B26","inputs":[{"type":"text","key":"source","label":"貼上靈感來源","placeholder":"IG 連結、截圖備註、朋友丟來的店名"},{"type":"range","key":"chaos","label":"收藏混亂度","min":1,"max":100,"value":64,"left":"很集中","right":"爆量混亂"},{"type":"choice","key":"mood","label":"想保留的氛圍","choices":["好拍","美食","放空","在地","夜生活"]},{"type":"range","key":"share","label":"想分享程度","min":1,"max":100,"value":72,"left":"自己收藏","right":"想發爆"}],"appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_creator-trip-remix","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/creator-trip-remix.html"}</script>
-  <script src="../assets/independent-tool-runtime.js"></script>
+          <label class="cr-field">
+            <span>創作者名稱或來源</span>
+            <input data-creator value="首爾咖啡旅人">
+          </label>
+
+          <label class="cr-field">
+            <span>原始路線</span>
+            <textarea data-creator-route></textarea>
+          </label>
+
+          <div class="cr-grid-2">
+            <label class="cr-field">
+              <span>目的地</span>
+              <input data-city value="首爾">
+            </label>
+            <label class="cr-field">
+              <span>預算</span>
+              <select data-budget>
+                <option>低預算</option>
+                <option selected>中等</option>
+                <option>願意加碼</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="cr-grid-2">
+            <label class="cr-field">
+              <span>步調</span>
+              <select data-pace>
+                <option>慢旅</option>
+                <option selected>剛好</option>
+                <option>緊湊</option>
+              </select>
+            </label>
+            <label class="cr-field">
+              <span>想避開</span>
+              <input data-avoid placeholder="例如：明洞、人潮、酒吧">
+            </label>
+          </div>
+
+          <div class="cr-remix-controls">
+            <label class="cr-toggle"><span>保留拍照亮點</span><input type="checkbox" data-keepPhotos checked></label>
+            <label class="cr-toggle"><span>降低人潮摩擦</span><input type="checkbox" data-reduceCrowds checked></label>
+            <label class="cr-toggle"><span>升級吃喝記憶點</span><input type="checkbox" data-foodUpgrade></label>
+          </div>
+
+          <button class="cr-button primary full" data-remix>生成 Remix 版本</button>
+        </aside>
+
+        <section class="cr-output">
+          <div class="cr-title">
+            <h2>Remix 工作台</h2>
+            <small>原路線 vs 你的版本</small>
+          </div>
+          <div class="cr-summary" data-summary></div>
+          <div class="cr-board" data-board></div>
+          <div class="cr-plan">
+            <section class="cr-route" data-route></section>
+            <aside class="cr-card" data-card></aside>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <div class="cr-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/creator-remix.js?v=20260525a"></script>
 </body>
 </html>

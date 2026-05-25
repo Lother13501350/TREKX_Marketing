@@ -5,7 +5,7 @@ const root = process.cwd();
 const toolsDir = path.join(root, "tools");
 const posterDir = path.join(root, "assets", "tool-posters");
 const appStoreUrl = "https://apps.apple.com/tw/app/chillout/id6760571567";
-const bespokeToolSlugs = new Set(["save-sprint", "screenshot-to-route"]);
+const bespokeToolSlugs = new Set(["save-sprint", "screenshot-to-route", "creator-trip-remix"]);
 
 const categories = {
   social: {

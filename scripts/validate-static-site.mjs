@@ -24,6 +24,8 @@ const requiredFiles = [
   "assets/save-sprint.js",
   "assets/screenshot-route.css",
   "assets/screenshot-route.js",
+  "assets/creator-remix.css",
+  "assets/creator-remix.js",
   "assets/styles.css",
   "vercel.json",
 ];
