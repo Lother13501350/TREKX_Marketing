@@ -4,6 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const toolsDir = path.join(root, "tools");
 const posterDir = path.join(root, "assets", "tool-posters");
+const toolScriptDir = path.join(root, "assets", "tool-scripts");
 const appStoreUrl = "https://apps.apple.com/tw/app/chillout/id6760571567";
 const bespokeToolSlugs = new Set(["save-sprint", "screenshot-to-route", "creator-trip-remix", "dupe-or-dream", "saved-post-cleanse", "map-pin-or-mood"]);
 
@@ -447,12 +448,152 @@ function resolveMode(tool) {
   return modeByCategory[tool.category] || "sorter";
 }
 
+function executionPackFor(tool, mode, sampleItems) {
+  const focus = tool.chips[0] || tool.name;
+  const secondary = tool.chips[1] || sampleItems[1] || "旅行節奏";
+  const third = tool.chips[2] || sampleItems[2] || "分享結果";
+  const packs = {
+    sorter: {
+      actions: [
+        `把「${focus}」拆成 3 個桶：今天必排、可備用、先刪掉。`,
+        `把 ${sampleItems[0]} 與 ${sampleItems[1]} 合併成第一版路線。`,
+        `把得分最高的 3 個素材丟進 ChillOut 產生完整行程。`
+      ],
+      hooks: [
+        `我用 ${tool.name} 把群組靈感整理成可出發清單。`,
+        `收藏不是問題，沒有整理才是問題。`,
+        `留言你的 ${focus}，我幫你丟進 ChillOut 變行程。`
+      ],
+      qa: ["至少輸入 3 個素材", "結果要出現三桶分類", "分享文案要含 ChillOut 導流"]
+    },
+    quiz: {
+      actions: [
+        `用 ${focus} 結果決定行程第一順位。`,
+        `把 ${secondary} 與社交能量轉成每日密度。`,
+        `把人格結果丟進 ChillOut 生成角色式行程。`
+      ],
+      hooks: [
+        `我的 ${tool.name} 結果居然是這個。`,
+        `你不是難搞，你只是旅行設定很明確。`,
+        `把你的結果貼出來，看誰最適合一起旅行。`
+      ],
+      qa: ["每個選項會改變分數", "結果要有角色名稱", "Prompt 要保留人格條件"]
+    },
+    pact: {
+      actions: [
+        `先把 ${focus} 寫成旅伴共識，而不是出發後才吵。`,
+        `把 ${secondary} 設成行前必談條款。`,
+        `把協議截圖丟群組，確認每個人都接受。`
+      ],
+      hooks: [
+        `旅行前先簽這張，不然出發後很容易爆。`,
+        `真正的旅伴默契是先講清楚。`,
+        `把最容易吵的點變成可以截圖的協議。`
+      ],
+      qa: ["旅伴名單可空白也能生成", "至少輸出 4 條協議", "Prompt 要包含預算與放風需求"]
+    },
+    nightRoute: {
+      actions: [
+        `把 ${focus} 排在晚間主段，不連續硬塞。`,
+        `先決定安全返程，再決定宵夜。`,
+        `把夜晚路線丟進 ChillOut 補交通與備案。`
+      ],
+      hooks: [
+        `夜遊不是熬夜，是有節奏地走。`,
+        `這條路線先保命，再浪漫。`,
+        `把城市晚上排成三段，不會玩到崩。`
+      ],
+      qa: ["要輸出 3 個以上時段", "要有安全收尾", "Prompt 要包含城市與時段"]
+    },
+    decision: {
+      actions: [
+        `先判斷 ${focus} 值不值得，不值得就切 ${secondary}。`,
+        `把人潮與移動成本轉成 go / change / skip。`,
+        `把替代玩法丟進 ChillOut 找附近低壓路線。`
+      ],
+      hooks: [
+        `不是所有爆紅都值得排。`,
+        `花 30 秒省掉半天踩雷。`,
+        `這個點到底去不去，先用工具算一次。`
+      ],
+      qa: ["結果要有去/改/跳過", "替代方案不可空白", "Prompt 要能生成備案"]
+    },
+    wellnessPlan: {
+      actions: [
+        `先保護能量，再安排 ${focus}。`,
+        `把 ${secondary} 變成恢復點，不當成打卡點。`,
+        `用 ChillOut 補低壓交通與提早收尾方案。`
+      ],
+      hooks: [
+        `旅行不是把自己榨乾。`,
+        `今天只排一件重要的事也可以。`,
+        `把低電量旅行排得好看一點。`
+      ],
+      qa: ["活動量要影響結果", "結果要有恢復點", "Prompt 要保留低壓條件"]
+    },
+    cultureMission: {
+      actions: [
+        `把 ${focus} 轉成 4 個城市任務。`,
+        `用 ${secondary} 決定開場鏡頭。`,
+        `把任務卡丟進 ChillOut 補場景與移動順序。`
+      ],
+      hooks: [
+        `把一個作品變成一趟旅行。`,
+        `這不是打卡，是城市任務。`,
+        `用 ${tool.name} 做一張自己的旅行護照。`
+      ],
+      qa: ["要輸出任務", "要有可帶走的紀念物", "Prompt 要包含作品與沉浸程度"]
+    },
+    foodRoute: {
+      actions: [
+        `用 ${focus} 當味覺主線，不要把店名塞滿。`,
+        `把 ${secondary} 安排在體力最好時段。`,
+        `把美食節奏丟進 ChillOut 補步行與雨備。`
+      ],
+      hooks: [
+        `先決定今天要怎麼吃，再排路線。`,
+        `不要讓排隊毀掉一整天。`,
+        `這是一張吃得下、走得動的美食路線。`
+      ],
+      qa: ["結果要有時段", "排隊與預算會改變文案", "Prompt 要包含口味與預算"]
+    },
+    microPlanner: {
+      actions: [
+        `把 ${focus} 壓成一趟真的能出門的短逃。`,
+        `先鎖交通，再決定主要體驗。`,
+        `把短逃卡丟進 ChillOut 補完整半日或一日路線。`
+      ],
+      hooks: [
+        `只有三小時也可以是一趟旅行。`,
+        `短逃不是亂跑，是限制設計。`,
+        `用 ${tool.name} 幫今天留一個出口。`
+      ],
+      qa: ["時間窗會影響結果", "結果要有出發入口", "Prompt 要包含交通與預算"]
+    },
+    memoryMaker: {
+      actions: [
+        `把 ${focus} 變成回憶標題。`,
+        `用 ${secondary} 決定分享格式。`,
+        `把回憶素材丟進 ChillOut 生成回憶錄或下一趟靈感。`
+      ],
+      hooks: [
+        `回憶不是照片很多，是有一個好標題。`,
+        `把旅行收尾做成可以分享的卡。`,
+        `這張卡會暴露你下一趟想去哪。`
+      ],
+      qa: ["要輸出標題", "要有分享格式", "Prompt 要包含情緒與下一趟線索"]
+    }
+  };
+  return packs[mode] || packs.sorter;
+}
+
 function buildToolSpec(tool, category, id, index) {
   const mode = resolveMode(tool);
   const meta = modeMeta[mode];
   const sampleItems = rotateItems(categorySamples[tool.category], index, 7);
   const variant = modeVariants[index % modeVariants.length];
   const scoreSeed = 58 + (index % 27);
+  const executionPack = executionPackFor(tool, mode, sampleItems);
   return {
     mode,
     modeLabel: meta.label,
@@ -464,6 +605,7 @@ function buildToolSpec(tool, category, id, index) {
     shareLead: meta.shareLead,
     sampleItems,
     scoreSeed,
+    executionPack,
     playSteps: [
       `輸入 ${sampleItems[0]} 或這次最想解決的旅行條件。`,
       `調整 ${tool.chips[0] || meta.label}、${tool.chips[1] || "節奏"} 與 ${tool.chips[2] || "分享"} 的優先順序。`,
@@ -629,7 +771,7 @@ function pageTemplate(tool) {
   </main>
 
   <script type="application/json" id="tool-data">${data}</script>
-  <script src="../assets/independent-tool-runtime.js"></script>
+  <script src="../assets/tool-scripts/${tool.slug}.js?v=20260525d"></script>
 </body>
 </html>`;
 }
@@ -771,6 +913,32 @@ function runtimeScript() {
   return fs.readFileSync(path.join(root, "scripts", "independent-tool-runtime.template.js"), "utf8");
 }
 
+function standaloneRuntimeScript(tool) {
+  const embeddedTool = JSON.stringify(tool, null, 2).replaceAll("</", "<\\/");
+  const template = runtimeScript();
+  const bootstrapPattern = /\(\(\) => \{\r?\n  const dataNode = document\.getElementById\("tool-data"\);\r?\n  const consoleNode = document\.querySelector\("\[data-tool-console\]"\);\r?\n  const resultCard = document\.querySelector\("\[data-result-card\]"\);\r?\n  if \(!dataNode \|\| !consoleNode \|\| !resultCard\) return;\r?\n\r?\n  const tool = JSON\.parse\(dataNode\.textContent\);\r?\n  const state = \{\};/;
+  const standaloneBootstrap = `(() => {
+  const tool = ${embeddedTool};
+  const consoleNode = document.querySelector("[data-tool-console]");
+  const resultCard = document.querySelector("[data-result-card]");
+  if (!consoleNode || !resultCard) return;
+
+  const state = {};`;
+  const code = template.replace(bootstrapPattern, standaloneBootstrap);
+  if (code === template) {
+    throw new Error(`Unable to create standalone runtime for ${tool.slug}`);
+  }
+  return `/*
+ * ChillOut standalone microtool
+ * Tool: ${tool.id} ${tool.name}
+ * Slug: ${tool.slug}
+ * Mode: ${tool.mode}
+ * This file is generated as an independent runnable tool script.
+ */
+${code}
+`;
+}
+
 function sitemapXml() {
   const baseUrl = "https://chillout-marketing-dashboard.vercel.app";
   const lastmod = "2026-05-25";
@@ -811,12 +979,16 @@ Sitemap: https://chillout-marketing-dashboard.vercel.app/sitemap.xml
 function ensureCleanGeneratedDirectory() {
   fs.mkdirSync(toolsDir, { recursive: true });
   fs.mkdirSync(posterDir, { recursive: true });
+  fs.mkdirSync(toolScriptDir, { recursive: true });
   for (const file of fs.readdirSync(toolsDir)) {
     const slug = file.replace(/\.html$/, "");
     if (file.endsWith(".html") && !bespokeToolSlugs.has(slug)) fs.unlinkSync(path.join(toolsDir, file));
   }
   for (const file of fs.readdirSync(posterDir)) {
     if (file.endsWith(".svg")) fs.unlinkSync(path.join(posterDir, file));
+  }
+  for (const file of fs.readdirSync(toolScriptDir)) {
+    if (file.endsWith(".js")) fs.unlinkSync(path.join(toolScriptDir, file));
   }
 }
 
@@ -825,6 +997,7 @@ ensureCleanGeneratedDirectory();
 for (const tool of tools) {
   if (!bespokeToolSlugs.has(tool.slug)) {
     fs.writeFileSync(path.join(toolsDir, `${tool.slug}.html`), pageTemplate(tool), "utf8");
+    fs.writeFileSync(path.join(toolScriptDir, `${tool.slug}.js`), standaloneRuntimeScript(tool), "utf8");
   }
   fs.writeFileSync(path.join(posterDir, `${tool.slug}.svg`), posterSvg(tool), "utf8");
 }

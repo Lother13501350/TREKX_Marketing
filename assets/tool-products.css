@@ -586,6 +586,34 @@ body.tool-product-page{
   color:var(--tool-accent);
   font-weight:950;
 }
+.tool-product-page .execution-pack{
+  display:grid;
+  gap:10px;
+  margin-top:4px;
+}
+.tool-product-page .execution-pack section{
+  border:1px solid var(--simple-line);
+  border-radius:12px;
+  background:#fff;
+  padding:12px;
+}
+.tool-product-page .execution-pack h3{
+  margin:0 0 8px;
+  color:var(--tool-accent);
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.tool-product-page .execution-pack ol,
+.tool-product-page .execution-pack ul{
+  display:grid;
+  gap:7px;
+  margin:0;
+  padding-left:18px;
+  color:var(--simple-muted);
+  font-size:13px;
+  font-weight:760;
+}
 .tool-product-page.mode-quiz .product-workbench,
 .tool-product-page.mode-wellnessPlan .product-workbench{
   grid-template-columns:minmax(320px,1fr) minmax(300px,420px);

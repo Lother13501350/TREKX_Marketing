@@ -60,8 +60,8 @@
     </div>
 
     <h2>三、100 個工具的重做策略</h2>
-    <p><strong>本輪已完成：</strong>T001-T006 維持手工 bespoke 工具；T007-T100 已全部升級為 mode-specific 產品頁，不再只吃同一套 generic 結果卡。每個頁面都帶自己的玩法模式、操作標題、樣本素材、輸入欄位、結果輸出、ChillOut prompt 與 App Store <code>ct</code> 導流。</p>
-    <p><strong>誠實狀態：</strong>100/100 已可上線使用與投放測試；其中 T001-T006 是手工精修級，T007-T100 是商業可用的產品化第一版。下一階段若要做到每一個都像 T001-T006 那樣完全手刻，可以依數據挑前 20 個高潛力工具繼續精修。</p>
+    <p><strong>深度重做狀態：</strong>T001-T006 維持手工 bespoke 工具；T007-T100 已拆成 94 支獨立 standalone JS，不再由單一共用 runtime 撐所有頁面。每個 generated 工具頁都有自己的腳本檔、工具資料、樣本素材、輸入欄位、結果輸出、執行包、ChillOut prompt 與 App Store <code>ct</code> 導流。</p>
+    <p><strong>誠實狀態：</strong>100/100 已可上線使用與投放測試；其中 T001-T006 是手工精修級，T007-T100 是有獨立 JS 的商業可用產品版。後續若要再升級，可以依實際流量把高潛力工具改成完全手寫互動。</p>
 
     <h3>互動類型分配</h3>
     <table>
@@ -81,7 +81,9 @@
       <thead><tr><th>項目</th><th>完成結果</th><th>驗收方式</th></tr></thead>
       <tbody>
         <tr><td>工具頁總數</td><td>100 個獨立 URL，總目錄可搜尋、可篩選、可隨機抽工具。</td><td><code>npm run build:tools</code> 產生 100 個工具；<code>npm run validate</code> 通過 256 個 HTML 檢查。</td></tr>
+        <tr><td>獨立工具腳本</td><td>T007-T100 產出 94 支 <code>assets/tool-scripts/*.js</code>，加上 T001-T006 既有 bespoke JS，總共 100 組工具邏輯。</td><td>generated standalone scripts 約 51,000 行，頁面已改連各自腳本，不再共用同一個 runtime。</td></tr>
         <tr><td>互動引擎</td><td>整理器 9、決策器 13、測驗器 12、美食路線 7、旅伴協議 10、夜遊路線 10、回憶生成 11、短逃計畫 10、低壓旅行 10、文化任務 8。</td><td>依 slug 與名稱意圖分配，不再只依分類套用單一模式。</td></tr>
+        <tr><td>每工具執行包</td><td>每個 generated 工具結果都包含「下一步行動、社群鉤子、檢核」三區。</td><td>行銷組可直接拿結果卡與執行包做短影音、貼文、互動問答或投放素材。</td></tr>
         <tr><td>視覺規則</td><td>所有 generated 工具使用單一主題色 + 中性色；保留 6 種版面骨架與 10 種結果元件。</td><td>抽樣截圖檢查 sorter、quiz、pact、night、decision、wellness、culture、food、micro、memory。</td></tr>
         <tr><td>導流</td><td>每個工具結果區與導覽均帶工具專屬 App Store <code>ct=tool_slug</code> 參數。</td><td>生成器統一注入，結果分數會附加到導流 URL 方便後續分析。</td></tr>
       </tbody>
@@ -129,7 +131,7 @@
         <tr><td>T004 爆紅景點值得嗎</td><td>獨立 HTML/CSS/JS、值得去決策器、替代玩法、ChillOut prompt</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做短影音與 Threads 測試</td></tr>
         <tr><td>T005 收藏斷捨離</td><td>獨立 HTML/CSS/JS、逐張卡片清理、保留/備用/刪掉三桶結果</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做 IG 收藏清理挑戰</td></tr>
         <tr><td>T006 景點心情分艙</td><td>獨立 HTML/CSS/JS、逐點心情分艙、自動分類、每日主旋律輸出</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做「不要先照地圖排」內容測試</td></tr>
-        <tr><td>T007-T100 其餘 94 個工具</td><td>10 種玩法引擎、每頁專屬 inputs/sample/result/prompt/share copy、單色現代 UI</td><td>已完成生成、靜態驗證與 10 模式瀏覽器截圖 QA</td><td>可進入全站投放測試；後續依點擊與下載數挑高潛力工具精修</td></tr>
+        <tr><td>T007-T100 其餘 94 個工具</td><td>每頁專屬 standalone JS、10 種玩法引擎、每頁專屬 inputs/sample/result/prompt/share copy/執行包、單色現代 UI</td><td>已完成生成、靜態驗證與代表工具瀏覽器截圖 QA</td><td>可進入全站投放測試；後續依點擊與下載數挑高潛力工具精修</td></tr>
       </tbody>
     </table>
 

@@ -149,6 +149,28 @@
       </div>`;
   }
 
+  function executionPackHtml(result) {
+    const pack = tool.executionPack || {};
+    const actions = pack.actions || tool.playSteps || [];
+    const hooks = pack.hooks || [`我剛完成 ${tool.name}，結果是 ${result.title}`];
+    const qa = pack.qa || ["結果可理解", "Prompt 可複製", "App 導流可追蹤"];
+    return `
+      <div class="execution-pack">
+        <section>
+          <h3>下一步行動</h3>
+          <ol>${actions.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ol>
+        </section>
+        <section>
+          <h3>社群鉤子</h3>
+          <ul>${hooks.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+        </section>
+        <section>
+          <h3>檢核</h3>
+          <ul>${qa.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+        </section>
+      </div>`;
+  }
+
   function buildSorter(score) {
     const items = listFromText("rawList");
     return {
@@ -352,7 +374,7 @@
     copyNode.textContent = result.body;
     promptNode.textContent = result.prompt;
     chipsNode.innerHTML = result.chips.map((chip) => `<span>${escapeHtml(chip)}</span>`).join("");
-    outputNode.innerHTML = result.detailHtml;
+    outputNode.innerHTML = result.detailHtml + executionPackHtml(result);
 
     const shareText = `${tool.shareLead || "我完成了一個旅行小工具"}：${result.title}（${result.score}/100）\n${result.body}\n\n我會丟到 ChillOut 生成完整行程：${tool.appUrl}`;
     const copyButton = document.querySelector("[data-copy-result]");
