@@ -3,93 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>獨處社交排程器｜ChillOut 旅行小工具</title>
-  <meta name="description" content="多人旅行也能留出自己喘氣的時間。設定獨處需求與共同活動，輸出可接受的分開行動時段。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="獨處社交排程器｜ChillOut 旅行小工具">
-  <meta property="og:description" content="多人旅行也能留出自己喘氣的時間。">
+  <title>獨處社交排程器｜ChillOut 旅行小工具 T030</title>
+  <meta name="description" content="輸入旅伴獨處需求、社交電量、錯過焦慮與共同活動，生成一起玩時段、分開行動時段、集合規則與 ChillOut prompt。">
+  <meta property="og:title" content="獨處社交排程器｜ChillOut">
+  <meta property="og:description" content="分開一下，不代表不想一起玩。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/solo-or-social.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/solo-or-social.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/solo-or-social.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/solo-or-social.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-0 mode-pact" style="--tool-accent:#EF476F">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="ss-app">
+  <header class="ss-topbar">
+    <a class="ss-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="ss-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T030 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_solo-or-social_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_solo_or_social_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T030 · 搭子與關係工具</p>
-        <h1>獨處社交排程器</h1>
-        <p class="product-lead">多人旅行也能留出自己喘氣的時間。</p>
-        <div class="product-pills">
-          <span>獨處時段</span><span>共同活動</span><span>低摩擦</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/solo-or-social.svg" alt="獨處社交排程器 互動工具視覺">
-      </figure>
+  <main class="ss-page">
+    <section class="ss-hero">
+      <p class="ss-eyebrow">Solo social scheduler</p>
+      <h1>多人旅行，也要有人可以自己喘口氣。</h1>
+      <p>不是每個人都能從早到晚黏在一起。這個工具把獨處需求、社交電量、錯過焦慮與共同活動排成一張低摩擦時程，讓分開一下不再像拒絕朋友。</p>
     </section>
 
-    <section class="product-workbench" aria-label="獨處社交排程器 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>設定獨處需求與共同活動，輸出可接受的分開行動時段。</h2>
-        <p>跟朋友旅行但需要獨處的人可以在 30 秒內得到一張可分享的結果卡。把出發前最容易吵的點變成可以截圖討論的協議。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
+    <section class="ss-layout" aria-label="獨處社交排程器操作區">
+      <aside class="ss-panel ss-settings">
+        <form data-social-form>
+          <label class="ss-field">
+            <span>旅行日</span>
+            <input data-trip value="東京第四天" autocomplete="off">
+          </label>
+          <label class="ss-field">
+            <span>分開行動規則</span>
+            <select data-policy>
+              <option value="announce" selected>先講好再分開</option>
+              <option value="free">自由分開不用解釋</option>
+              <option value="pair">至少兩人一組</option>
+            </select>
+          </label>
+          <label class="ss-range">
+            <span>集合安全感 <strong data-safety-value>72</strong></span>
+            <input data-safety type="range" min="0" max="100" value="72">
+          </label>
+          <div class="ss-actions">
+            <button type="button" class="ss-button" data-sample>載入示範</button>
+            <button type="button" class="ss-button" data-add-person>加旅伴</button>
+            <button type="button" class="ss-button" data-add-activity>加活動</button>
           </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_solo-or-social_result">丟進 ChillOut</a>
-          </div>
-        </div>
+        </form>
       </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+      <section class="ss-panel ss-people">
+        <div class="ss-section-head">
+          <div>
+            <p class="ss-eyebrow">Travelers</p>
+            <h2>獨處與社交電量</h2>
+          </div>
+        </div>
+        <div class="ss-people-list" data-people></div>
+      </section>
+
+      <section class="ss-panel ss-activities">
+        <div class="ss-section-head">
+          <div>
+            <p class="ss-eyebrow">Shared plans</p>
+            <h2>共同活動</h2>
+          </div>
+          <button type="button" class="ss-button ss-primary" data-generate>生成排程</button>
+        </div>
+        <div class="ss-activity-list" data-activities></div>
+      </section>
+
+      <section class="ss-panel ss-output" data-output aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"solo-or-social","category":"group","name":"獨處社交排程器","tagline":"多人旅行也能留出自己喘氣的時間。","audience":"跟朋友旅行但需要獨處的人","mechanic":"設定獨處需求與共同活動，輸出可接受的分開行動時段。","result":"分開一下，不代表不想一起玩。","chips":["獨處時段","共同活動","低摩擦"],"mode":"pact","modeLabel":"旅伴協議","modeVariant":"雷達圖","interfaceTitle":"獨處社交排程器操作台","actionLabel":"產生旅伴共識","resultName":"旅伴協議書","modePromise":"把出發前最容易吵的點變成可以截圖討論的協議。","shareLead":"我做了一份旅行前共識協議","sampleItems":["美食預算","拍照耐心","各自放風","交通分工","房型偏好","最後決策權","早起時間"],"scoreSeed":60,"executionPack":{"actions":["先把 獨處時段 寫成旅伴共識，而不是出發後才吵。","把 共同活動 設成行前必談條款。","把協議截圖丟群組，確認每個人都接受。"],"hooks":["旅行前先簽這張，不然出發後很容易爆。","真正的旅伴默契是先講清楚。","把最容易吵的點變成可以截圖的協議。"],"qa":["旅伴名單可空白也能生成","至少輸出 4 條協議","Prompt 要包含預算與放風需求"]},"playSteps":["輸入 美食預算 或這次最想解決的旅行條件。","調整 獨處時段、共同活動 與 低摩擦 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"people","label":"旅伴名單","placeholder":"例如：我、阿哲、小雨、Mia"},{"type":"range","key":"budgetGap","label":"預算差距","min":1,"max":100,"value":67,"left":"很一致","right":"落差很大"},{"type":"choice","key":"conflict","label":"最容易吵的點","choices":["美食預算","拍照耐心","各自放風","交通分工","房型偏好"]},{"type":"range","key":"aloneTime","label":"各自放風需求","min":1,"max":100,"value":64,"left":"全程黏著","right":"需要獨處"}],"id":"T030","categoryLabel":"搭子與關係工具","categoryTone":"把旅行前最容易吵的事情變成可以討論、投票、截圖分享的協議。","primary":"#EF476F","accent":"#EF476F","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_solo-or-social","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/solo-or-social.html"}</script>
-  <script src="../assets/tool-scripts/solo-or-social.js?v=20260525d"></script>
+  <div class="ss-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/solo-or-social.js?v=20260525manual1"></script>
 </body>
 </html>
