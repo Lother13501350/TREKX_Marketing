@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">淡季適配測驗</title>
+  <desc id="desc">以月份膠卷、天氣線、票價和雙路線構成的淡季旅行決策視覺。</desc>
+  <rect width="1200" height="840" fill="#f5f2f3"/>
+  <path d="M0 160h1200M0 320h1200M0 480h1200M0 640h1200M160 0v840M320 0v840M480 0v840M640 0v840M800 0v840M960 0v840" stroke="#e0dbdd" stroke-width="2"/>
+  <rect x="112" y="96" width="976" height="648" rx="34" fill="#ffffff" stroke="#e0dbdd" stroke-width="3"/>
+  <text x="172" y="170" fill="#65595d" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">T047 / SHOULDER SEASON FIT</text>
+  <text x="172" y="276" fill="#1b1819" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">GO</text>
+  <text x="172" y="366" fill="#1b1819" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">CHANGE</text>
+  <text x="172" y="456" fill="#1b1819" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">WAIT</text>
+  <path d="M170 590c86-60 144-82 224-68 90 16 134 92 222 74 82-17 118-110 202-104 74 5 128 70 176 130" fill="none" stroke="#65595d" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="170" cy="590" r="20" fill="#1b1819"/>
+  <circle cx="394" cy="522" r="20" fill="#65595d"/>
+  <circle cx="616" cy="596" r="20" fill="#65595d"/>
+  <circle cx="818" cy="492" r="20" fill="#65595d"/>
+  <circle cx="994" cy="622" r="20" fill="#1b1819"/>
+  <g transform="translate(650 168)">
+    <rect x="0" y="0" width="330" height="228" rx="28" fill="#f5f2f3" stroke="#e0dbdd" stroke-width="3"/>
+    <path d="M52 70h226M52 122h226M52 174h226" stroke="#e0dbdd" stroke-width="8" stroke-linecap="round"/>
+    <path d="M62 174l62-76 52 36 52-82 52 122" fill="none" stroke="#65595d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="52" y="46" fill="#65595d" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">WEATHER LINE</text>
+  </g>
+  <g transform="translate(650 452)">
+    <rect x="0" y="0" width="330" height="118" rx="28" fill="#65595d"/>
+    <text x="42" y="72" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900">FIT 78</text>
+    <text x="196" y="72" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">DUAL PLAN</text>
+  </g>
+</svg>

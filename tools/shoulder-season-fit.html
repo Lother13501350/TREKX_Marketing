@@ -3,93 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>淡季適配測驗｜ChillOut 旅行小工具</title>
-  <meta name="description" content="判斷你適不適合淡季出發。評估天氣容忍、預算敏感與人潮厭惡，輸出淡季適合度。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="淡季適配測驗｜ChillOut 旅行小工具">
-  <meta property="og:description" content="判斷你適不適合淡季出發。">
+  <title>淡季適配測驗｜ChillOut 旅行小工具 T047</title>
+  <meta name="description" content="T047 手寫版。輸入目的地、淡季月份、預算、人潮、天氣容忍與店休風險，判斷你適不適合淡季出發，並產生好天/壞天兩套玩法。">
+  <meta property="og:title" content="淡季適配測驗｜ChillOut 旅行小工具 T047">
+  <meta property="og:description" content="淡季不是便宜版旺季。用這個工具判斷你是淡季玩家、備案玩家，還是應該等旺季。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/shoulder-season-fit.html">
-  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/shoulder-season-fit.svg">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/shoulder-season-fit-manual.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/shoulder-season-fit.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/shoulder-season-fit.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-5 mode-quiz" style="--tool-accent:#2F9E44">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="sf-app">
+  <header class="sf-nav">
+    <a class="sf-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="sf-mark">C</span>
+      <span><strong>ChillOut</strong><small>T047 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_shoulder-season-fit_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_shoulder_season_fit_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T047 · 避開人潮與繞路</p>
-        <h1>淡季適配測驗</h1>
-        <p class="product-lead">判斷你適不適合淡季出發。</p>
-        <div class="product-pills">
-          <span>淡季</span><span>省錢</span><span>天氣備案</span>
-        </div>
+    <section class="sf-hero">
+      <div class="sf-copy">
+        <p class="sf-kicker">T047 / Shoulder season fit</p>
+        <h1>淡季不是便宜版旺季，是另一套旅行遊戲。</h1>
+        <p>如果你怕天氣、怕店休、怕拍不到照片，淡季省下的錢可能會變成焦慮。這個工具把你的容忍度和目的地風險算清楚，決定要不要淡季出發。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/shoulder-season-fit.svg" alt="淡季適配測驗 互動工具視覺">
+      <figure class="sf-visual">
+        <img src="../assets/tool-posters/shoulder-season-fit-manual.svg" alt="淡季適配測驗視覺">
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="淡季適配測驗 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>評估天氣容忍、預算敏感與人潮厭惡，輸出淡季適合度。</h2>
-        <p>想省錢但怕天氣與冷清的人可以在 30 秒內得到一張可分享的結果卡。用幾個選擇題產生可分享的人格結果與第一版行程方向。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_shoulder-season-fit_result">丟進 ChillOut</a>
-          </div>
+    <section class="sf-lab" aria-label="淡季條件設定">
+      <aside class="sf-settings">
+        <p class="sf-kicker">Season setup</p>
+        <h2>先設定你要挑戰的淡季</h2>
+        <label>目的地<input data-destination value="京都" placeholder="例如：京都、首爾、冰島、北海道"></label>
+        <div class="sf-two">
+          <label>出發月份
+            <select data-month>
+              <option value="march">3 月</option>
+              <option value="april">4 月</option>
+              <option value="may">5 月</option>
+              <option value="september">9 月</option>
+              <option value="october" selected>10 月</option>
+              <option value="november">11 月</option>
+            </select>
+          </label>
+          <label>旅行天數
+            <select data-days>
+              <option value="2">2 天</option>
+              <option value="4" selected>4 天</option>
+              <option value="6">6 天</option>
+              <option value="8">8 天以上</option>
+            </select>
+          </label>
+        </div>
+        <label>目的地淡季風險
+          <select data-season-risk>
+            <option value="mild" selected>只是人少一點</option>
+            <option value="weather">天氣不穩</option>
+            <option value="closure">店休 / 景點縮短營業</option>
+            <option value="remote">交通班次少</option>
+          </select>
+        </label>
+        <label class="sf-range"><span>預算敏感 <strong data-budget-label>76/100</strong></span><input data-budget type="range" min="1" max="100" value="76"></label>
+        <label class="sf-range"><span>怕人潮程度 <strong data-crowd-label>82/100</strong></span><input data-crowd type="range" min="1" max="100" value="82"></label>
+        <label class="sf-range"><span>天氣容忍 <strong data-weather-label>58/100</strong></span><input data-weather type="range" min="1" max="100" value="58"></label>
+        <label class="sf-range"><span>臨時改行程能力 <strong data-flex-label>64/100</strong></span><input data-flex type="range" min="1" max="100" value="64"></label>
+        <div class="sf-actions">
+          <button type="button" data-sample>帶入範例</button>
+          <button type="button" class="sf-primary" data-generate>測出適配度</button>
         </div>
       </aside>
+
+      <section class="sf-profile" aria-label="淡季偏好">
+        <div class="sf-profile-head">
+          <p class="sf-kicker">Travel contract</p>
+          <h2>哪些東西不能犧牲？</h2>
+        </div>
+        <div class="sf-contracts">
+          <label><input type="checkbox" data-contract="photo" checked><span><strong>照片與景色要漂亮</strong><small>如果霧、雨、枯枝太多會失望。</small></span></label>
+          <label><input type="checkbox" data-contract="food" checked><span><strong>餐廳不能店休太多</strong><small>美食是主要目的，不想一直吃備案。</small></span></label>
+          <label><input type="checkbox" data-contract="elder"><span><strong>同行者不適合受凍或淋雨</strong><small>有長輩、小孩或體力限制。</small></span></label>
+          <label><input type="checkbox" data-contract="event"><span><strong>想碰運氣看活動或季節景</strong><small>願意為花況、楓況、祭典承擔不確定。</small></span></label>
+          <label><input type="checkbox" data-contract="drive"><span><strong>可自駕或接受繞路</strong><small>交通少一點也能自己補救。</small></span></label>
+          <label><input type="checkbox" data-contract="indoor"><span><strong>室內備案也能開心</strong><small>博物館、咖啡、書店可以撐住一整天。</small></span></label>
+        </div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="sf-output" data-output aria-live="polite">
+      <div class="sf-empty">
+        <p class="sf-kicker">Result</p>
+        <h2>按下測驗後，這裡會產生淡季適配卡。</h2>
+        <p>結果會包含適配分數、去/改/等的判斷、好天/壞天雙路線、訂房訂票規則、社群分享文與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"shoulder-season-fit","category":"detour","name":"淡季適配測驗","tagline":"判斷你適不適合淡季出發。","audience":"想省錢但怕天氣與冷清的人","mechanic":"評估天氣容忍、預算敏感與人潮厭惡，輸出淡季適合度。","result":"淡季不是便宜版旺季，是另一種玩法。","chips":["淡季","省錢","天氣備案"],"mode":"quiz","modeLabel":"人格測驗","modeVariant":"清單桌面","interfaceTitle":"淡季適配測驗操作台","actionLabel":"測出我的旅行角色","resultName":"旅行人格卡","modePromise":"用幾個選擇題產生可分享的人格結果與第一版行程方向。","shareLead":"我剛測出自己的旅行人格","sampleItems":["替代小巷","附近咖啡","備案公園","熱門景點","排隊名店","人潮路口","交通轉乘"],"scoreSeed":77,"executionPack":{"actions":["用 淡季 結果決定行程第一順位。","把 省錢 與社交能量轉成每日密度。","把人格結果丟進 ChillOut 生成角色式行程。"],"hooks":["我的 淡季適配測驗 結果居然是這個。","你不是難搞，你只是旅行設定很明確。","把你的結果貼出來，看誰最適合一起旅行。"],"qa":["每個選項會改變分數","結果要有角色名稱","Prompt 要保留人格條件"]},"playSteps":["輸入 替代小巷 或這次最想解決的旅行條件。","調整 淡季、省錢 與 天氣備案 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"choice","key":"pace","label":"旅行節奏","choices":["慢慢晃","重點精準","一天塞滿","看心情改"]},{"type":"choice","key":"anchor","label":"最在意的錨點","choices":["替代小巷","附近咖啡","備案公園","熱門景點","排隊名店"]},{"type":"choice","key":"risk","label":"臨時改行程接受度","choices":["完全不行","可接受一點","越即興越好"]},{"type":"range","key":"social","label":"社交能量","min":1,"max":100,"value":60,"left":"安靜旅行","right":"認識新朋友"}],"id":"T047","categoryLabel":"避開人潮與繞路","categoryTone":"把爆紅景點旁邊更舒服、更像自己的選項挖出來。","primary":"#2F9E44","accent":"#2F9E44","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_shoulder-season-fit","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/shoulder-season-fit.html"}</script>
-  <script src="../assets/tool-scripts/shoulder-season-fit.js?v=20260525d"></script>
+  <div class="sf-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/shoulder-season-fit.js?v=20260525manual1"></script>
 </body>
 </html>
