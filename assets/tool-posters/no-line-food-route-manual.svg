@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">零排隊美食路線</title>
+  <desc id="desc">以收據、時鐘、餐點路線和無排隊標記構成的旅行美食工具視覺。</desc>
+  <rect width="1200" height="840" fill="#f2f4f6"/>
+  <path d="M0 140h1200M0 280h1200M0 420h1200M0 560h1200M0 700h1200M150 0v840M300 0v840M450 0v840M600 0v840M750 0v840M900 0v840M1050 0v840" stroke="#d9dde3" stroke-width="2"/>
+  <rect x="126" y="82" width="948" height="676" rx="34" fill="#ffffff" stroke="#d9dde3" stroke-width="3"/>
+  <text x="182" y="164" fill="#4f5967" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">T048 / NO-LINE FOOD ROUTE</text>
+  <text x="182" y="264" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="900">EAT</text>
+  <text x="182" y="350" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="900">NO</text>
+  <text x="182" y="436" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="900">LINE</text>
+  <path d="M188 612c74-48 122-96 216-88 86 7 114 68 202 64 88-4 122-78 214-70 74 6 122 58 170 94" fill="none" stroke="#4f5967" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="188" cy="612" r="21" fill="#17191d"/>
+  <circle cx="404" cy="524" r="21" fill="#4f5967"/>
+  <circle cx="606" cy="588" r="21" fill="#4f5967"/>
+  <circle cx="820" cy="518" r="21" fill="#4f5967"/>
+  <circle cx="990" cy="612" r="21" fill="#17191d"/>
+  <g transform="translate(642 164)">
+    <rect x="0" y="0" width="330" height="388" rx="28" fill="#f2f4f6" stroke="#d9dde3" stroke-width="3"/>
+    <text x="38" y="62" fill="#4f5967" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">QUEUE LIMIT</text>
+    <text x="38" y="150" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="900">10</text>
+    <text x="160" y="150" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900">MIN</text>
+    <path d="M44 212h234M44 272h234M44 332h168" stroke="#4f5967" stroke-width="14" stroke-linecap="round"/>
+    <path d="M230 296l52 52M282 296l-52 52" stroke="#17191d" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>
