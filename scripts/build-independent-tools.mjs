@@ -771,6 +771,43 @@ function runtimeScript() {
   return fs.readFileSync(path.join(root, "scripts", "independent-tool-runtime.template.js"), "utf8");
 }
 
+function sitemapXml() {
+  const baseUrl = "https://chillout-marketing-dashboard.vercel.app";
+  const lastmod = "2026-05-25";
+  const staticPages = [
+    { loc: "/", priority: "1.0", changefreq: "weekly" },
+    { loc: "/travel-microtools-100.html", priority: "0.95", changefreq: "weekly" },
+    { loc: "/microtools-commercial-rebuild-report.html", priority: "0.6", changefreq: "monthly" },
+    { loc: "/ig-chaos-index.html", priority: "0.8", changefreq: "weekly" },
+    { loc: "/ig-travel-planner.html", priority: "0.8", changefreq: "weekly" },
+    { loc: "/launch-kit.html", priority: "0.7", changefreq: "monthly" }
+  ];
+  const toolPages = tools.map((tool) => ({
+    loc: `/tools/${tool.slug}.html`,
+    priority: tool.id <= "T006" ? "0.9" : "0.75",
+    changefreq: "weekly"
+  }));
+  const urls = [...staticPages, ...toolPages];
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((url) => `  <url>
+    <loc>${baseUrl}${url.loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>
+  </url>`).join("\n")}
+</urlset>
+`;
+}
+
+function robotsTxt() {
+  return `User-agent: *
+Allow: /
+
+Sitemap: https://chillout-marketing-dashboard.vercel.app/sitemap.xml
+`;
+}
+
 function ensureCleanGeneratedDirectory() {
   fs.mkdirSync(toolsDir, { recursive: true });
   fs.mkdirSync(posterDir, { recursive: true });
@@ -795,5 +832,7 @@ for (const tool of tools) {
 fs.writeFileSync(path.join(root, "travel-microtools-100.html"), galleryTemplate(), "utf8");
 fs.writeFileSync(path.join(root, "assets", "independent-tools.js"), catalogScript(), "utf8");
 fs.writeFileSync(path.join(root, "assets", "independent-tool-runtime.js"), runtimeScript(), "utf8");
+fs.writeFileSync(path.join(root, "sitemap.xml"), sitemapXml(), "utf8");
+fs.writeFileSync(path.join(root, "robots.txt"), robotsTxt(), "utf8");
 
 console.log(`Generated ${tools.length} independent ChillOut travel tools.`);
