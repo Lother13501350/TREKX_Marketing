@@ -3,93 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>夜遊安全通行證｜ChillOut 旅行小工具</title>
-  <meta name="description" content="把夜遊風險轉成簡單檢核與路線限制。依城市、同行人數與回程方式，生成安全檢核與不要去區域。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="夜遊安全通行證｜ChillOut 旅行小工具">
-  <meta property="og:description" content="把夜遊風險轉成簡單檢核與路線限制。">
+  <title>夜遊安全通行證｜ChillOut 旅行小工具 T036</title>
+  <meta name="description" content="把夜遊風險轉成一張可執行的安全通行證。輸入城市、同行人數、回程方式與檢核項目，生成夜遊限制、不要去區域、分享文與 ChillOut prompt。">
+  <meta property="og:title" content="夜遊安全通行證｜ChillOut 旅行小工具 T036">
+  <meta property="og:description" content="玩得晚可以，但回得去更重要。用一張通行證檢查夜遊是否可以出門。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/night-safety-pass.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/night-safety-pass.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/night-safety-pass.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/night-safety-pass.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-0 mode-nightRoute" style="--tool-accent:#4D96FF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="ns-app">
+  <header class="ns-nav">
+    <a class="ns-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="ns-mark">C</span>
+      <span><strong>ChillOut</strong><small>T036 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_night-safety-pass_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_night_safety_pass_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T036 · 夜旅與 Noctourism</p>
-        <h1>夜遊安全通行證</h1>
-        <p class="product-lead">把夜遊風險轉成簡單檢核與路線限制。</p>
-        <div class="product-pills">
-          <span>安全檢核</span><span>回程</span><span>夜遊</span>
-        </div>
+    <section class="ns-hero">
+      <div class="ns-hero-copy">
+        <p class="ns-kicker">T036 · night safety pass</p>
+        <h1>夜遊可以很自由，但邊界要先畫好。</h1>
+        <p>這不是恐嚇工具，而是一張出門前的通行證。把回程、同行人、電量、集合點、現金與主路線先檢查，才決定今晚可以走多晚、走多遠。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/night-safety-pass.svg" alt="夜遊安全通行證 互動工具視覺">
+      <figure class="ns-visual">
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1100&q=80" alt="夜晚城市街道">
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="夜遊安全通行證 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>依城市、同行人數與回程方式，生成安全檢核與不要去區域。</h2>
-        <p>想夜遊但重視安全的人可以在 30 秒內得到一張可分享的結果卡。把晚上安全、交通與氣氛排成不硬撐的三段式夜遊。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_night-safety-pass_result">丟進 ChillOut</a>
-          </div>
+    <section class="ns-workbench" aria-label="夜遊安全通行證操作區">
+      <aside class="ns-settings" aria-label="夜遊條件">
+        <p class="ns-kicker">Night conditions</p>
+        <h2>今晚條件</h2>
+        <label>
+          城市
+          <input data-city value="首爾" placeholder="例如：東京、台北、曼谷">
+        </label>
+        <label>
+          夜遊區域
+          <input data-zone value="漢江到弘大主路線" placeholder="例如：中山站周邊、難波商圈">
+        </label>
+        <div class="ns-two">
+          <label>
+            出門時間
+            <input data-start type="time" value="20:30">
+          </label>
+          <label>
+            最晚回程
+            <input data-return type="time" value="23:40">
+          </label>
+        </div>
+        <div class="ns-two">
+          <label>
+            同行人數
+            <input data-group type="number" min="1" max="12" value="2">
+          </label>
+          <label>
+            回程方式
+            <select data-transport>
+              <option value="taxi">計程車 / 叫車</option>
+              <option value="metro">大眾運輸</option>
+              <option value="walk">步行回住宿</option>
+              <option value="unknown">尚未確定</option>
+            </select>
+          </label>
+        </div>
+        <label class="ns-range">
+          <span>保守程度 <strong data-caution-label>76/100</strong></span>
+          <input data-caution type="range" min="1" max="100" value="76">
+        </label>
+        <div class="ns-actions">
+          <button type="button" data-sample>載入範例</button>
+          <button type="button" data-add-check>新增檢核</button>
         </div>
       </aside>
+
+      <section class="ns-checks" aria-label="安全檢核">
+        <div class="ns-check-head">
+          <div>
+            <p class="ns-kicker">Safety checklist</p>
+            <h2>安全檢核</h2>
+          </div>
+          <button type="button" class="ns-primary" data-generate>生成通行證</button>
+        </div>
+        <div class="ns-check-list" data-checks></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="ns-output" data-output aria-live="polite">
+      <div class="ns-empty">
+        <p class="ns-kicker">Result</p>
+        <h2>先完成檢核，這裡會生成今晚夜遊安全通行證。</h2>
+        <p>通行證會輸出分數、夜遊邊界、不要去區域、群組公告與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"night-safety-pass","category":"night","name":"夜遊安全通行證","tagline":"把夜遊風險轉成簡單檢核與路線限制。","audience":"想夜遊但重視安全的人","mechanic":"依城市、同行人數與回程方式，生成安全檢核與不要去區域。","result":"玩得晚可以，但回得去更重要。","chips":["安全檢核","回程","夜遊"],"mode":"nightRoute","modeLabel":"夜遊路線","modeVariant":"票券介面","interfaceTitle":"夜遊安全通行證操作台","actionLabel":"排出夜晚節奏","resultName":"夜晚節奏表","modePromise":"把晚上安全、交通與氣氛排成不硬撐的三段式夜遊。","shareLead":"我排了一條不踩雷的夜遊路線","sampleItems":["日落前集合","晚餐後散步","夜景拍照","宵夜收尾","安全返程","雨備室內點","末班車時間"],"scoreSeed":66,"executionPack":{"actions":["把 安全檢核 排在晚間主段，不連續硬塞。","先決定安全返程，再決定宵夜。","把夜晚路線丟進 ChillOut 補交通與備案。"],"hooks":["夜遊不是熬夜，是有節奏地走。","這條路線先保命，再浪漫。","把城市晚上排成三段，不會玩到崩。"],"qa":["要輸出 3 個以上時段","要有安全收尾","Prompt 要包含城市與時段"]},"playSteps":["輸入 日落前集合 或這次最想解決的旅行條件。","調整 安全檢核、回程 與 夜遊 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"city","label":"目的地城市","placeholder":"例如：首爾、東京、台南、曼谷"},{"type":"choice","key":"time","label":"出門時段","choices":["日落前","晚餐後","午夜前","清晨前"]},{"type":"choice","key":"nightMood","label":"夜晚主題","choices":["日落前集合","晚餐後散步","夜景拍照","宵夜收尾","安全返程"]},{"type":"range","key":"safety","label":"安全保守度","min":1,"max":100,"value":75,"left":"敢冒險","right":"保守安全"}],"id":"T036","categoryLabel":"夜旅與 Noctourism","categoryTone":"跟上夜遊、日落、深夜甜點與城市霓虹的旅行趨勢。","primary":"#4D96FF","accent":"#4D96FF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_night-safety-pass","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/night-safety-pass.html"}</script>
-  <script src="../assets/tool-scripts/night-safety-pass.js?v=20260525d"></script>
+  <div class="ns-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/night-safety-pass.js?v=20260525manual1"></script>
 </body>
 </html>
