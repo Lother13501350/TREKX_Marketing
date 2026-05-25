@@ -3,93 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>房型能量測驗｜ChillOut 旅行小工具</title>
-  <meta name="description" content="從住宿需求反推你這趟旅行要補什麼。評估睡眠、浴缸、景觀、位置需求，產生住宿優先順序。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="房型能量測驗｜ChillOut 旅行小工具">
-  <meta property="og:description" content="從住宿需求反推你這趟旅行要補什麼。">
+  <title>房型能量測驗｜ChillOut 旅行小工具 T018</title>
+  <meta name="description" content="從睡眠、位置、景觀、浴缸、工作、行李、預算和行程強度，反推出住宿房型優先順序與 ChillOut 訂房 prompt。">
+  <meta property="og:title" content="房型能量測驗｜ChillOut">
+  <meta property="og:description" content="住宿不是配角，它會決定你有沒有力氣玩。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/hotel-room-energy.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/hotel-room-energy.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/hotel-room-energy.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/hotel-room-energy.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-0 mode-quiz" style="--tool-accent:#7C5CFF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="hotel-app">
+  <header class="hr-topbar">
+    <a class="hr-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="hr-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T018 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hotel-room-energy_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hotel_room_energy_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T018 · 旅行人格測驗</p>
-        <h1>房型能量測驗</h1>
-        <p class="product-lead">從住宿需求反推你這趟旅行要補什麼。</p>
-        <div class="product-pills">
-          <span>住宿需求</span><span>房型排序</span><span>預算分配</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/hotel-room-energy.svg" alt="房型能量測驗 互動工具視覺">
-      </figure>
+  <main class="hr-page">
+    <section class="hr-hero">
+      <p class="hr-eyebrow">Hotel room energy test</p>
+      <h1>住宿不是配角，它會決定你有沒有力氣玩。</h1>
+      <p>訂房不是只比價格。這個工具會把你的睡眠需求、位置壓力、行程強度和恢復方式整理成房型優先順序，幫你知道錢該花在哪裡。</p>
     </section>
 
-    <section class="product-workbench" aria-label="房型能量測驗 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>評估睡眠、浴缸、景觀、位置需求，產生住宿優先順序。</h2>
-        <p>訂房前猶豫房型與地點的人可以在 30 秒內得到一張可分享的結果卡。用幾個選擇題產生可分享的人格結果與第一版行程方向。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hotel-room-energy_result">丟進 ChillOut</a>
-          </div>
+    <section class="hr-tool" aria-label="房型能量測驗操作區">
+      <form class="hr-form" data-form>
+        <div class="hr-grid">
+          <label class="hr-field">
+            <span>目的地</span>
+            <input data-city value="台北" autocomplete="off">
+          </label>
+          <label class="hr-field">
+            <span>住宿晚數</span>
+            <input data-nights type="number" min="1" max="14" value="3">
+          </label>
         </div>
-      </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+        <label class="hr-range">
+          <span>睡眠重要度 <strong data-value="sleep">86</strong></span>
+          <input data-sleep type="range" min="0" max="100" value="86">
+        </label>
+        <label class="hr-range">
+          <span>地點便利度 <strong data-value="location">78</strong></span>
+          <input data-location type="range" min="0" max="100" value="78">
+        </label>
+        <label class="hr-range">
+          <span>景觀 / 設計感 <strong data-value="view">48</strong></span>
+          <input data-view type="range" min="0" max="100" value="48">
+        </label>
+        <label class="hr-range">
+          <span>浴缸 / 放鬆需求 <strong data-value="bath">62</strong></span>
+          <input data-bath type="range" min="0" max="100" value="62">
+        </label>
+
+        <div class="hr-grid">
+          <label class="hr-field">
+            <span>行程強度</span>
+            <select data-intensity>
+              <option value="low">慢旅</option>
+              <option value="mid" selected>正常走</option>
+              <option value="high">每天很滿</option>
+            </select>
+          </label>
+          <label class="hr-field">
+            <span>預算策略</span>
+            <select data-budget>
+              <option value="save">省住宿</option>
+              <option value="balance" selected>平衡</option>
+              <option value="invest">願意花在房間</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="hr-checks">
+          <label><input data-work type="checkbox"> 需要在房間工作或剪片</label>
+          <label><input data-luggage type="checkbox" checked> 行李會比較多</label>
+          <label><input data-noise type="checkbox" checked> 怕吵，隔音很重要</label>
+        </div>
+
+        <div class="hr-actions">
+          <button class="hr-button" type="button" data-sample>載入示範</button>
+          <button class="hr-button hr-primary" type="submit">排序房型需求</button>
+        </div>
+      </form>
+
+      <section class="hr-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"hotel-room-energy","category":"quiz","name":"房型能量測驗","tagline":"從住宿需求反推你這趟旅行要補什麼。","audience":"訂房前猶豫房型與地點的人","mechanic":"評估睡眠、浴缸、景觀、位置需求，產生住宿優先順序。","result":"住宿不是配角，它會決定你有沒有力氣玩。","chips":["住宿需求","房型排序","預算分配"],"mode":"quiz","modeLabel":"人格測驗","modeVariant":"時間線","interfaceTitle":"房型能量測驗操作台","actionLabel":"測出我的旅行角色","resultName":"旅行人格卡","modePromise":"用幾個選擇題產生可分享的人格結果與第一版行程方向。","shareLead":"我剛測出自己的旅行人格","sampleItems":["餐廳優先","突然改行程","安靜探索","朋友一起玩","慢慢晃","一天塞滿","拍照優先"],"scoreSeed":75,"executionPack":{"actions":["用 住宿需求 結果決定行程第一順位。","把 房型排序 與社交能量轉成每日密度。","把人格結果丟進 ChillOut 生成角色式行程。"],"hooks":["我的 房型能量測驗 結果居然是這個。","你不是難搞，你只是旅行設定很明確。","把你的結果貼出來，看誰最適合一起旅行。"],"qa":["每個選項會改變分數","結果要有角色名稱","Prompt 要保留人格條件"]},"playSteps":["輸入 餐廳優先 或這次最想解決的旅行條件。","調整 住宿需求、房型排序 與 預算分配 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"choice","key":"pace","label":"旅行節奏","choices":["慢慢晃","重點精準","一天塞滿","看心情改"]},{"type":"choice","key":"anchor","label":"最在意的錨點","choices":["餐廳優先","突然改行程","安靜探索","朋友一起玩","慢慢晃"]},{"type":"choice","key":"risk","label":"臨時改行程接受度","choices":["完全不行","可接受一點","越即興越好"]},{"type":"range","key":"social","label":"社交能量","min":1,"max":100,"value":63,"left":"安靜旅行","right":"認識新朋友"}],"id":"T018","categoryLabel":"旅行人格測驗","categoryTone":"用輕量測驗讓使用者得到可分享的旅行角色與第一版行程。","primary":"#7C5CFF","accent":"#7C5CFF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_hotel-room-energy","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/hotel-room-energy.html"}</script>
-  <script src="../assets/tool-scripts/hotel-room-energy.js?v=20260525d"></script>
+  <div class="hr-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/hotel-room-energy.js?v=20260525manual1"></script>
 </body>
 </html>
