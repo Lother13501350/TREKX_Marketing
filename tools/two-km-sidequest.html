@@ -3,93 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2 公里支線任務｜ChillOut 旅行小工具</title>
-  <meta name="description" content="在主要景點旁邊多找一個驚喜。輸入主景點，生成步行 2 公里內的咖啡、巷弄或觀景任務。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="2 公里支線任務｜ChillOut 旅行小工具">
-  <meta property="og:description" content="在主要景點旁邊多找一個驚喜。">
+  <title>2 公里支線任務｜ChillOut 旅行小工具 T043</title>
+  <meta name="description" content="在主要景點旁邊找一個 2 公里內的小冒險。輸入主景點、可用時間、步行上限、體力與候選支線，生成可執行支線任務與 ChillOut prompt。">
+  <meta property="og:title" content="2 公里支線任務｜ChillOut 旅行小工具 T043">
+  <meta property="og:description" content="最有記憶點的常常是支線。在主要景點旁邊多找一個驚喜。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/two-km-sidequest.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/two-km-sidequest.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/two-km-sidequest.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/two-km-sidequest.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-1 mode-decision" style="--tool-accent:#2F9E44">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="sq-app">
+  <header class="sq-nav">
+    <a class="sq-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="sq-mark">C</span>
+      <span><strong>ChillOut</strong><small>T043 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_two-km-sidequest_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_two_km_sidequest_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T043 · 避開人潮與繞路</p>
-        <h1>2 公里支線任務</h1>
-        <p class="product-lead">在主要景點旁邊多找一個驚喜。</p>
-        <div class="product-pills">
-          <span>支線任務</span><span>步行</span><span>驚喜點</span>
-        </div>
+    <section class="sq-hero">
+      <div class="sq-hero-copy">
+        <p class="sq-kicker">T043 · two kilometer sidequest</p>
+        <h1>主景點旁邊，才常常藏著今天最像自己的地方。</h1>
+        <p>輸入你已經要去的主景點，再放入 2 公里內可能的小支線。工具會幫你挑出不繞太遠、體力吃得下、又有記憶點的微冒險。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/two-km-sidequest.svg" alt="2 公里支線任務 互動工具視覺">
+      <figure class="sq-visual">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=80" alt="城市步行支線小路">
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="2 公里支線任務 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>輸入主景點，生成步行 2 公里內的咖啡、巷弄或觀景任務。</h2>
-        <p>想在行程中加入小冒險的人可以在 30 秒內得到一張可分享的結果卡。把人潮、時間與期待值算成去、改、跳過三種決策。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_two-km-sidequest_result">丟進 ChillOut</a>
-          </div>
+    <section class="sq-workbench" aria-label="2 公里支線任務操作區">
+      <aside class="sq-settings" aria-label="支線條件">
+        <p class="sq-kicker">Sidequest settings</p>
+        <h2>支線條件</h2>
+        <label>
+          主景點
+          <input data-main value="台北故宮" placeholder="例如：清水寺、南山塔、赤崁樓">
+        </label>
+        <div class="sq-two">
+          <label>
+            可用時間
+            <select data-window>
+              <option value="30">30 分鐘</option>
+              <option value="45" selected>45 分鐘</option>
+              <option value="75">75 分鐘</option>
+              <option value="120">2 小時</option>
+            </select>
+          </label>
+          <label>
+            移動方式
+            <select data-move>
+              <option value="walk">步行</option>
+              <option value="bike">腳踏車</option>
+              <option value="bus">公車</option>
+              <option value="taxi">叫車</option>
+            </select>
+          </label>
+        </div>
+        <label class="sq-range"><span>步行上限 <strong data-distance-label>2.0 km</strong></span><input data-distance type="range" min="0.4" max="2" step="0.1" value="2"></label>
+        <label class="sq-range"><span>體力餘裕 <strong data-energy-label>64/100</strong></span><input data-energy type="range" min="1" max="100" value="64"></label>
+        <label class="sq-range"><span>驚喜偏好 <strong data-surprise-label>78/100</strong></span><input data-surprise type="range" min="1" max="100" value="78"></label>
+        <div class="sq-actions">
+          <button type="button" data-sample>載入範例</button>
+          <button type="button" data-add-quest>新增支線</button>
         </div>
       </aside>
+
+      <section class="sq-quests" aria-label="候選支線">
+        <div class="sq-quest-head">
+          <div>
+            <p class="sq-kicker">Sidequest candidates</p>
+            <h2>候選支線</h2>
+          </div>
+          <button type="button" class="sq-primary" data-generate>生成支線任務</button>
+        </div>
+        <div class="sq-quest-list" data-quests></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="sq-output" data-output aria-live="polite">
+      <div class="sq-empty">
+        <p class="sq-kicker">Result</p>
+        <h2>先放入候選支線，這裡會生成 2 公里微冒險。</h2>
+        <p>結果會包含三個支線任務、放棄條件、分享文與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"two-km-sidequest","category":"detour","name":"2 公里支線任務","tagline":"在主要景點旁邊多找一個驚喜。","audience":"想在行程中加入小冒險的人","mechanic":"輸入主景點，生成步行 2 公里內的咖啡、巷弄或觀景任務。","result":"最有記憶點的常常是支線。","chips":["支線任務","步行","驚喜點"],"mode":"decision","modeLabel":"值得去判斷","modeVariant":"三欄分流","interfaceTitle":"2 公里支線任務操作台","actionLabel":"算出取捨建議","resultName":"去留決策卡","modePromise":"把人潮、時間與期待值算成去、改、跳過三種決策。","shareLead":"我用工具判斷這個旅遊選項值不值得","sampleItems":["熱門景點","排隊名店","人潮路口","交通轉乘","替代小巷","附近咖啡","備案公園"],"scoreSeed":73,"executionPack":{"actions":["先判斷 支線任務 值不值得，不值得就切 步行。","把人潮與移動成本轉成 go / change / skip。","把替代玩法丟進 ChillOut 找附近低壓路線。"],"hooks":["不是所有爆紅都值得排。","花 30 秒省掉半天踩雷。","這個點到底去不去，先用工具算一次。"],"qa":["結果要有去/改/跳過","替代方案不可空白","Prompt 要能生成備案"]},"playSteps":["輸入 熱門景點 或這次最想解決的旅行條件。","調整 支線任務、步行 與 驚喜點 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"target","label":"要判斷的選項","placeholder":"例如：熱門景點、排隊名店"},{"type":"range","key":"crowd","label":"可忍受人潮","min":1,"max":100,"value":74,"left":"完全不要","right":"可以排隊"},{"type":"choice","key":"backup","label":"偏好的替代方向","choices":["人潮路口","交通轉乘","替代小巷","附近咖啡","備案公園"]},{"type":"range","key":"effort","label":"願意多花的移動成本","min":1,"max":100,"value":43,"left":"越近越好","right":"繞路也行"}],"id":"T043","categoryLabel":"避開人潮與繞路","categoryTone":"把爆紅景點旁邊更舒服、更像自己的選項挖出來。","primary":"#2F9E44","accent":"#2F9E44","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_two-km-sidequest","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/two-km-sidequest.html"}</script>
-  <script src="../assets/tool-scripts/two-km-sidequest.js?v=20260525d"></script>
+  <div class="sq-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/two-km-sidequest.js?v=20260525manual1"></script>
 </body>
 </html>
