@@ -3,93 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>朋友丟連結收件箱｜ChillOut 旅行小工具</title>
-  <meta name="description" content="群組裡的旅遊連結一鍵變成待辦。貼上多個連結或店名，工具會分類成食、住、拍、逛與負責人。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="朋友丟連結收件箱｜ChillOut 旅行小工具">
-  <meta property="og:description" content="群組裡的旅遊連結一鍵變成待辦。">
+  <title>朋友丟連結收件箱｜ChillOut 旅行小工具 T007</title>
+  <meta name="description" content="把朋友丟來的旅行連結、店名與 Reels 整理成必排、備用、刪掉三桶，分配負責人並產生 ChillOut 行程 prompt。">
+  <meta property="og:title" content="朋友丟連結收件箱｜ChillOut">
+  <meta property="og:description" content="群組裡的旅遊連結，一鍵整理成可出發清單。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/friend-link-inbox.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/friend-link-inbox.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/friend-link-inbox.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/friend-link-inbox.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-1 mode-sorter" style="--tool-accent:#08A7A0">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="friend-inbox-app">
+  <header class="fi-topbar">
+    <a class="fi-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="fi-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T007 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_friend-link-inbox_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_friend_link_inbox_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T007 · 社群靈感轉行程</p>
-        <h1>朋友丟連結收件箱</h1>
-        <p class="product-lead">群組裡的旅遊連結一鍵變成待辦。</p>
-        <div class="product-pills">
-          <span>群組整理</span><span>負責人</span><span>可執行清單</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/friend-link-inbox.svg" alt="朋友丟連結收件箱 互動工具視覺">
-      </figure>
+  <main class="fi-shell">
+    <section class="fi-hero">
+      <p class="fi-eyebrow">Group link inbox</p>
+      <h1>朋友一直丟連結，但沒人整理。</h1>
+      <p>把群組裡的 IG、地圖連結、店名和截圖文字貼進來。工具會幫你分出必排、備用、刪掉，並把每個點分配給適合負責的人。</p>
     </section>
 
-    <section class="product-workbench" aria-label="朋友丟連結收件箱 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>貼上多個連結或店名，工具會分類成食、住、拍、逛與負責人。</h2>
-        <p>朋友一直丟連結但沒人整理的旅行群可以在 30 秒內得到一張可分享的結果卡。把散亂素材分成今天必排、可備用、先刪掉三種狀態。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_friend-link-inbox_result">丟進 ChillOut</a>
-          </div>
+    <section class="fi-workbench" aria-label="朋友丟連結收件箱操作區">
+      <form class="fi-input" data-form>
+        <label class="fi-field">
+          <span>群組丟來的素材</span>
+          <textarea data-links spellcheck="false" placeholder="每行一個連結、店名或景點"></textarea>
+        </label>
+        <div class="fi-grid">
+          <label class="fi-field">
+            <span>旅伴名單</span>
+            <input data-people value="我、阿哲、小雨、Mia" autocomplete="off">
+          </label>
+          <label class="fi-field">
+            <span>整理策略</span>
+            <select data-style>
+              <option value="效率">效率優先</option>
+              <option value="公平">每個人都顧到</option>
+              <option value="低壓">不要排太滿</option>
+            </select>
+          </label>
         </div>
-      </aside>
-    </section>
+        <div class="fi-actions">
+          <button class="fi-button" type="button" data-sample>載入示範</button>
+          <button class="fi-button fi-primary" type="submit">整理收件箱</button>
+        </div>
+      </form>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+      <section class="fi-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"friend-link-inbox","category":"social","name":"朋友丟連結收件箱","tagline":"群組裡的旅遊連結一鍵變成待辦。","audience":"朋友一直丟連結但沒人整理的旅行群","mechanic":"貼上多個連結或店名，工具會分類成食、住、拍、逛與負責人。","result":"不用再往上滑聊天記錄，先把靈感收進同一張桌。","chips":["群組整理","負責人","可執行清單"],"mode":"sorter","modeLabel":"靈感整理器","modeVariant":"清單桌面","interfaceTitle":"朋友丟連結收件箱操作台","actionLabel":"整理成可出發清單","resultName":"出發清單","modePromise":"把散亂素材分成今天必排、可備用、先刪掉三種狀態。","shareLead":"我把一堆旅遊靈感整理成可出發清單","sampleItems":["朋友群組連結","IG 收藏店家","朋友丟的 Reels","小紅書截圖","咖啡廳名單","夜景口袋清單","想去但沒排的景點"],"scoreSeed":64,"executionPack":{"actions":["把「群組整理」拆成 3 個桶：今天必排、可備用、先刪掉。","把 朋友群組連結 與 IG 收藏店家 合併成第一版路線。","把得分最高的 3 個素材丟進 ChillOut 產生完整行程。"],"hooks":["我用 朋友丟連結收件箱 把群組靈感整理成可出發清單。","收藏不是問題，沒有整理才是問題。","留言你的 群組整理，我幫你丟進 ChillOut 變行程。"],"qa":["至少輸入 3 個素材","結果要出現三桶分類","分享文案要含 ChillOut 導流"]},"playSteps":["輸入 朋友群組連結 或這次最想解決的旅行條件。","調整 群組整理、負責人 與 可執行清單 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"rawList","label":"群組整理素材","placeholder":"貼上或輸入：朋友群組連結、IG 收藏店家、朋友丟的 Reels"},{"type":"range","key":"urgency","label":"這次真的想去的程度","min":1,"max":100,"value":68,"left":"只是收藏","right":"馬上想排"},{"type":"choice","key":"filter","label":"整理優先規則","choices":["朋友群組連結","IG 收藏店家","朋友丟的 Reels","小紅書截圖","咖啡廳名單"]},{"type":"range","key":"shareNeed","label":"想分享給朋友的程度","min":1,"max":100,"value":61,"left":"自己用","right":"想發限動"}],"id":"T007","categoryLabel":"社群靈感轉行程","categoryTone":"把 IG、截圖、朋友傳來的靈感變成可以出發的路線。","primary":"#08A7A0","accent":"#08A7A0","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_friend-link-inbox","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/friend-link-inbox.html"}</script>
-  <script src="../assets/tool-scripts/friend-link-inbox.js?v=20260525d"></script>
+  <div class="fi-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/friend-link-inbox.js?v=20260525manual1"></script>
 </body>
 </html>
