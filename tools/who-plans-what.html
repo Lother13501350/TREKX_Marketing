@@ -3,93 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>旅行分工抽籤｜ChillOut 旅行小工具</title>
-  <meta name="description" content="把排行程變成可接受的任務分配。輸入成員與任務，依興趣分配餐廳、交通、住宿與拍照。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="旅行分工抽籤｜ChillOut 旅行小工具">
-  <meta property="og:description" content="把排行程變成可接受的任務分配。">
+  <title>旅行分工抽籤｜ChillOut 旅行小工具 T025</title>
+  <meta name="description" content="把旅行前的餐廳、交通、住宿、拍照、預算與備案分配給同行成員，輸出公平負載、群組公告與 ChillOut prompt。">
+  <meta property="og:title" content="旅行分工抽籤｜ChillOut">
+  <meta property="og:description" content="主揪不該是一個人的職業，把任務變成大家都能接受的分工表。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/who-plans-what.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/who-plans-what.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/who-plans-what.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/who-plans-what.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-1 mode-pact" style="--tool-accent:#EF476F">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="wp-app">
+  <header class="wp-topbar">
+    <a class="wp-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="wp-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T025 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_who-plans-what_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_who_plans_what_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T025 · 搭子與關係工具</p>
-        <h1>旅行分工抽籤</h1>
-        <p class="product-lead">把排行程變成可接受的任務分配。</p>
-        <div class="product-pills">
-          <span>任務分配</span><span>主揪救援</span><span>群組協作</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/who-plans-what.svg" alt="旅行分工抽籤 互動工具視覺">
-      </figure>
+  <main class="wp-page">
+    <section class="wp-hero">
+      <p class="wp-eyebrow">Trip task draft</p>
+      <h1>排行程不要再靠一個人硬撐。</h1>
+      <p>把人、任務與難度放進來，工具會依照擅長項目、可投入時間與決斷力分配工作，讓餐廳、交通、住宿、拍照、預算與備案都有負責人。</p>
     </section>
 
-    <section class="product-workbench" aria-label="旅行分工抽籤 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>輸入成員與任務，依興趣分配餐廳、交通、住宿與拍照。</h2>
-        <p>總是只有一個人在規劃的群組可以在 30 秒內得到一張可分享的結果卡。把出發前最容易吵的點變成可以截圖討論的協議。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
+    <section class="wp-grid" aria-label="旅行分工抽籤操作區">
+      <aside class="wp-panel wp-settings">
+        <form data-trip-form>
+          <label class="wp-field">
+            <span>旅行名稱</span>
+            <input data-trip value="四人東京週末" autocomplete="off">
+          </label>
+          <div class="wp-two">
+            <label class="wp-field">
+              <span>出發倒數天數</span>
+              <input data-countdown type="number" min="1" max="180" value="21">
+            </label>
+            <label class="wp-field">
+              <span>目前主揪壓力</span>
+              <select data-pressure>
+                <option value="low">還可以</option>
+                <option value="mid" selected>開始有壓力</option>
+                <option value="high">快爆炸</option>
+              </select>
+            </label>
           </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_who-plans-what_result">丟進 ChillOut</a>
+          <label class="wp-range">
+            <span>群組回覆速度 <strong data-reply-value>46</strong></span>
+            <input data-reply type="range" min="0" max="100" value="46">
+          </label>
+          <div class="wp-actions">
+            <button type="button" class="wp-button" data-sample>載入示範</button>
+            <button type="button" class="wp-button" data-add-person>加成員</button>
+            <button type="button" class="wp-button" data-add-task>加任務</button>
           </div>
-        </div>
+        </form>
       </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+      <section class="wp-panel wp-people">
+        <div class="wp-section-head">
+          <div>
+            <p class="wp-eyebrow">People</p>
+            <h2>誰可以負責什麼</h2>
+          </div>
+        </div>
+        <div class="wp-people-list" data-people></div>
+      </section>
+
+      <section class="wp-panel wp-tasks">
+        <div class="wp-section-head">
+          <div>
+            <p class="wp-eyebrow">Tasks</p>
+            <h2>要分出去的任務</h2>
+          </div>
+          <button type="button" class="wp-button wp-primary" data-generate>重新分配</button>
+        </div>
+        <div class="wp-task-list" data-tasks></div>
+      </section>
+
+      <section class="wp-panel wp-output" data-output aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"who-plans-what","category":"group","name":"旅行分工抽籤","tagline":"把排行程變成可接受的任務分配。","audience":"總是只有一個人在規劃的群組","mechanic":"輸入成員與任務，依興趣分配餐廳、交通、住宿與拍照。","result":"主揪不該是一個人的職業。","chips":["任務分配","主揪救援","群組協作"],"mode":"pact","modeLabel":"旅伴協議","modeVariant":"極簡卡片","interfaceTitle":"旅行分工抽籤操作台","actionLabel":"產生旅伴共識","resultName":"旅伴協議書","modePromise":"把出發前最容易吵的點變成可以截圖討論的協議。","shareLead":"我做了一份旅行前共識協議","sampleItems":["各自放風","交通分工","房型偏好","最後決策權","早起時間","美食預算","拍照耐心"],"scoreSeed":82,"executionPack":{"actions":["先把 任務分配 寫成旅伴共識，而不是出發後才吵。","把 主揪救援 設成行前必談條款。","把協議截圖丟群組，確認每個人都接受。"],"hooks":["旅行前先簽這張，不然出發後很容易爆。","真正的旅伴默契是先講清楚。","把最容易吵的點變成可以截圖的協議。"],"qa":["旅伴名單可空白也能生成","至少輸出 4 條協議","Prompt 要包含預算與放風需求"]},"playSteps":["輸入 各自放風 或這次最想解決的旅行條件。","調整 任務分配、主揪救援 與 群組協作 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"people","label":"旅伴名單","placeholder":"例如：我、阿哲、小雨、Mia"},{"type":"range","key":"budgetGap","label":"預算差距","min":1,"max":100,"value":62,"left":"很一致","right":"落差很大"},{"type":"choice","key":"conflict","label":"最容易吵的點","choices":["各自放風","交通分工","房型偏好","最後決策權","早起時間"]},{"type":"range","key":"aloneTime","label":"各自放風需求","min":1,"max":100,"value":59,"left":"全程黏著","right":"需要獨處"}],"id":"T025","categoryLabel":"搭子與關係工具","categoryTone":"把旅行前最容易吵的事情變成可以討論、投票、截圖分享的協議。","primary":"#EF476F","accent":"#EF476F","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_who-plans-what","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/who-plans-what.html"}</script>
-  <script src="../assets/tool-scripts/who-plans-what.js?v=20260525d"></script>
+  <div class="wp-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/who-plans-what.js?v=20260525manual1"></script>
 </body>
 </html>
