@@ -3,93 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>餐廳否決權｜ChillOut 旅行小工具</title>
-  <meta name="description" content="每個人都有一次不想吃的權利。輸入忌口與想吃，生成候選餐廳規則與否決權。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="餐廳否決權｜ChillOut 旅行小工具">
-  <meta property="og:description" content="每個人都有一次不想吃的權利。">
+  <title>餐廳否決權｜ChillOut 旅行小工具 T027</title>
+  <meta name="description" content="整理多人旅行的忌口、想吃、辣度、預算與候選餐廳，輸出安全候選、否決規則、群組公告與 ChillOut 美食路線 prompt。">
+  <meta property="og:title" content="餐廳否決權｜ChillOut">
+  <meta property="og:description" content="每個人都有一次不想吃的權利，餐廳不是猜心遊戲，是共同規則。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/restaurant-veto.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/restaurant-veto.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/restaurant-veto.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/restaurant-veto.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-3 mode-pact" style="--tool-accent:#EF476F">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="rv-app">
+  <header class="rv-topbar">
+    <a class="rv-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="rv-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T027 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_restaurant-veto_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_restaurant_veto_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T027 · 搭子與關係工具</p>
-        <h1>餐廳否決權</h1>
-        <p class="product-lead">每個人都有一次不想吃的權利。</p>
-        <div class="product-pills">
-          <span>餐廳共識</span><span>否決權</span><span>忌口整理</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/restaurant-veto.svg" alt="餐廳否決權 互動工具視覺">
-      </figure>
+  <main class="rv-page">
+    <section class="rv-hero">
+      <p class="rv-eyebrow">Restaurant veto board</p>
+      <h1>多人吃飯，先把不能吃的講清楚。</h1>
+      <p>旅行吃飯最怕有人一直說都可以，最後又默默不開心。這個工具把忌口、想吃、辣度、預算與候選餐廳放在同一張表，讓每個人都有一次合理否決權。</p>
     </section>
 
-    <section class="product-workbench" aria-label="餐廳否決權 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>輸入忌口與想吃，生成候選餐廳規則與否決權。</h2>
-        <p>多人旅行吃飯最難決定的人可以在 30 秒內得到一張可分享的結果卡。把出發前最容易吵的點變成可以截圖討論的協議。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
+    <section class="rv-layout" aria-label="餐廳否決權操作區">
+      <aside class="rv-panel rv-settings">
+        <form data-meal-form>
+          <label class="rv-field">
+            <span>旅行餐局</span>
+            <input data-trip value="首爾第二晚晚餐" autocomplete="off">
+          </label>
+          <div class="rv-two">
+            <label class="rv-field">
+              <span>用餐人數</span>
+              <input data-count type="number" min="2" max="20" value="4">
+            </label>
+            <label class="rv-field">
+              <span>否決規則</span>
+              <select data-policy>
+                <option value="one" selected>每人一次否決</option>
+                <option value="allergy">忌口優先</option>
+                <option value="majority">多數決</option>
+              </select>
+            </label>
           </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_restaurant-veto_result">丟進 ChillOut</a>
+          <label class="rv-range">
+            <span>群組飢餓風險 <strong data-hunger-value>58</strong></span>
+            <input data-hunger type="range" min="0" max="100" value="58">
+          </label>
+          <div class="rv-actions">
+            <button type="button" class="rv-button" data-sample>載入示範</button>
+            <button type="button" class="rv-button" data-add-diner>加旅伴</button>
+            <button type="button" class="rv-button" data-add-place>加餐廳</button>
           </div>
-        </div>
+        </form>
       </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+      <section class="rv-panel rv-diners">
+        <div class="rv-section-head">
+          <div>
+            <p class="rv-eyebrow">Diners</p>
+            <h2>忌口與想吃</h2>
+          </div>
+        </div>
+        <div class="rv-diner-list" data-diners></div>
+      </section>
+
+      <section class="rv-panel rv-places">
+        <div class="rv-section-head">
+          <div>
+            <p class="rv-eyebrow">Candidates</p>
+            <h2>候選餐廳</h2>
+          </div>
+          <button type="button" class="rv-button rv-primary" data-generate>生成否決表</button>
+        </div>
+        <div class="rv-place-list" data-places></div>
+      </section>
+
+      <section class="rv-panel rv-output" data-output aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"restaurant-veto","category":"group","name":"餐廳否決權","tagline":"每個人都有一次不想吃的權利。","audience":"多人旅行吃飯最難決定的人","mechanic":"輸入忌口與想吃，生成候選餐廳規則與否決權。","result":"餐廳不是猜心遊戲，是共同規則。","chips":["餐廳共識","否決權","忌口整理"],"mode":"pact","modeLabel":"旅伴協議","modeVariant":"三欄分流","interfaceTitle":"餐廳否決權操作台","actionLabel":"產生旅伴共識","resultName":"旅伴協議書","modePromise":"把出發前最容易吵的點變成可以截圖討論的協議。","shareLead":"我做了一份旅行前共識協議","sampleItems":["房型偏好","最後決策權","早起時間","美食預算","拍照耐心","各自放風","交通分工"],"scoreSeed":84,"executionPack":{"actions":["先把 餐廳共識 寫成旅伴共識，而不是出發後才吵。","把 否決權 設成行前必談條款。","把協議截圖丟群組，確認每個人都接受。"],"hooks":["旅行前先簽這張，不然出發後很容易爆。","真正的旅伴默契是先講清楚。","把最容易吵的點變成可以截圖的協議。"],"qa":["旅伴名單可空白也能生成","至少輸出 4 條協議","Prompt 要包含預算與放風需求"]},"playSteps":["輸入 房型偏好 或這次最想解決的旅行條件。","調整 餐廳共識、否決權 與 忌口整理 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"people","label":"旅伴名單","placeholder":"例如：我、阿哲、小雨、Mia"},{"type":"range","key":"budgetGap","label":"預算差距","min":1,"max":100,"value":64,"left":"很一致","right":"落差很大"},{"type":"choice","key":"conflict","label":"最容易吵的點","choices":["房型偏好","最後決策權","早起時間","美食預算","拍照耐心"]},{"type":"range","key":"aloneTime","label":"各自放風需求","min":1,"max":100,"value":61,"left":"全程黏著","right":"需要獨處"}],"id":"T027","categoryLabel":"搭子與關係工具","categoryTone":"把旅行前最容易吵的事情變成可以討論、投票、截圖分享的協議。","primary":"#EF476F","accent":"#EF476F","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_restaurant-veto","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/restaurant-veto.html"}</script>
-  <script src="../assets/tool-scripts/restaurant-veto.js?v=20260525d"></script>
+  <div class="rv-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/restaurant-veto.js?v=20260525manual1"></script>
 </body>
 </html>
