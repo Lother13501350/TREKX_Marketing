@@ -3,93 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>車站微旅行｜ChillOut 旅行小工具</title>
-  <meta name="description" content="只用一個車站周邊排出半天。輸入車站與可用時間，生成吃、逛、休息三段。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="車站微旅行｜ChillOut 旅行小工具">
-  <meta property="og:description" content="只用一個車站周邊排出半天。">
+  <title>車站微旅行｜ChillOut 旅行小工具 T044</title>
+  <meta name="description" content="只用一個車站周邊排出半天。輸入車站、可用時間、行李狀態、天氣與候選點，生成吃、逛、休息三段車站微旅行。">
+  <meta property="og:title" content="車站微旅行｜ChillOut 旅行小工具 T044">
+  <meta property="og:description" content="車站不是路過，它也能是一段旅行。把轉車和等人的空檔變成微旅行。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/station-mini-trip.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/station-mini-trip.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/station-mini-trip.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/station-mini-trip.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-2 mode-decision" style="--tool-accent:#2F9E44">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="sm-app">
+  <header class="sm-nav">
+    <a class="sm-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="sm-mark">C</span>
+      <span><strong>ChillOut</strong><small>T044 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_station-mini-trip_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_station_mini_trip_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T044 · 避開人潮與繞路</p>
-        <h1>車站微旅行</h1>
-        <p class="product-lead">只用一個車站周邊排出半天。</p>
-        <div class="product-pills">
-          <span>車站</span><span>半天</span><span>微旅行</span>
-        </div>
+    <section class="sm-hero">
+      <div class="sm-hero-copy">
+        <p class="sm-kicker">T044 · station micro trip</p>
+        <h1>等車、轉車、等人，也可以是一段小旅行。</h1>
+        <p>輸入你所在的車站和空檔時間，工具會用行李、天氣、步行距離與候選點，排出吃、逛、休息三段式微旅行，並提醒你什麼時候該回站。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/station-mini-trip.svg" alt="車站微旅行 互動工具視覺">
+      <figure class="sm-visual">
+        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1100&q=80" alt="車站與月台">
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="車站微旅行 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>輸入車站與可用時間，生成吃、逛、休息三段。</h2>
-        <p>轉車、等人或短時間空檔的人可以在 30 秒內得到一張可分享的結果卡。把人潮、時間與期待值算成去、改、跳過三種決策。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_station-mini-trip_result">丟進 ChillOut</a>
-          </div>
+    <section class="sm-workbench" aria-label="車站微旅行操作區">
+      <aside class="sm-settings" aria-label="空檔條件">
+        <p class="sm-kicker">Station settings</p>
+        <h2>空檔條件</h2>
+        <label>車站<input data-station value="台中車站" placeholder="例如：京都站、首爾站、高雄車站"></label>
+        <div class="sm-two">
+          <label>可用時間<select data-window><option value="45">45 分鐘</option><option value="90" selected>90 分鐘</option><option value="150">2.5 小時</option><option value="240">半天</option></select></label>
+          <label>回站緩衝<select data-buffer><option value="10">10 分鐘</option><option value="15" selected>15 分鐘</option><option value="25">25 分鐘</option></select></label>
+        </div>
+        <label>行李狀態<select data-luggage><option value="large">大行李</option><option value="carry">登機箱</option><option value="light" selected>輕便背包</option><option value="none">無行李</option></select></label>
+        <label class="sm-check"><input data-rain type="checkbox"><span>可能下雨，優先室內或有遮蔽</span></label>
+        <label class="sm-range"><span>步行上限 <strong data-walk-label>14 分鐘</strong></span><input data-walk type="range" min="4" max="35" value="14"></label>
+        <label class="sm-range"><span>探索慾望 <strong data-curiosity-label>66/100</strong></span><input data-curiosity type="range" min="1" max="100" value="66"></label>
+        <div class="sm-actions">
+          <button type="button" data-sample>載入範例</button>
+          <button type="button" data-add-stop>新增車站點</button>
         </div>
       </aside>
+
+      <section class="sm-stops" aria-label="車站周邊候選點">
+        <div class="sm-stop-head">
+          <div><p class="sm-kicker">Station stops</p><h2>周邊候選點</h2></div>
+          <button type="button" class="sm-primary" data-generate>生成微旅行</button>
+        </div>
+        <div class="sm-stop-list" data-stops></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="sm-output" data-output aria-live="polite">
+      <div class="sm-empty">
+        <p class="sm-kicker">Result</p>
+        <h2>先放入車站周邊候選點，這裡會生成三段微旅行。</h2>
+        <p>結果會包含吃、逛、休息、回站提醒、分享文與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"station-mini-trip","category":"detour","name":"車站微旅行","tagline":"只用一個車站周邊排出半天。","audience":"轉車、等人或短時間空檔的人","mechanic":"輸入車站與可用時間，生成吃、逛、休息三段。","result":"車站不是路過，它也能是一段旅行。","chips":["車站","半天","微旅行"],"mode":"decision","modeLabel":"值得去判斷","modeVariant":"票券介面","interfaceTitle":"車站微旅行操作台","actionLabel":"算出取捨建議","resultName":"去留決策卡","modePromise":"把人潮、時間與期待值算成去、改、跳過三種決策。","shareLead":"我用工具判斷這個旅遊選項值不值得","sampleItems":["排隊名店","人潮路口","交通轉乘","替代小巷","附近咖啡","備案公園","熱門景點"],"scoreSeed":74,"executionPack":{"actions":["先判斷 車站 值不值得，不值得就切 半天。","把人潮與移動成本轉成 go / change / skip。","把替代玩法丟進 ChillOut 找附近低壓路線。"],"hooks":["不是所有爆紅都值得排。","花 30 秒省掉半天踩雷。","這個點到底去不去，先用工具算一次。"],"qa":["結果要有去/改/跳過","替代方案不可空白","Prompt 要能生成備案"]},"playSteps":["輸入 排隊名店 或這次最想解決的旅行條件。","調整 車站、半天 與 微旅行 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"target","label":"要判斷的選項","placeholder":"例如：排隊名店、人潮路口"},{"type":"range","key":"crowd","label":"可忍受人潮","min":1,"max":100,"value":75,"left":"完全不要","right":"可以排隊"},{"type":"choice","key":"backup","label":"偏好的替代方向","choices":["交通轉乘","替代小巷","附近咖啡","備案公園","熱門景點"]},{"type":"range","key":"effort","label":"願意多花的移動成本","min":1,"max":100,"value":44,"left":"越近越好","right":"繞路也行"}],"id":"T044","categoryLabel":"避開人潮與繞路","categoryTone":"把爆紅景點旁邊更舒服、更像自己的選項挖出來。","primary":"#2F9E44","accent":"#2F9E44","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_station-mini-trip","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/station-mini-trip.html"}</script>
-  <script src="../assets/tool-scripts/station-mini-trip.js?v=20260525d"></script>
+  <div class="sm-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/station-mini-trip.js?v=20260525manual1"></script>
 </body>
 </html>
