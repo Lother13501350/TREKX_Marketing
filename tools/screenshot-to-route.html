@@ -4,21 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>三張截圖路線工坊｜ChillOut 旅行小工具 T002</title>
-  <meta name="description" content="輸入三張旅遊截圖代表的地點，快速排成一條半日路線，並產生 ChillOut prompt。">
-  <meta property="og:title" content="三張截圖路線工坊">
+  <meta name="description" content="輸入三張旅行截圖代表的地點，快速排成半日路線，並產生可直接丟進 ChillOut 的行程 prompt。">
+  <meta property="og:title" content="三張截圖路線工坊｜ChillOut">
   <meta property="og:description" content="三張截圖，變成一條簡單可走的旅行路線。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/screenshot-to-route.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/screenshot-to-route.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/screenshot-to-route.html">
-  <link rel="stylesheet" href="../assets/screenshot-route.css?v=20260525simple">
+  <link rel="stylesheet" href="../assets/screenshot-route.css?v=20260525manual2">
 </head>
 <body class="screenshot-route-app">
-  <header class="sr-nav">
-    <a class="sr-brand" href="../travel-microtools-100.html">
-      <span class="sr-mark">C</span>
-      <span><strong>ChillOut</strong><small>T002 三張截圖路線工坊</small></span>
+  <header class="sr-topbar">
+    <a class="sr-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="sr-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T002 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
@@ -27,25 +30,40 @@
     </nav>
   </header>
 
-  <main class="sr-page">
+  <main class="sr-shell">
     <section class="sr-hero">
-      <p class="sr-kicker">T002 · Three screenshots to route</p>
-      <h1>三張截圖，排成一條路線。</h1>
-      <p>不用上傳也可以。把三張截圖代表的地點打進來，工具會幫你排出最直覺的半日順序。</p>
+      <p class="sr-eyebrow">Three screenshots to route</p>
+      <h1>三張截圖，排成一條半日路線。</h1>
+      <p>你不用先知道地址。只要把三張截圖代表的地點打進來，工具會判斷順序、節奏與備案，最後給你一段可以直接交給 ChillOut 的 prompt。</p>
     </section>
 
-    <section class="sr-tool">
-      <section class="sr-card">
-        <h2>1. 輸入三個地點</h2>
-        <p class="sr-help">每一格代表一張截圖裡你想去的地方。</p>
+    <section class="sr-studio" aria-label="三張截圖路線工坊操作區">
+      <form class="sr-builder" data-form>
         <div class="sr-shots">
-          <label class="sr-shot"><span>截圖 A</span><input data-shot placeholder="例如：景福宮韓服拍照"></label>
-          <label class="sr-shot"><span>截圖 B</span><input data-shot placeholder="例如：益善洞傳統茶屋"></label>
-          <label class="sr-shot"><span>截圖 C</span><input data-shot placeholder="例如：廣藏市場晚餐"></label>
+          <label class="sr-shot">
+            <span>A</span>
+            <strong>第一張截圖</strong>
+            <input data-shot value="景福宮韓服拍照" autocomplete="off">
+          </label>
+          <label class="sr-shot">
+            <span>B</span>
+            <strong>第二張截圖</strong>
+            <input data-shot value="益善洞傳統茶屋" autocomplete="off">
+          </label>
+          <label class="sr-shot">
+            <span>C</span>
+            <strong>第三張截圖</strong>
+            <input data-shot value="廣藏市場晚餐" autocomplete="off">
+          </label>
         </div>
-        <div class="sr-row">
-          <label>目的地<input data-city value="首爾"></label>
-          <label>起始時間
+
+        <div class="sr-controls">
+          <label>
+            <span>目的地</span>
+            <input data-city value="首爾" autocomplete="off">
+          </label>
+          <label>
+            <span>開始時間</span>
             <select data-start>
               <option>09:00</option>
               <option selected>10:00</option>
@@ -53,18 +71,28 @@
               <option>16:00</option>
             </select>
           </label>
+          <label>
+            <span>想要的節奏</span>
+            <select data-pace>
+              <option value="輕鬆">輕鬆</option>
+              <option value="拍照優先">拍照優先</option>
+              <option value="吃喝優先">吃喝優先</option>
+              <option value="少走路">少走路</option>
+            </select>
+          </label>
         </div>
-        <div class="sr-actions">
-          <button class="sr-button" data-sample>載入示範</button>
-          <button class="sr-button primary" data-generate>2. 產生路線</button>
-        </div>
-      </section>
 
-      <section class="sr-result" data-result></section>
+        <div class="sr-actions">
+          <button type="button" class="sr-button" data-sample>載入示範</button>
+          <button type="submit" class="sr-button sr-primary">生成路線</button>
+        </div>
+      </form>
+
+      <section class="sr-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
   <div class="sr-toast" data-toast role="status" aria-live="polite"></div>
-  <script src="../assets/screenshot-route.js?v=20260525simple"></script>
+  <script src="../assets/screenshot-route.js?v=20260525manual2"></script>
 </body>
 </html>

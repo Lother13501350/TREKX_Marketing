@@ -306,6 +306,10 @@ body.tool-product-page{
 .tool-product-page.layout-1 .product-poster{
   order:-1;
 }
+.tool-product-page.layout-1 .product-poster img{
+  width:100%;
+  max-width:380px;
+}
 .tool-product-page.layout-1 .product-workbench{
   grid-template-columns:minmax(0,1fr) minmax(280px,420px);
 }
@@ -648,5 +652,81 @@ body.tool-product-page{
   .tool-product-page .mode-timeline span{
     width:max-content;
     min-width:62px;
+  }
+}
+
+/* Manual polish layer: make the remaining productized pages read like tools, not nested boards. */
+.tool-product-page .product-workbench{
+  grid-template-columns:minmax(320px,1fr) minmax(320px,440px);
+  align-items:start;
+  max-width:1220px;
+}
+.tool-product-page .workbench-intro{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(0,360px) minmax(0,1fr);
+  gap:18px;
+  align-items:end;
+  padding:22px 24px;
+}
+.tool-product-page .workbench-intro h2{
+  max-width:900px;
+  font-size:clamp(24px,3vw,36px);
+}
+.tool-product-page .workbench-intro p:last-child{
+  max-width:720px;
+  justify-self:end;
+}
+.tool-product-page .tool-console,
+.tool-product-page .result-panel{
+  padding:20px;
+}
+.tool-product-page .result-panel{
+  position:sticky;
+  top:92px;
+}
+.tool-product-page .result-card{
+  gap:14px;
+  box-shadow:0 18px 50px rgba(31,27,20,.07);
+}
+.tool-product-page .result-card>strong{
+  font-size:clamp(52px,6vw,78px);
+}
+.tool-product-page .console-fields{
+  gap:12px;
+}
+.tool-product-page .console-field{
+  box-shadow:none;
+}
+.tool-product-page .product-button.primary,
+.tool-product-page .console-head button,
+.tool-product-page .choice-grid button.active{
+  box-shadow:0 10px 24px color-mix(in srgb,var(--tool-accent) 20%,transparent);
+}
+.tool-product-page .result-actions .product-button{
+  flex:1 1 150px;
+}
+.tool-product-page.mode-quiz .workbench-intro,
+.tool-product-page.mode-wellnessPlan .workbench-intro{
+  display:grid;
+}
+.tool-product-page.mode-quiz .product-workbench,
+.tool-product-page.mode-wellnessPlan .product-workbench{
+  grid-template-columns:minmax(320px,1fr) minmax(320px,440px);
+}
+@media (max-width:1080px){
+  .tool-product-page .product-workbench,
+  .tool-product-page.mode-quiz .product-workbench,
+  .tool-product-page.mode-wellnessPlan .product-workbench{
+    grid-template-columns:1fr;
+  }
+  .tool-product-page .workbench-intro{
+    grid-template-columns:1fr;
+  }
+  .tool-product-page .workbench-intro p:last-child{
+    justify-self:start;
+  }
+  .tool-product-page .result-panel{
+    position:static;
   }
 }
