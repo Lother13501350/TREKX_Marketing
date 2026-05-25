@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">轉機城市卡</title>
+  <desc id="desc">以登機證、跑道、城市路線和時間軸構成的轉機決策工具視覺。</desc>
+  <rect width="1200" height="840" fill="#f3f5f4"/>
+  <path d="M0 112h1200M0 224h1200M0 336h1200M0 448h1200M0 560h1200M0 672h1200M150 0v840M300 0v840M450 0v840M600 0v840M750 0v840M900 0v840M1050 0v840" stroke="#d9dedf" stroke-width="2" opacity=".7"/>
+  <rect x="128" y="92" width="944" height="656" rx="34" fill="#ffffff" stroke="#d9dedf" stroke-width="3"/>
+  <path d="M806 92v656" stroke="#d9dedf" stroke-width="3" stroke-dasharray="12 18"/>
+  <circle cx="806" cy="92" r="18" fill="#f3f5f4" stroke="#d9dedf" stroke-width="3"/>
+  <circle cx="806" cy="748" r="18" fill="#f3f5f4" stroke="#d9dedf" stroke-width="3"/>
+  <text x="176" y="168" fill="#58656a" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">T045 / LAYOVER CITY CARD</text>
+  <text x="176" y="256" fill="#171b1d" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">CITY</text>
+  <text x="176" y="344" fill="#171b1d" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">TASTING</text>
+  <text x="176" y="432" fill="#171b1d" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">PASS</text>
+  <rect x="176" y="500" width="560" height="86" rx="18" fill="#f3f5f4" stroke="#d9dedf" stroke-width="3"/>
+  <text x="208" y="554" fill="#58656a" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">6H 00M LAYOVER / 228 MIN FREE</text>
+  <path d="M200 650c70-76 142-112 216-108 96 4 136 80 220 68 60-9 98-58 134-104" fill="none" stroke="#58656a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="200" cy="650" r="20" fill="#171b1d"/>
+  <circle cx="416" cy="542" r="20" fill="#58656a"/>
+  <circle cx="636" cy="610" r="20" fill="#58656a"/>
+  <circle cx="770" cy="506" r="20" fill="#171b1d"/>
+  <text x="858" y="178" fill="#58656a" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">GATE</text>
+  <text x="858" y="270" fill="#171b1d" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="900">45</text>
+  <rect x="858" y="326" width="142" height="142" rx="20" fill="#f3f5f4" stroke="#d9dedf" stroke-width="3"/>
+  <path d="M890 408h78M929 369v78" stroke="#58656a" stroke-width="12" stroke-linecap="round"/>
+  <text x="858" y="540" fill="#58656a" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">RETURN LINE</text>
+  <text x="858" y="598" fill="#171b1d" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">120 MIN</text>
+  <rect x="858" y="642" width="150" height="42" rx="21" fill="#58656a"/>
+  <text x="890" y="671" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">SAFE</text>
+</svg>
