@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">熱門景點過濾器</title>
+  <desc id="desc">以三欄過濾板、景點去留分流與時間節省標示構成的旅行決策工具視覺。</desc>
+  <rect width="1200" height="840" fill="#f5f4f1"/>
+  <path d="M0 140h1200M0 280h1200M0 420h1200M0 560h1200M0 700h1200M150 0v840M300 0v840M450 0v840M600 0v840M750 0v840M900 0v840M1050 0v840" stroke="#e1ded7" stroke-width="2"/>
+  <rect x="112" y="92" width="976" height="656" rx="34" fill="#ffffff" stroke="#e1ded7" stroke-width="3"/>
+  <text x="172" y="170" fill="#646155" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">T050 / POPULAR PLACE FILTER</text>
+  <text x="172" y="276" fill="#1a1916" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="900">KEEP</text>
+  <text x="172" y="366" fill="#1a1916" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="900">REMIX</text>
+  <text x="172" y="456" fill="#1a1916" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="900">DROP</text>
+  <g transform="translate(620 178)">
+    <rect x="0" y="0" width="142" height="330" rx="24" fill="#f5f4f1" stroke="#e1ded7" stroke-width="3"/>
+    <rect x="188" y="0" width="142" height="330" rx="24" fill="#f5f4f1" stroke="#e1ded7" stroke-width="3"/>
+    <rect x="376" y="0" width="142" height="330" rx="24" fill="#646155"/>
+    <text x="36" y="58" fill="#646155" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">GO</text>
+    <text x="220" y="58" fill="#646155" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">FIX</text>
+    <text x="408" y="58" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">CUT</text>
+    <path d="M36 116h70M36 176h70M36 236h46M224 116h70M224 176h46M412 116h70M412 176h70M412 236h40" stroke="#646155" stroke-width="12" stroke-linecap="round"/>
+    <path d="M412 116h70M412 176h70M412 236h40" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <path d="M176 612c90-50 162-70 252-50 98 22 154 106 256 72 90-30 126-132 222-120 62 8 104 52 138 92" fill="none" stroke="#646155" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="176" cy="612" r="21" fill="#1a1916"/>
+  <circle cx="428" cy="562" r="21" fill="#646155"/>
+  <circle cx="684" cy="634" r="21" fill="#646155"/>
+  <circle cx="906" cy="514" r="21" fill="#646155"/>
+  <circle cx="1044" cy="606" r="21" fill="#1a1916"/>
+</svg>
