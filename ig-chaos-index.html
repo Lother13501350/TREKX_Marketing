@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IG 收藏混亂指數｜ChillOut 旅行小工具</title>
+  <meta name="description" content="測你的 IG 旅行收藏到底有多混亂。完成 5 題，取得混亂分數、整理建議、可直接貼進 ChillOut 的 AI 旅行 prompt。">
+  <meta property="og:title" content="測你的 IG 收藏混亂指數">
+  <meta property="og:description" content="旅行靈感存了一堆，最後還是不知道怎麼排？用 30 秒測出你的 IG 旅行收藏混亂指數。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/ig-chaos-index.html">
+  <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/screenshots/chillout-screen-1.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/ig-chaos-index.html">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="launch-page chaos-page">
+  <header class="launch-nav">
+    <a class="launch-brand" href="index.html">
+      <span class="brand-mark">C</span>
+      <span><strong>ChillOut</strong><small>Chaos Index</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="index.html">下載頁</a>
+      <a href="travel-microtools-100.html">100 小工具</a>
+      <a href="ig-travel-planner.html">IG 排行程</a>
+      <a href="launch-kit.html">分享素材</a>
+    </nav>
+  </header>
+
+  <main class="chaos-main">
+    <section class="chaos-hero">
+      <div>
+        <p class="eyebrow">30 秒測驗</p>
+        <h1>你的 IG 旅行收藏，到底有多混亂？</h1>
+        <p>很多人不是沒有旅行靈感，是靈感太多、太散、太晚整理。填 5 題，取得你的混亂指數，順手拿一組可以貼進 ChillOut 的整理 prompt。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#quiz">開始測驗</a>
+          <a class="btn ghost" href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=ig_chaos_top">直接下載 ChillOut</a>
+        </div>
+      </div>
+      <div class="chaos-preview">
+        <span>IG CHAOS INDEX</span>
+        <strong data-preview-score>?</strong>
+        <p>收藏很多不是問題，問題是出發前還要重新翻一次。</p>
+      </div>
+    </section>
+
+    <section class="chaos-tool" id="quiz">
+      <form class="chaos-form" data-chaos-form>
+        <label>
+          <span>你大概存了幾個「想去」的旅行貼文？</span>
+          <select name="saved">
+            <option value="8">10 個以下，還算清醒</option>
+            <option value="18">10-30 個，開始有點多</option>
+            <option value="28">30-80 個，已經需要整理</option>
+            <option value="38">80 個以上，這是一座資料倉庫</option>
+          </select>
+        </label>
+        <label>
+          <span>這些收藏橫跨幾個目的地？</span>
+          <select name="destinations">
+            <option value="4">1 個目的地</option>
+            <option value="10">2-3 個目的地</option>
+            <option value="18">4-6 個目的地</option>
+            <option value="26">我已經分不清了</option>
+          </select>
+        </label>
+        <label>
+          <span>你離出發還剩多久？</span>
+          <select name="deadline">
+            <option value="4">一個月以上</option>
+            <option value="12">2-4 週</option>
+            <option value="22">一週內</option>
+            <option value="30">明天/今晚/不要問</option>
+          </select>
+        </label>
+        <label>
+          <span>你有把景點分區或排順路嗎？</span>
+          <select name="sorted">
+            <option value="0">有，已經分好區</option>
+            <option value="8">有粗略分類</option>
+            <option value="20">只有截圖和收藏</option>
+            <option value="30">我靠臨場感</option>
+          </select>
+        </label>
+        <label>
+          <span>同行者現在知道行程嗎？</span>
+          <select name="team">
+            <option value="2">知道，而且有共識</option>
+            <option value="8">知道大方向</option>
+            <option value="16">他們以為我會處理</option>
+            <option value="24">我也以為我會處理</option>
+          </select>
+        </label>
+      </form>
+
+      <aside class="chaos-result" data-chaos-result>
+        <p class="eyebrow">你的結果</p>
+        <strong data-chaos-score>0</strong>
+        <h2 data-chaos-title>清醒收藏家</h2>
+        <p data-chaos-copy>你的收藏還在可控範圍。現在整理，會比出發前一天輕鬆很多。</p>
+        <div class="chaos-meter"><i data-chaos-meter></i></div>
+        <div class="prompt-card" data-chaos-prompt>請幫我把 IG 收藏景點整理成一趟可編輯行程，先依區域分組，再排出不趕路的每日路線。</div>
+        <div class="hero-actions">
+          <button class="btn ghost" type="button" data-copy-chaos>複製結果</button>
+          <a class="btn primary" href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=ig_chaos_result">用 ChillOut 整理行程</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="chaos-share">
+      <h2>分享文案</h2>
+      <p data-chaos-share>我的 IG 旅行收藏混亂指數是 0/100。現在先把景點丟進 ChillOut 整理。</p>
+    </section>
+  </main>
+  <script src="assets/ig-chaos.js"></script>
+</body>
+</html>

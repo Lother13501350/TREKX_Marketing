@@ -224,11 +224,34 @@ textarea{min-height:42px;resize:vertical}
 .microtool-card dt{font-size:12px;color:#0e5a6f;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
 .microtool-card dd{margin:2px 0 0;color:#526a70}
 .microtool-actions{display:flex;gap:8px;margin-top:auto;flex-wrap:wrap}
+.chaos-main{padding:42px clamp(18px,5vw,72px)}
+.chaos-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,420px);gap:24px;align-items:center;margin-bottom:20px}
+.chaos-hero h1{font-size:clamp(42px,6vw,78px);line-height:1.02;margin:8px 0 16px}
+.chaos-hero p{font-size:19px;color:#51666c;max-width:760px}
+.chaos-preview{background:#102f3a;color:#ecf6f5;border-radius:8px;padding:26px;box-shadow:0 18px 52px rgba(20,40,50,.18)}
+.chaos-preview span{font-size:13px;font-weight:900;letter-spacing:.12em;color:#e7b75f}
+.chaos-preview strong{display:block;font-size:96px;line-height:1;margin:16px 0}
+.chaos-preview p{color:#cfe2e2;margin:0}
+.chaos-tool{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,420px);gap:18px;align-items:start}
+.chaos-form,.chaos-result,.chaos-share{background:#fff;border:1px solid #dbe7e2;border-radius:8px;box-shadow:0 14px 38px rgba(20,40,50,.08);padding:22px}
+.chaos-form{display:grid;gap:14px}
+.chaos-form label{display:grid;gap:7px;color:#25444d;font-weight:900}
+.chaos-form label span{font-size:15px}
+.chaos-form select{font-weight:700}
+.chaos-result{position:sticky;top:96px}
+.chaos-result strong{display:block;font-size:86px;line-height:1;color:#0e5a6f}
+.chaos-result h2{font-size:28px;margin:8px 0}
+.chaos-meter{height:12px;border-radius:999px;background:#e9f0ee;overflow:hidden;margin:16px 0}
+.chaos-meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#1f7a68,#e7b75f,#e77a59);transition:width .25s ease}
+.chaos-share{margin-top:18px}
+.chaos-share h2{margin-top:0}
+.chaos-share p{font-size:18px;color:#40585f}
 @media (max-width:980px){
-  .launch-hero,.launch-section,.microtools-hero{grid-template-columns:1fr}
+  .launch-hero,.launch-section,.microtools-hero,.chaos-hero,.chaos-tool{grid-template-columns:1fr}
   .phone-stage{min-height:520px}
   .launch-strip,.copy-grid,.microtools-grid{grid-template-columns:1fr}
   .screenshot-grid{grid-template-columns:repeat(3,minmax(150px,1fr));overflow:auto;padding-bottom:10px}
+  .chaos-result{position:relative;top:auto}
 }
 @media (max-width:640px){
   .launch-nav{align-items:flex-start;display:grid}
