@@ -3,93 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>慢旅快旅比例尺｜ChillOut 旅行小工具</title>
-  <meta name="description" content="算出你一天該排幾個點才舒服。用體力、好奇心、移動厭惡與休息需求產生日程密度。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="慢旅快旅比例尺｜ChillOut 旅行小工具">
-  <meta property="og:description" content="算出你一天該排幾個點才舒服。">
+  <title>慢旅快旅比例尺｜ChillOut 旅行小工具 T017</title>
+  <meta name="description" content="用可用時間、體力、好奇心、移動厭惡與休息需求，算出一天該排幾個點才舒服。">
+  <meta property="og:title" content="慢旅快旅比例尺｜ChillOut">
+  <meta property="og:description" content="不是景點少，是你需要留白。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/slow-fast-balance.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/slow-fast-balance.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/slow-fast-balance.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/slow-fast-balance.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-5 mode-quiz" style="--tool-accent:#7C5CFF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="balance-app">
+  <header class="sb-topbar">
+    <a class="sb-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="sb-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T017 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_slow-fast-balance_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_slow_fast_balance_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T017 · 旅行人格測驗</p>
-        <h1>慢旅快旅比例尺</h1>
-        <p class="product-lead">算出你一天該排幾個點才舒服。</p>
-        <div class="product-pills">
-          <span>行程密度</span><span>慢旅比例</span><span>舒適節奏</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/slow-fast-balance.svg" alt="慢旅快旅比例尺 互動工具視覺">
-      </figure>
+  <main class="sb-page">
+    <section class="sb-hero">
+      <p class="sb-eyebrow">Slow / fast travel ratio</p>
+      <h1>不是景點少，是你需要留白。</h1>
+      <p>把旅行可用時間、體力、移動壓力和好奇心放進來，算出今天應該排幾個點、慢旅比例多少、哪幾段要留白。</p>
     </section>
 
-    <section class="product-workbench" aria-label="慢旅快旅比例尺 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>用體力、好奇心、移動厭惡與休息需求產生日程密度。</h2>
-        <p>行程常常過滿或太空的人可以在 30 秒內得到一張可分享的結果卡。用幾個選擇題產生可分享的人格結果與第一版行程方向。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_slow-fast-balance_result">丟進 ChillOut</a>
-          </div>
+    <section class="sb-tool" aria-label="慢旅快旅比例尺操作區">
+      <form class="sb-form" data-form>
+        <div class="sb-grid">
+          <label class="sb-field">
+            <span>城市 / 區域</span>
+            <input data-city value="大阪" autocomplete="off">
+          </label>
+          <label class="sb-field">
+            <span>可用時間</span>
+            <select data-hours>
+              <option value="5">5 小時</option>
+              <option value="7" selected>7 小時</option>
+              <option value="9">9 小時</option>
+              <option value="11">11 小時</option>
+            </select>
+          </label>
         </div>
-      </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+        <label class="sb-range">
+          <span>今日體力 <strong data-value="energy">62</strong></span>
+          <input data-energy type="range" min="0" max="100" value="62">
+        </label>
+        <label class="sb-range">
+          <span>好奇心 <strong data-value="curiosity">74</strong></span>
+          <input data-curiosity type="range" min="0" max="100" value="74">
+        </label>
+        <label class="sb-range">
+          <span>討厭移動程度 <strong data-value="movement">66</strong></span>
+          <input data-movement type="range" min="0" max="100" value="66">
+        </label>
+        <label class="sb-range">
+          <span>需要休息程度 <strong data-value="rest">70</strong></span>
+          <input data-rest type="range" min="0" max="100" value="70">
+        </label>
+
+        <div class="sb-grid">
+          <label class="sb-field">
+            <span>拍照需求</span>
+            <select data-photo>
+              <option value="low">不太拍</option>
+              <option value="mid" selected>要有幾張</option>
+              <option value="high">拍照是重點</option>
+            </select>
+          </label>
+          <label class="sb-field">
+            <span>餐廳錨點</span>
+            <select data-food>
+              <option value="none">沒有固定</option>
+              <option value="one" selected>一餐要鎖</option>
+              <option value="two">兩餐都重要</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="sb-field">
+          <span>旅伴狀態</span>
+          <select data-party>
+            <option value="solo">一個人</option>
+            <option value="couple" selected>兩人</option>
+            <option value="group">朋友小團</option>
+            <option value="family">親子 / 長輩</option>
+          </select>
+        </label>
+
+        <div class="sb-actions">
+          <button class="sb-button" type="button" data-sample>載入示範</button>
+          <button class="sb-button sb-primary" type="submit">計算比例</button>
+        </div>
+      </form>
+
+      <section class="sb-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"slow-fast-balance","category":"quiz","name":"慢旅快旅比例尺","tagline":"算出你一天該排幾個點才舒服。","audience":"行程常常過滿或太空的人","mechanic":"用體力、好奇心、移動厭惡與休息需求產生日程密度。","result":"不是景點少，是你需要留白。","chips":["行程密度","慢旅比例","舒適節奏"],"mode":"quiz","modeLabel":"人格測驗","modeVariant":"極簡卡片","interfaceTitle":"慢旅快旅比例尺操作台","actionLabel":"測出我的旅行角色","resultName":"旅行人格卡","modePromise":"用幾個選擇題產生可分享的人格結果與第一版行程方向。","shareLead":"我剛測出自己的旅行人格","sampleItems":["拍照優先","餐廳優先","突然改行程","安靜探索","朋友一起玩","慢慢晃","一天塞滿"],"scoreSeed":74,"executionPack":{"actions":["用 行程密度 結果決定行程第一順位。","把 慢旅比例 與社交能量轉成每日密度。","把人格結果丟進 ChillOut 生成角色式行程。"],"hooks":["我的 慢旅快旅比例尺 結果居然是這個。","你不是難搞，你只是旅行設定很明確。","把你的結果貼出來，看誰最適合一起旅行。"],"qa":["每個選項會改變分數","結果要有角色名稱","Prompt 要保留人格條件"]},"playSteps":["輸入 拍照優先 或這次最想解決的旅行條件。","調整 行程密度、慢旅比例 與 舒適節奏 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"choice","key":"pace","label":"旅行節奏","choices":["慢慢晃","重點精準","一天塞滿","看心情改"]},{"type":"choice","key":"anchor","label":"最在意的錨點","choices":["拍照優先","餐廳優先","突然改行程","安靜探索","朋友一起玩"]},{"type":"choice","key":"risk","label":"臨時改行程接受度","choices":["完全不行","可接受一點","越即興越好"]},{"type":"range","key":"social","label":"社交能量","min":1,"max":100,"value":62,"left":"安靜旅行","right":"認識新朋友"}],"id":"T017","categoryLabel":"旅行人格測驗","categoryTone":"用輕量測驗讓使用者得到可分享的旅行角色與第一版行程。","primary":"#7C5CFF","accent":"#7C5CFF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_slow-fast-balance","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/slow-fast-balance.html"}</script>
-  <script src="../assets/tool-scripts/slow-fast-balance.js?v=20260525d"></script>
+  <div class="sb-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/slow-fast-balance.js?v=20260525manual1"></script>
 </body>
 </html>
