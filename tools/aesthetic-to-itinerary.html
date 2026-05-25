@@ -3,93 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>旅行美學轉行程｜ChillOut 旅行小工具</title>
-  <meta name="description" content="從一種美學直接生出一天路線。選擇奶油、霓虹、復古、森林或海風等美學，輸出對應路線。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="旅行美學轉行程｜ChillOut 旅行小工具">
-  <meta property="og:description" content="從一種美學直接生出一天路線。">
+  <title>旅行美學轉行程｜ChillOut 旅行小工具 T010</title>
+  <meta name="description" content="選一種旅行美學與目的地，產出一日路線、拍照任務、節奏提醒與可丟進 ChillOut 的行程 prompt。">
+  <meta property="og:title" content="旅行美學轉行程｜ChillOut">
+  <meta property="og:description" content="先選風格，再讓行程長出來。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/aesthetic-to-itinerary.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/aesthetic-to-itinerary.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/aesthetic-to-itinerary.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/aesthetic-to-itinerary.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-4 mode-sorter" style="--tool-accent:#08A7A0">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="aesthetic-app">
+  <header class="ai-topbar">
+    <a class="ai-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="ai-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T010 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_aesthetic-to-itinerary_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_aesthetic_to_itinerary_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T010 · 社群靈感轉行程</p>
-        <h1>旅行美學轉行程</h1>
-        <p class="product-lead">從一種美學直接生出一天路線。</p>
-        <div class="product-pills">
-          <span>美學路線</span><span>拍照任務</span><span>ChillOut 生成</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/aesthetic-to-itinerary.svg" alt="旅行美學轉行程 互動工具視覺">
-      </figure>
+  <main class="ai-page">
+    <section class="ai-hero">
+      <p class="ai-eyebrow">Aesthetic to itinerary</p>
+      <h1>先選風格，再讓行程長出來。</h1>
+      <p>不是每趟旅行都要從景點開始。選一種今天想要的美學，輸入目的地，工具會把風格轉成路線節奏、拍照任務和 ChillOut 生成 prompt。</p>
     </section>
 
-    <section class="product-workbench" aria-label="旅行美學轉行程 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>選擇奶油、霓虹、復古、森林或海風等美學，輸出對應路線。</h2>
-        <p>先被風格吸引、後面才想目的地的人可以在 30 秒內得到一張可分享的結果卡。把散亂素材分成今天必排、可備用、先刪掉三種狀態。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_aesthetic-to-itinerary_result">丟進 ChillOut</a>
-          </div>
-        </div>
-      </aside>
-    </section>
+    <section class="ai-studio" aria-label="旅行美學轉行程操作區">
+      <form class="ai-panel" data-form>
+        <label class="ai-field">
+          <span>目的地</span>
+          <input data-city value="東京" autocomplete="off">
+        </label>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+        <label class="ai-field">
+          <span>今天的旅行美學</span>
+          <select data-aesthetic>
+            <option value="cream" selected>奶油咖啡感</option>
+            <option value="neon">霓虹夜拍感</option>
+            <option value="retro">復古街區感</option>
+            <option value="forest">森林慢走感</option>
+            <option value="sea">海風空白感</option>
+          </select>
+        </label>
+
+        <div class="ai-grid">
+          <label class="ai-field">
+            <span>旅行節奏</span>
+            <select data-pace>
+              <option value="slow" selected>慢慢走</option>
+              <option value="balanced">剛剛好</option>
+              <option value="full">想多拍一點</option>
+            </select>
+          </label>
+          <label class="ai-field">
+            <span>出發時段</span>
+            <select data-start>
+              <option value="morning" selected>上午</option>
+              <option value="afternoon">下午</option>
+              <option value="night">晚上</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="ai-field">
+          <span>想放進去的元素</span>
+          <textarea data-elements spellcheck="false" placeholder="每行一個：咖啡、書店、夜景、老街、海邊、展覽"></textarea>
+        </label>
+
+        <div class="ai-actions">
+          <button class="ai-button" type="button" data-sample>載入示範</button>
+          <button class="ai-button ai-primary" type="submit">生成風格行程</button>
+        </div>
+      </form>
+
+      <section class="ai-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"aesthetic-to-itinerary","category":"social","name":"旅行美學轉行程","tagline":"從一種美學直接生出一天路線。","audience":"先被風格吸引、後面才想目的地的人","mechanic":"選擇奶油、霓虹、復古、森林或海風等美學，輸出對應路線。","result":"你的旅行可以先有風格，再找地點。","chips":["美學路線","拍照任務","ChillOut 生成"],"mode":"sorter","modeLabel":"靈感整理器","modeVariant":"時間線","interfaceTitle":"旅行美學轉行程操作台","actionLabel":"整理成可出發清單","resultName":"出發清單","modePromise":"把散亂素材分成今天必排、可備用、先刪掉三種狀態。","shareLead":"我把一堆旅遊靈感整理成可出發清單","sampleItems":["小紅書截圖","咖啡廳名單","夜景口袋清單","想去但沒排的景點","朋友群組連結","IG 收藏店家","朋友丟的 Reels"],"scoreSeed":67,"executionPack":{"actions":["把「美學路線」拆成 3 個桶：今天必排、可備用、先刪掉。","把 小紅書截圖 與 咖啡廳名單 合併成第一版路線。","把得分最高的 3 個素材丟進 ChillOut 產生完整行程。"],"hooks":["我用 旅行美學轉行程 把群組靈感整理成可出發清單。","收藏不是問題，沒有整理才是問題。","留言你的 美學路線，我幫你丟進 ChillOut 變行程。"],"qa":["至少輸入 3 個素材","結果要出現三桶分類","分享文案要含 ChillOut 導流"]},"playSteps":["輸入 小紅書截圖 或這次最想解決的旅行條件。","調整 美學路線、拍照任務 與 ChillOut 生成 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"rawList","label":"美學路線素材","placeholder":"貼上或輸入：小紅書截圖、咖啡廳名單、夜景口袋清單"},{"type":"range","key":"urgency","label":"這次真的想去的程度","min":1,"max":100,"value":71,"left":"只是收藏","right":"馬上想排"},{"type":"choice","key":"filter","label":"整理優先規則","choices":["小紅書截圖","咖啡廳名單","夜景口袋清單","想去但沒排的景點","朋友群組連結"]},{"type":"range","key":"shareNeed","label":"想分享給朋友的程度","min":1,"max":100,"value":64,"left":"自己用","right":"想發限動"}],"id":"T010","categoryLabel":"社群靈感轉行程","categoryTone":"把 IG、截圖、朋友傳來的靈感變成可以出發的路線。","primary":"#08A7A0","accent":"#08A7A0","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_aesthetic-to-itinerary","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/aesthetic-to-itinerary.html"}</script>
-  <script src="../assets/tool-scripts/aesthetic-to-itinerary.js?v=20260525d"></script>
+  <div class="ai-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/aesthetic-to-itinerary.js?v=20260525manual1"></script>
 </body>
 </html>
