@@ -3,93 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>紅眼航班救援包｜ChillOut 旅行小工具</title>
-  <meta name="description" content="紅眼前後不再狼狽。輸入班機時間與保守度，安排淋浴、寄物、咖啡與補眠策略。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="紅眼航班救援包｜ChillOut 旅行小工具">
-  <meta property="og:description" content="紅眼前後不再狼狽。">
+  <title>紅眼航班救援包｜ChillOut 旅行小工具 T035</title>
+  <meta name="description" content="輸入紅眼航班時間、行李狀態、住宿時間與疲勞敏感度，安排寄物、淋浴、咖啡、補眠、交通與早餐策略，生成可分享的紅眼航班救援計畫。">
+  <meta property="og:title" content="紅眼航班救援包｜ChillOut 旅行小工具 T035">
+  <meta property="og:description" content="紅眼航班需要的是緩衝，不是硬撐。把班機前後排成可執行的生存時間表。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/red-eye-rescue.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/red-eye-rescue.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/red-eye-rescue.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/red-eye-rescue.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-5 mode-nightRoute" style="--tool-accent:#4D96FF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="rr-app">
+  <header class="rr-nav">
+    <a class="rr-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="rr-mark">C</span>
+      <span><strong>ChillOut</strong><small>T035 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_red-eye-rescue_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_red_eye_rescue_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T035 · 夜旅與 Noctourism</p>
-        <h1>紅眼航班救援包</h1>
-        <p class="product-lead">紅眼前後不再狼狽。</p>
-        <div class="product-pills">
-          <span>紅眼航班</span><span>寄物</span><span>補眠</span>
-        </div>
+    <section class="rr-hero">
+      <div class="rr-hero-copy">
+        <p class="rr-kicker">T035 · red-eye flight survival</p>
+        <h1>紅眼航班不是行程空白，是需要被設計的恢復段。</h1>
+        <p>這個工具會把班機、住宿、行李、補眠、淋浴、咖啡與交通排成一份救援包。目標不是塞更多景點，而是讓你不要在機場和街上狼狽漂流。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/red-eye-rescue.svg" alt="紅眼航班救援包 互動工具視覺">
+      <figure class="rr-visual">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1100&q=80" alt="夜間機場候機空間">
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="紅眼航班救援包 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>輸入班機時間與保守度，安排淋浴、寄物、咖啡與補眠策略。</h2>
-        <p>搭早班或紅眼班機的人可以在 30 秒內得到一張可分享的結果卡。把晚上安全、交通與氣氛排成不硬撐的三段式夜遊。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_red-eye-rescue_result">丟進 ChillOut</a>
-          </div>
+    <section class="rr-workbench" aria-label="紅眼航班救援包操作區">
+      <aside class="rr-flight" aria-label="航班條件">
+        <p class="rr-kicker">Flight conditions</p>
+        <h2>班機條件</h2>
+        <label>
+          城市 / 機場
+          <input data-city value="新加坡樟宜" placeholder="例如：東京羽田、首爾仁川、曼谷素萬那普">
+        </label>
+        <div class="rr-two">
+          <label>
+            模式
+            <select data-mode>
+              <option value="arrival">清晨抵達</option>
+              <option value="departure">深夜出發</option>
+            </select>
+          </label>
+          <label>
+            班機時間
+            <input data-flight-time type="time" value="05:35">
+          </label>
+        </div>
+        <div class="rr-two">
+          <label>
+            住宿可進房
+            <input data-room-time type="time" value="14:00">
+          </label>
+          <label>
+            隔天第一件事
+            <input data-first-thing value="11:30 會議 / 景點預約" placeholder="例如：10:00 集合、13:00 check-in">
+          </label>
+        </div>
+        <label>
+          行李狀態
+          <select data-luggage>
+            <option value="large">大行李箱</option>
+            <option value="carry">登機箱</option>
+            <option value="backpack">背包</option>
+            <option value="none">幾乎無行李</option>
+          </select>
+        </label>
+        <label class="rr-range">
+          <span>疲勞敏感度 <strong data-fatigue-label>72/100</strong></span>
+          <input data-fatigue type="range" min="1" max="100" value="72">
+        </label>
+        <label class="rr-check">
+          <input data-shower type="checkbox" checked>
+          <span>機場或住宿附近可淋浴</span>
+        </label>
+        <label class="rr-check">
+          <input data-locker type="checkbox" checked>
+          <span>可寄物或提早放行李</span>
+        </label>
+        <div class="rr-actions">
+          <button type="button" data-sample>載入範例</button>
+          <button type="button" data-add-module>新增救援模組</button>
         </div>
       </aside>
+
+      <section class="rr-modules" aria-label="救援模組">
+        <div class="rr-module-head">
+          <div>
+            <p class="rr-kicker">Rescue modules</p>
+            <h2>救援模組</h2>
+          </div>
+          <button type="button" class="rr-primary" data-generate>生成救援包</button>
+        </div>
+        <div class="rr-module-list" data-modules></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="rr-output" data-output aria-live="polite">
+      <div class="rr-empty">
+        <p class="rr-kicker">Result</p>
+        <h2>先確認班機與救援模組，這裡會生成紅眼航班救援包。</h2>
+        <p>結果會包含時間表、體力分配、不可硬撐清單、社群分享文與 ChillOut prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"red-eye-rescue","category":"night","name":"紅眼航班救援包","tagline":"紅眼前後不再狼狽。","audience":"搭早班或紅眼班機的人","mechanic":"輸入班機時間與保守度，安排淋浴、寄物、咖啡與補眠策略。","result":"紅眼航班需要的是緩衝，不是硬撐。","chips":["紅眼航班","寄物","補眠"],"mode":"nightRoute","modeLabel":"夜遊路線","modeVariant":"三欄分流","interfaceTitle":"紅眼航班救援包操作台","actionLabel":"排出夜晚節奏","resultName":"夜晚節奏表","modePromise":"把晚上安全、交通與氣氛排成不硬撐的三段式夜遊。","shareLead":"我排了一條不踩雷的夜遊路線","sampleItems":["末班車時間","日落前集合","晚餐後散步","夜景拍照","宵夜收尾","安全返程","雨備室內點"],"scoreSeed":65,"executionPack":{"actions":["把 紅眼航班 排在晚間主段，不連續硬塞。","先決定安全返程，再決定宵夜。","把夜晚路線丟進 ChillOut 補交通與備案。"],"hooks":["夜遊不是熬夜，是有節奏地走。","這條路線先保命，再浪漫。","把城市晚上排成三段，不會玩到崩。"],"qa":["要輸出 3 個以上時段","要有安全收尾","Prompt 要包含城市與時段"]},"playSteps":["輸入 末班車時間 或這次最想解決的旅行條件。","調整 紅眼航班、寄物 與 補眠 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"city","label":"目的地城市","placeholder":"例如：首爾、東京、台南、曼谷"},{"type":"choice","key":"time","label":"出門時段","choices":["日落前","晚餐後","午夜前","清晨前"]},{"type":"choice","key":"nightMood","label":"夜晚主題","choices":["末班車時間","日落前集合","晚餐後散步","夜景拍照","宵夜收尾"]},{"type":"range","key":"safety","label":"安全保守度","min":1,"max":100,"value":74,"left":"敢冒險","right":"保守安全"}],"id":"T035","categoryLabel":"夜旅與 Noctourism","categoryTone":"跟上夜遊、日落、深夜甜點與城市霓虹的旅行趨勢。","primary":"#4D96FF","accent":"#4D96FF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_red-eye-rescue","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/red-eye-rescue.html"}</script>
-  <script src="../assets/tool-scripts/red-eye-rescue.js?v=20260525d"></script>
+  <div class="rr-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/red-eye-rescue.js?v=20260525manual1"></script>
 </body>
 </html>
