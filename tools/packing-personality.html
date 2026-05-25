@@ -3,93 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>行李箱人格｜ChillOut 旅行小工具</title>
-  <meta name="description" content="用打包方式測你適合的旅行節奏。測打包提前量、備品量與穿搭執念，產出行李人格與提醒。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="行李箱人格｜ChillOut 旅行小工具">
-  <meta property="og:description" content="用打包方式測你適合的旅行節奏。">
+  <title>行李箱人格｜ChillOut 旅行小工具 T015</title>
+  <meta name="description" content="用旅行天數、氣候、洗衣條件、穿搭與備品傾向診斷行李箱人格，產生必帶、可刪與 ChillOut 出發清單 prompt。">
+  <meta property="og:title" content="行李箱人格｜ChillOut">
+  <meta property="og:description" content="你的行李箱比你更誠實。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/packing-personality.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/packing-personality.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/packing-personality.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/packing-personality.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-3 mode-quiz" style="--tool-accent:#7C5CFF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="packing-app">
+  <header class="pp-topbar">
+    <a class="pp-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="pp-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T015 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_packing-personality_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_packing_personality_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T015 · 旅行人格測驗</p>
-        <h1>行李箱人格</h1>
-        <p class="product-lead">用打包方式測你適合的旅行節奏。</p>
-        <div class="product-pills">
-          <span>行李人格</span><span>打包提示</span><span>出發清單</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/packing-personality.svg" alt="行李箱人格 互動工具視覺">
-      </figure>
+  <main class="pp-page">
+    <section class="pp-hero">
+      <p class="pp-eyebrow">Packing personality scanner</p>
+      <h1>你的行李箱，比你更誠實。</h1>
+      <p>這不是單純打包清單。它會看旅行天數、氣候、洗衣條件、穿搭和備品習慣，幫你判斷行李風險，整理成必帶、可刪、需要補的出發清單。</p>
     </section>
 
-    <section class="product-workbench" aria-label="行李箱人格 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>測打包提前量、備品量與穿搭執念，產出行李人格與提醒。</h2>
-        <p>行李常常爆掉或漏帶的人可以在 30 秒內得到一張可分享的結果卡。用幾個選擇題產生可分享的人格結果與第一版行程方向。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_packing-personality_result">丟進 ChillOut</a>
-          </div>
+    <section class="pp-workbench" aria-label="行李箱人格操作區">
+      <form class="pp-form" data-form>
+        <div class="pp-grid">
+          <label class="pp-field">
+            <span>旅行天數</span>
+            <input data-days type="number" min="1" max="30" value="5">
+          </label>
+          <label class="pp-field">
+            <span>行李尺寸</span>
+            <select data-bag>
+              <option value="carry" selected>登機箱</option>
+              <option value="medium">24 吋行李箱</option>
+              <option value="large">28 吋以上</option>
+            </select>
+          </label>
         </div>
-      </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+        <div class="pp-grid">
+          <label class="pp-field">
+            <span>氣候</span>
+            <select data-weather>
+              <option value="warm">溫暖</option>
+              <option value="mixed" selected>早晚溫差大</option>
+              <option value="cold">寒冷</option>
+              <option value="rain">容易下雨</option>
+            </select>
+          </label>
+          <label class="pp-field">
+            <span>洗衣條件</span>
+            <select data-laundry>
+              <option value="yes">會洗衣</option>
+              <option value="maybe" selected>不確定</option>
+              <option value="no">不洗衣</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="pp-field">
+          <span>穿搭策略</span>
+          <select data-outfit>
+            <option value="minimal">少量百搭</option>
+            <option value="photo" selected>每天都要有畫面</option>
+            <option value="comfort">舒服第一</option>
+          </select>
+        </label>
+
+        <label class="pp-field">
+          <span>備品習慣</span>
+          <select data-backup>
+            <option value="low">只帶剛好</option>
+            <option value="medium" selected>重要東西會備用</option>
+            <option value="high">什麼都想多帶一份</option>
+          </select>
+        </label>
+
+        <label class="pp-field">
+          <span>已想到要帶的東西</span>
+          <textarea data-items spellcheck="false" placeholder="每行一個：相機、外套、藥品、轉接頭、保養品"></textarea>
+        </label>
+
+        <div class="pp-checks">
+          <label><input data-tech type="checkbox" checked> 需要拍照/筆電/多個充電設備</label>
+          <label><input data-meds type="checkbox" checked> 需要常備藥或保健品</label>
+          <label><input data-souvenir type="checkbox"> 想留伴手禮空間</label>
+        </div>
+
+        <div class="pp-actions">
+          <button class="pp-button" type="button" data-sample>載入示範</button>
+          <button class="pp-button pp-primary" type="submit">診斷行李箱</button>
+        </div>
+      </form>
+
+      <section class="pp-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"packing-personality","category":"quiz","name":"行李箱人格","tagline":"用打包方式測你適合的旅行節奏。","audience":"行李常常爆掉或漏帶的人","mechanic":"測打包提前量、備品量與穿搭執念，產出行李人格與提醒。","result":"你的行李箱比你更誠實。","chips":["行李人格","打包提示","出發清單"],"mode":"quiz","modeLabel":"人格測驗","modeVariant":"清單桌面","interfaceTitle":"行李箱人格操作台","actionLabel":"測出我的旅行角色","resultName":"旅行人格卡","modePromise":"用幾個選擇題產生可分享的人格結果與第一版行程方向。","shareLead":"我剛測出自己的旅行人格","sampleItems":["慢慢晃","一天塞滿","拍照優先","餐廳優先","突然改行程","安靜探索","朋友一起玩"],"scoreSeed":72,"executionPack":{"actions":["用 行李人格 結果決定行程第一順位。","把 打包提示 與社交能量轉成每日密度。","把人格結果丟進 ChillOut 生成角色式行程。"],"hooks":["我的 行李箱人格 結果居然是這個。","你不是難搞，你只是旅行設定很明確。","把你的結果貼出來，看誰最適合一起旅行。"],"qa":["每個選項會改變分數","結果要有角色名稱","Prompt 要保留人格條件"]},"playSteps":["輸入 慢慢晃 或這次最想解決的旅行條件。","調整 行李人格、打包提示 與 出發清單 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"choice","key":"pace","label":"旅行節奏","choices":["慢慢晃","重點精準","一天塞滿","看心情改"]},{"type":"choice","key":"anchor","label":"最在意的錨點","choices":["慢慢晃","一天塞滿","拍照優先","餐廳優先","突然改行程"]},{"type":"choice","key":"risk","label":"臨時改行程接受度","choices":["完全不行","可接受一點","越即興越好"]},{"type":"range","key":"social","label":"社交能量","min":1,"max":100,"value":60,"left":"安靜旅行","right":"認識新朋友"}],"id":"T015","categoryLabel":"旅行人格測驗","categoryTone":"用輕量測驗讓使用者得到可分享的旅行角色與第一版行程。","primary":"#7C5CFF","accent":"#7C5CFF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_packing-personality","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/packing-personality.html"}</script>
-  <script src="../assets/tool-scripts/packing-personality.js?v=20260525d"></script>
+  <div class="pp-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/packing-personality.js?v=20260525manual1"></script>
 </body>
 </html>
