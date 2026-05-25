@@ -3,93 +3,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>霓虹拍照任務｜ChillOut 旅行小工具</title>
-  <meta name="description" content="用任務卡拍出一組夜晚照片。選城市與風格，產生招牌、倒影、路口、人物四種任務。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="霓虹拍照任務｜ChillOut 旅行小工具">
-  <meta property="og:description" content="用任務卡拍出一組夜晚照片。">
+  <title>霓虹拍照任務｜ChillOut 旅行小工具 T037</title>
+  <meta name="description" content="把夜間城市感照片變成可執行的拍照任務板。選城市、風格、拍攝對象與任務素材，生成招牌、倒影、路口、人物與細節拍攝順序，導回 ChillOut 做回憶錄。">
+  <meta property="og:title" content="霓虹拍照任務｜ChillOut 旅行小工具 T037">
+  <meta property="og:description" content="霓虹不是背景，是照片任務。用任務卡拍出一組夜晚城市照片。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/neon-photo-mission.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/neon-photo-mission.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/neon-photo-mission.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/neon-photo-mission.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-1 mode-memoryMaker" style="--tool-accent:#4D96FF">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="np-app">
+  <header class="np-nav">
+    <a class="np-brand" href="../travel-microtools-100.html" aria-label="回到 ChillOut 100 小工具">
+      <span class="np-mark">C</span>
+      <span><strong>ChillOut</strong><small>T037 手寫版</small></span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_neon-photo-mission_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_neon_photo_mission_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T037 · 夜旅與 Noctourism</p>
-        <h1>霓虹拍照任務</h1>
-        <p class="product-lead">用任務卡拍出一組夜晚照片。</p>
-        <div class="product-pills">
-          <span>拍照任務</span><span>霓虹</span><span>限動</span>
-        </div>
+    <section class="np-hero">
+      <div class="np-hero-copy">
+        <p class="np-kicker">T037 · neon photo mission</p>
+        <h1>不要只說要拍夜景，把它拆成五個任務。</h1>
+        <p>輸入城市、拍攝對象與你想要的夜晚感，工具會把招牌、倒影、路口、人物和細節排成一組可執行的任務板。拍完直接丟進 ChillOut 做回憶錄或下一趟靈感。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/neon-photo-mission.svg" alt="霓虹拍照任務 互動工具視覺">
+      <figure class="np-visual">
+        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1100&q=80" alt="夜晚霓虹街道">
       </figure>
     </section>
 
-    <section class="product-workbench" aria-label="霓虹拍照任務 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>選城市與風格，產生招牌、倒影、路口、人物四種任務。</h2>
-        <p>想拍夜間城市感照片的人可以在 30 秒內得到一張可分享的結果卡。把照片、片段或情緒整理成標題、文案與下一趟線索。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_neon-photo-mission_result">丟進 ChillOut</a>
-          </div>
+    <section class="np-workbench" aria-label="霓虹拍照任務操作區">
+      <aside class="np-settings" aria-label="拍攝設定">
+        <p class="np-kicker">Shoot settings</p>
+        <h2>拍攝設定</h2>
+        <label>
+          城市 / 區域
+          <input data-city value="大阪道頓堀" placeholder="例如：首爾弘大、台北西門町、東京新宿">
+        </label>
+        <div class="np-two">
+          <label>
+            分享格式
+            <select data-format>
+              <option value="story">限動九宮格</option>
+              <option value="post">IG 貼文</option>
+              <option value="reel">短影音封面</option>
+              <option value="memoir">旅行回憶錄</option>
+            </select>
+          </label>
+          <label>
+            拍攝對象
+            <select data-subject>
+              <option value="solo">自己一人</option>
+              <option value="couple">兩人同行</option>
+              <option value="friends">朋友群</option>
+              <option value="street">只拍街景</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          這組照片的標題感
+          <input data-title value="今晚城市像一張電影海報" placeholder="例如：雨後的街像在發光">
+        </label>
+        <label class="np-range">
+          <span>情緒濃度 <strong data-emotion-label>72/100</strong></span>
+          <input data-emotion type="range" min="1" max="100" value="72">
+        </label>
+        <label class="np-range">
+          <span>安全保守 <strong data-safety-label>68/100</strong></span>
+          <input data-safety type="range" min="1" max="100" value="68">
+        </label>
+        <div class="np-actions">
+          <button type="button" data-sample>載入範例</button>
+          <button type="button" data-add-shot>新增任務</button>
         </div>
       </aside>
+
+      <section class="np-missions" aria-label="拍照任務">
+        <div class="np-mission-head">
+          <div>
+            <p class="np-kicker">Mission board</p>
+            <h2>任務素材</h2>
+          </div>
+          <button type="button" class="np-primary" data-generate>生成拍照任務</button>
+        </div>
+        <div class="np-mission-list" data-missions></div>
+      </section>
     </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+    <section class="np-output" data-output aria-live="polite">
+      <div class="np-empty">
+        <p class="np-kicker">Result</p>
+        <h2>先設定任務素材，這裡會生成一組可拍的霓虹照片任務。</h2>
+        <p>結果會包含拍攝順序、每張照片構圖提示、限動文案與 ChillOut 回憶錄 prompt。</p>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"neon-photo-mission","category":"night","name":"霓虹拍照任務","tagline":"用任務卡拍出一組夜晚照片。","audience":"想拍夜間城市感照片的人","mechanic":"選城市與風格，產生招牌、倒影、路口、人物四種任務。","result":"霓虹不是背景，是照片任務。","chips":["拍照任務","霓虹","限動"],"mode":"memoryMaker","modeLabel":"回憶生成器","modeVariant":"任務板","interfaceTitle":"霓虹拍照任務操作台","actionLabel":"做出回憶素材","resultName":"回憶分享卡","modePromise":"把照片、片段或情緒整理成標題、文案與下一趟線索。","shareLead":"我把這趟旅行整理成一張回憶卡","sampleItems":["晚餐後散步","夜景拍照","宵夜收尾","安全返程","雨備室內點","末班車時間","日落前集合"],"scoreSeed":67,"executionPack":{"actions":["把 拍照任務 變成回憶標題。","用 霓虹 決定分享格式。","把回憶素材丟進 ChillOut 生成回憶錄或下一趟靈感。"],"hooks":["回憶不是照片很多，是有一個好標題。","把旅行收尾做成可以分享的卡。","這張卡會暴露你下一趟想去哪。"],"qa":["要輸出標題","要有分享格式","Prompt 要包含情緒與下一趟線索"]},"playSteps":["輸入 晚餐後散步 或這次最想解決的旅行條件。","調整 拍照任務、霓虹 與 限動 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"memory","label":"最想留下的一幕","placeholder":"例如：晚餐後散步、夜景拍照"},{"type":"choice","key":"format","label":"分享格式","choices":["IG 貼文","限動","回憶錄","明信片","短影音"]},{"type":"range","key":"emotion","label":"情緒濃度","min":1,"max":100,"value":84,"left":"淡淡的","right":"很想哭"},{"type":"choice","key":"next","label":"下一趟線索","choices":["宵夜收尾","安全返程","雨備室內點","末班車時間","日落前集合"]}],"id":"T037","categoryLabel":"夜旅與 Noctourism","categoryTone":"跟上夜遊、日落、深夜甜點與城市霓虹的旅行趨勢。","primary":"#4D96FF","accent":"#4D96FF","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_neon-photo-mission","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/neon-photo-mission.html"}</script>
-  <script src="../assets/tool-scripts/neon-photo-mission.js?v=20260525d"></script>
+  <div class="np-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/neon-photo-mission.js?v=20260525manual1"></script>
 </body>
 </html>
