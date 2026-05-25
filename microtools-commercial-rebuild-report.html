@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChillOut 100 個旅行小工具商業化重做報告</title>
+  <link rel="stylesheet" href="assets/tool-products.css?v=20260525b">
+  <style>
+    body{background:#071018;color:#f7fbff;margin:0;font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif}
+    .report{max-width:1160px;margin:0 auto;padding:44px 22px 80px}
+    .report h1{font-size:clamp(36px,6vw,72px);line-height:1;margin:0 0 18px}
+    .report h2{font-size:28px;margin:38px 0 12px;border-top:1px solid rgba(255,255,255,.14);padding-top:26px}
+    .report h3{font-size:20px;margin:22px 0 8px;color:#f4c95d}
+    .report p,.report li{color:#c6d5dd;font-size:17px}
+    .report table{width:100%;border-collapse:collapse;background:#0d1822;border:1px solid rgba(255,255,255,.14)}
+    .report th,.report td{border-bottom:1px solid rgba(255,255,255,.12);padding:12px;text-align:left;vertical-align:top}
+    .report th{color:#071018;background:#f4c95d}
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+    .badge-row span{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 12px;color:#f7fbff}
+    .report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .report-card{background:#0d1822;border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:18px}
+    .report-card strong{display:block;color:#fff;font-size:19px;margin-bottom:8px}
+    @media(max-width:760px){.report-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="report">
+    <p class="product-kicker">Commercial rebuild report</p>
+    <h1>100 個旅行小工具，從概念庫重做成 100 個獨立產品。</h1>
+    <p>本報告定義這批小工具的重做標準、驗收方式、差異化規則與第一個工具的正式執行方向。核心修正：不能再用同一套模板換文字，每個工具都必須有自己的問題、玩法、介面、資料輸入、結果邏輯、分享機制與 App 導流。</p>
+
+    <div class="badge-row">
+      <span>每個工具獨立 URL</span>
+      <span>每個工具獨立 UX</span>
+      <span>每個工具獨立演算法</span>
+      <span>每個工具獨立視覺語言</span>
+      <span>每個工具導回 ChillOut</span>
+    </div>
+
+    <h2>一、目前問題診斷</h2>
+    <table>
+      <thead><tr><th>問題</th><th>影響</th><th>重做要求</th></tr></thead>
+      <tbody>
+        <tr><td>100 個工具共用同一套互動模板</td><td>使用者會覺得只是換標題，沒有真的工具價值。</td><td>每個工具必須有自己的操作模型，例如清單整理、投票、地圖、輪盤、合約、計算器、故事生成、路線排程等。</td></tr>
+        <tr><td>結果卡太空泛</td><td>無法讓使用者相信工具有用，也不會願意分享。</td><td>結果必須包含可執行輸出：分類、路線、分數、決策、文案或 prompt。</td></tr>
+        <tr><td>視覺像資料庫，不像產品</td><td>不適合拿去做社群、廣告或創作者合作。</td><td>每個工具都要有主畫面、工作區、輸出區與可截圖的分享結果。</td></tr>
+        <tr><td>沒有商業化驗收</td><td>做完無法判斷能不能拿去投放。</td><td>每個工具完成時都要通過：可理解、可操作、可輸出、可分享、可導流、可追蹤。</td></tr>
+      </tbody>
+    </table>
+
+    <h2>二、商業化完成標準</h2>
+    <div class="report-grid">
+      <section class="report-card"><strong>1. 使用者 5 秒理解</strong><p>首屏要清楚說明這個工具解決什麼痛點，並直接顯示主要操作，不藏在長文後。</p></section>
+      <section class="report-card"><strong>2. 真正可操作</strong><p>至少有 3 種有效輸入或互動，輸入會改變結果，而不是永遠產生同一張卡。</p></section>
+      <section class="report-card"><strong>3. 結果可執行</strong><p>結果必須能讓使用者下一步行動，例如整理收藏、排出路線、做出選擇、產出合約或分享文案。</p></section>
+      <section class="report-card"><strong>4. 可分享</strong><p>每個工具要有可複製文案或可截圖區域，文案自然帶回 ChillOut。</p></section>
+      <section class="report-card"><strong>5. 獨立風格</strong><p>不能只換顏色。版面結構、互動方式、結果形式都要符合工具本身。</p></section>
+      <section class="report-card"><strong>6. 導流可追蹤</strong><p>App Store 連結使用對應 ct 參數，例如 <code>ct=tool_save_sprint_route</code>。</p></section>
+    </div>
+
+    <h2>三、100 個工具的重做策略</h2>
+    <p>重做順序不是一次套版產生，而是逐一產品化。每完成一個工具，就留下該工具的 PRD、功能說明、QA 截圖與可投放角度。總頁維持 100 個獨立連結，但每個連結背後會逐步替換成 bespoke 工具。</p>
+
+    <h3>互動類型分配</h3>
+    <table>
+      <thead><tr><th>類型</th><th>適合工具</th><th>完成型態</th></tr></thead>
+      <tbody>
+        <tr><td>整理器</td><td>IG 靈感急救室、收藏斷捨離、朋友連結收件箱</td><td>輸入素材，分類成看板、路線或刪除清單。</td></tr>
+        <tr><td>測驗器</td><td>旅行人格、城市靈魂伴侶、旅行反派</td><td>多題互動，產生角色、分數與分享卡。</td></tr>
+        <tr><td>決策器</td><td>爆紅景點值得嗎、排隊值得嗎、節慶適配器</td><td>輸入條件，產出 go/no-go 與替代方案。</td></tr>
+        <tr><td>協議器</td><td>旅行搭子合約、預算和平協議、早鳥夜貓停戰協議</td><td>旅伴填寫後產出可截圖合約。</td></tr>
+        <tr><td>路線器</td><td>夜貓城市路線、咖啡巡航器、24 小時逃跑</td><td>產出分時段路線與 ChillOut prompt。</td></tr>
+        <tr><td>內容化工具</td><td>旅行封面、Photo Dump 導演、旅行 Wrapped</td><td>產出標題、封面方向、貼文文案。</td></tr>
+      </tbody>
+    </table>
+
+    <h2>四、T001 IG 靈感急救室 PRD</h2>
+    <p><strong>主要功能：</strong>把使用者散落的 IG 收藏、景點筆記、朋友傳來的店名，轉成可操作的旅行靈感看板與第一版 ChillOut prompt。</p>
+    <p><strong>核心使用者：</strong>IG 收藏很多、截圖很多、出發前仍然不知道怎麼排的人。</p>
+    <p><strong>核心流程：</strong>貼上素材 → 自動分類 → 產生四欄救援看板 → 產生一日路線 → 複製分享文案或丟進 ChillOut。</p>
+    <p><strong>商業用途：</strong>可做短影音「我把 30 個 IG 收藏變成一天路線」、Threads 互動文、Dcard 實用工具文、SEO 頁與廣告 landing page。</p>
+
+    <h2>五、T001 驗收清單</h2>
+    <ul>
+      <li>可以貼上多行 IG/景點素材，沒有素材時提供示範資料。</li>
+      <li>每個素材會被分類、評分並進入不同欄位。</li>
+      <li>使用者可以新增單一靈感、切換旅行日數、預算、步調、城市。</li>
+      <li>會產生具體路線、備案、刪除建議、分享文案與 ChillOut prompt。</li>
+      <li>App Store 導流含工具專屬 ct 參數。</li>
+      <li>瀏覽器實測截圖確認視覺與互動可用。</li>
+    </ul>
+  </main>
+</body>
+</html>

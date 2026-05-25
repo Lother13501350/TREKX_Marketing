@@ -9,6 +9,7 @@ const requiredFiles = [
   "ig-chaos-index.html",
   "ig-travel-planner.html",
   "travel-microtools-100.html",
+  "microtools-commercial-rebuild-report.html",
   "calendar.html",
   "library.html",
   "plans.html",
@@ -19,6 +20,8 @@ const requiredFiles = [
   "assets/independent-tools.js",
   "assets/independent-tool-runtime.js",
   "assets/tool-products.css",
+  "assets/save-sprint.css",
+  "assets/save-sprint.js",
   "assets/styles.css",
   "vercel.json",
 ];

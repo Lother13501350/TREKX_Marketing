@@ -5,6 +5,7 @@ const root = process.cwd();
 const toolsDir = path.join(root, "tools");
 const posterDir = path.join(root, "assets", "tool-posters");
 const appStoreUrl = "https://apps.apple.com/tw/app/chillout/id6760571567";
+const bespokeToolSlugs = new Set(["save-sprint"]);
 
 const categories = {
   social: {
@@ -720,7 +721,8 @@ function ensureCleanGeneratedDirectory() {
   fs.mkdirSync(toolsDir, { recursive: true });
   fs.mkdirSync(posterDir, { recursive: true });
   for (const file of fs.readdirSync(toolsDir)) {
-    if (file.endsWith(".html")) fs.unlinkSync(path.join(toolsDir, file));
+    const slug = file.replace(/\.html$/, "");
+    if (file.endsWith(".html") && !bespokeToolSlugs.has(slug)) fs.unlinkSync(path.join(toolsDir, file));
   }
   for (const file of fs.readdirSync(posterDir)) {
     if (file.endsWith(".svg")) fs.unlinkSync(path.join(posterDir, file));
@@ -730,7 +732,9 @@ function ensureCleanGeneratedDirectory() {
 ensureCleanGeneratedDirectory();
 
 for (const tool of tools) {
-  fs.writeFileSync(path.join(toolsDir, `${tool.slug}.html`), pageTemplate(tool), "utf8");
+  if (!bespokeToolSlugs.has(tool.slug)) {
+    fs.writeFileSync(path.join(toolsDir, `${tool.slug}.html`), pageTemplate(tool), "utf8");
+  }
   fs.writeFileSync(path.join(posterDir, `${tool.slug}.svg`), posterSvg(tool), "utf8");
 }
 
