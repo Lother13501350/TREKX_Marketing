@@ -4,21 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>景點心情分艙｜ChillOut 旅行小工具 T006</title>
-  <meta name="description" content="把一堆景點依心情分成興奮、放空、拍照、吃喝四艙，輸出每天主旋律與 ChillOut prompt。">
-  <meta property="og:title" content="景點心情分艙">
+  <meta name="description" content="把一堆景點依心情分成興奮、放空、拍照、吃喝四艙，輸出每天主旋律與可交給 ChillOut 的行程 prompt。">
+  <meta property="og:title" content="景點心情分艙｜ChillOut">
   <meta property="og:description" content="不要先照地圖排。先把景點按心情分艙，再讓 ChillOut 排成每天節奏。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/map-pin-or-mood.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/map-pin-or-mood.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/map-pin-or-mood.html">
-  <link rel="stylesheet" href="../assets/mood-cabin.css?v=20260525simple">
+  <link rel="stylesheet" href="../assets/mood-cabin.css?v=20260525manual2">
 </head>
 <body class="mood-cabin-app">
-  <header class="mc-nav">
-    <a class="mc-brand" href="../travel-microtools-100.html">
-      <span class="mc-mark">C</span>
-      <span><strong>ChillOut</strong><small>T006 景點心情分艙</small></span>
+  <header class="mc-topbar">
+    <a class="mc-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="mc-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T006 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
@@ -27,9 +30,9 @@
     </nav>
   </header>
 
-  <main class="mc-page">
+  <main class="mc-shell">
     <section class="mc-hero">
-      <p class="mc-kicker">T006 · Mood first, map second</p>
+      <p class="mc-eyebrow">Mood first, map second</p>
       <h1>先分心情，再排行程。</h1>
       <p>貼上景點清單，每次只看一個點，把它丟進「興奮、放空、拍照、吃喝」其中一艙。最後輸出每天主旋律，讓 ChillOut 接手排路線。</p>
     </section>
@@ -37,7 +40,7 @@
     <section class="mc-loader" aria-label="景點輸入">
       <label>
         <span>景點清單</span>
-        <textarea data-list placeholder="每行一個景點，例如：聖水洞咖啡街"></textarea>
+        <textarea data-list spellcheck="false" placeholder="每行一個景點，例如：聖水洞咖啡街"></textarea>
       </label>
       <div class="mc-loader-actions">
         <label>
@@ -48,8 +51,8 @@
             <option>4</option>
           </select>
         </label>
-        <button class="mc-button" data-sample>載入示範</button>
-        <button class="mc-button primary" data-start>開始分艙</button>
+        <button class="mc-button" type="button" data-sample>載入示範</button>
+        <button class="mc-button mc-primary" type="button" data-start>開始分艙</button>
       </div>
     </section>
 
@@ -60,6 +63,6 @@
   </main>
 
   <div class="mc-toast" data-toast role="status" aria-live="polite"></div>
-  <script src="../assets/mood-cabin.js?v=20260525simple"></script>
+  <script src="../assets/mood-cabin.js?v=20260525manual2"></script>
 </body>
 </html>

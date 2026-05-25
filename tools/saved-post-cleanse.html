@@ -4,21 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>收藏斷捨離｜ChillOut 旅行小工具 T005</title>
-  <meta name="description" content="把 IG 收藏逐張做保留、備用、刪除，整理出真正能排進 ChillOut 行程的景點清單。">
-  <meta property="og:title" content="收藏斷捨離">
-  <meta property="og:description" content="不是每個收藏都值得進行程。逐張清掉，留下真的想去的。">
+  <meta name="description" content="把旅行收藏逐張判斷保留、備用或刪除，整理出真正能排進 ChillOut 行程的景點清單。">
+  <meta property="og:title" content="收藏斷捨離｜ChillOut">
+  <meta property="og:description" content="不是每個收藏都值得排行程。逐張清掉，留下真的想去的。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/saved-post-cleanse.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/saved-post-cleanse.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/saved-post-cleanse.html">
-  <link rel="stylesheet" href="../assets/saved-cleanse.css?v=20260525simple">
+  <link rel="stylesheet" href="../assets/saved-cleanse.css?v=20260525manual2">
 </head>
 <body class="saved-cleanse-app">
-  <header class="sc-nav">
-    <a class="sc-brand" href="../travel-microtools-100.html">
-      <span class="sc-mark">C</span>
-      <span><strong>ChillOut</strong><small>T005 收藏斷捨離</small></span>
+  <header class="sc-topbar">
+    <a class="sc-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="sc-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T005 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
@@ -27,29 +30,31 @@
     </nav>
   </header>
 
-  <main class="sc-page">
+  <main class="sc-shell">
     <section class="sc-hero">
-      <p class="sc-kicker">T005 · Swipe your saved places</p>
+      <p class="sc-eyebrow">Swipe your saved places</p>
       <h1>把永遠不會去的收藏清掉。</h1>
-      <p>每次只看一個收藏，按下保留、備用或刪掉。清完後，它會整理出真正值得丟進 ChillOut 的清單。</p>
+      <p>每次只看一個收藏，按下保留、備用或刪除。清完後，它會整理出真正值得丟進 ChillOut 的清單、分享文案與行程 prompt。</p>
     </section>
 
     <section class="sc-loader">
       <label>
         <span>收藏清單</span>
-        <textarea data-list placeholder="每行一個收藏或景點"></textarea>
+        <textarea data-list spellcheck="false" placeholder="每行一個收藏或景點"></textarea>
       </label>
-      <button class="sc-button" data-sample>載入示範</button>
-      <button class="sc-button primary" data-start>開始清理</button>
+      <div class="sc-loader-actions">
+        <button class="sc-button" type="button" data-sample>載入示範</button>
+        <button class="sc-button sc-primary" type="button" data-start>開始清理</button>
+      </div>
     </section>
 
-    <section class="sc-game" aria-label="收藏斷捨離操作">
+    <section class="sc-game" aria-label="收藏斷捨離操作區">
       <section class="sc-card" data-card></section>
       <aside class="sc-summary" data-summary></aside>
     </section>
   </main>
 
   <div class="sc-toast" data-toast role="status" aria-live="polite"></div>
-  <script src="../assets/saved-cleanse.js?v=20260525simple"></script>
+  <script src="../assets/saved-cleanse.js?v=20260525manual2"></script>
 </body>
 </html>
