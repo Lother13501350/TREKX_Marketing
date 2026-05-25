@@ -13,9 +13,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/airport-layover-card.html">
   <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525b">
+  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
 </head>
-<body class="tool-product-page layout-3" style="--tool-accent:#2F9E44">
+<body class="tool-product-page layout-3 mode-decision" style="--tool-accent:#2F9E44">
   <header class="product-nav">
     <a class="product-brand" href="../travel-microtools-100.html">
       <span class="brand-mark">C</span>
@@ -48,7 +48,7 @@
       <div class="workbench-intro">
         <p class="product-kicker">玩法</p>
         <h2>輸入轉機時間與保守度，產生出境可行度與安全路線。</h2>
-        <p>有 4 到 10 小時轉機的人可以在 30 秒內得到一張可分享的結果卡，再把結果丟進 ChillOut 生成完整行程。</p>
+        <p>有 4 到 10 小時轉機的人可以在 30 秒內得到一張可分享的結果卡。把人潮、時間與期待值算成去、改、跳過三種決策。最後把結果丟進 ChillOut 生成完整行程。</p>
       </div>
       <div class="tool-console" data-tool-console></div>
       <aside class="result-panel" data-result-panel>
@@ -89,7 +89,7 @@
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"airport-layover-card","category":"detour","name":"轉機城市卡","tagline":"讓轉機不只是坐在登機門前。","audience":"有 4 到 10 小時轉機的人","mechanic":"輸入轉機時間與保守度，產生出境可行度與安全路線。","result":"轉機時間可以是一張城市試吃券。","chips":["轉機","機場","快閃城市"],"id":"T045","categoryLabel":"避開人潮與繞路","categoryTone":"把爆紅景點旁邊更舒服、更像自己的選項挖出來。","primary":"#2F9E44","accent":"#FFD166","deep":"#071F13","inputs":[{"type":"text","key":"place","label":"原本想去的景點","placeholder":"例如：清水寺、弘大、海雲台、九份"},{"type":"range","key":"crowd","label":"可忍受人潮","min":1,"max":100,"value":38,"left":"完全不要","right":"可以排隊"},{"type":"choice","key":"detourType","label":"替代方向","choices":["小巷","咖啡","公園","在地市場","觀景點"]},{"type":"range","key":"walk","label":"願意多走距離","min":1,"max":100,"value":44,"left":"少走路","right":"走遠也行"}],"appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_airport-layover-card","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/airport-layover-card.html"}</script>
+  <script type="application/json" id="tool-data">{"slug":"airport-layover-card","category":"detour","name":"轉機城市卡","tagline":"讓轉機不只是坐在登機門前。","audience":"有 4 到 10 小時轉機的人","mechanic":"輸入轉機時間與保守度，產生出境可行度與安全路線。","result":"轉機時間可以是一張城市試吃券。","chips":["轉機","機場","快閃城市"],"mode":"decision","modeLabel":"值得去判斷","modeVariant":"任務板","interfaceTitle":"轉機城市卡操作台","actionLabel":"算出取捨建議","resultName":"去留決策卡","modePromise":"把人潮、時間與期待值算成去、改、跳過三種決策。","shareLead":"我用工具判斷這個旅遊選項值不值得","sampleItems":["人潮路口","交通轉乘","替代小巷","附近咖啡","備案公園","熱門景點","排隊名店"],"scoreSeed":75,"playSteps":["輸入 人潮路口 或這次最想解決的旅行條件。","調整 轉機、機場 與 快閃城市 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"target","label":"要判斷的選項","placeholder":"例如：人潮路口、交通轉乘"},{"type":"range","key":"crowd","label":"可忍受人潮","min":1,"max":100,"value":32,"left":"完全不要","right":"可以排隊"},{"type":"choice","key":"backup","label":"偏好的替代方向","choices":["替代小巷","附近咖啡","備案公園","熱門景點","排隊名店"]},{"type":"range","key":"effort","label":"願意多花的移動成本","min":1,"max":100,"value":45,"left":"越近越好","right":"繞路也行"}],"id":"T045","categoryLabel":"避開人潮與繞路","categoryTone":"把爆紅景點旁邊更舒服、更像自己的選項挖出來。","primary":"#2F9E44","accent":"#2F9E44","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_airport-layover-card","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/airport-layover-card.html"}</script>
   <script src="../assets/independent-tool-runtime.js"></script>
 </body>
 </html>

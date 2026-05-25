@@ -252,18 +252,240 @@ const toolSeeds = [
   { slug: "one-photo-next-trip", category: "memory", name: "一張照片下一站", tagline: "用一張照片的情緒推一個下一趟方向。", audience: "想從照片找靈感的人", mechanic: "描述一張照片，工具會判斷情緒、景色與下一站方向。", result: "一張照片不只記錄過去，也會暴露你接下來想去哪。", chips: ["照片", "下一站", "情緒"] }
 ];
 
+const modeByCategory = {
+  social: "sorter",
+  quiz: "quiz",
+  group: "pact",
+  night: "nightRoute",
+  detour: "decision",
+  wellness: "wellnessPlan",
+  culture: "cultureMission",
+  food: "foodRoute",
+  micro: "microPlanner",
+  memory: "memoryMaker"
+};
+
+const modeMeta = {
+  sorter: {
+    label: "靈感整理器",
+    action: "整理成可出發清單",
+    resultName: "出發清單",
+    promise: "把散亂素材分成今天必排、可備用、先刪掉三種狀態。",
+    shareLead: "我把一堆旅遊靈感整理成可出發清單"
+  },
+  quiz: {
+    label: "人格測驗",
+    action: "測出我的旅行角色",
+    resultName: "旅行人格卡",
+    promise: "用幾個選擇題產生可分享的人格結果與第一版行程方向。",
+    shareLead: "我剛測出自己的旅行人格"
+  },
+  pact: {
+    label: "旅伴協議",
+    action: "產生旅伴共識",
+    resultName: "旅伴協議書",
+    promise: "把出發前最容易吵的點變成可以截圖討論的協議。",
+    shareLead: "我做了一份旅行前共識協議"
+  },
+  nightRoute: {
+    label: "夜遊路線",
+    action: "排出夜晚節奏",
+    resultName: "夜晚節奏表",
+    promise: "把晚上安全、交通與氣氛排成不硬撐的三段式夜遊。",
+    shareLead: "我排了一條不踩雷的夜遊路線"
+  },
+  decision: {
+    label: "值得去判斷",
+    action: "算出取捨建議",
+    resultName: "去留決策卡",
+    promise: "把人潮、時間與期待值算成去、改、跳過三種決策。",
+    shareLead: "我用工具判斷這個旅遊選項值不值得"
+  },
+  wellnessPlan: {
+    label: "低壓旅行",
+    action: "安排舒服的一天",
+    resultName: "能量預算表",
+    promise: "先保護體力，再把城市安排成能恢復心情的節奏。",
+    shareLead: "我做了一份低壓旅行能量表"
+  },
+  cultureMission: {
+    label: "故事任務",
+    action: "生成文化任務",
+    resultName: "城市任務卡",
+    promise: "把書、電影、角色或音樂靈感轉成可走、可拍、可分享的任務。",
+    shareLead: "我把一個文化靈感變成旅行任務"
+  },
+  foodRoute: {
+    label: "美食路線",
+    action: "排出吃喝節奏",
+    resultName: "味覺路線卡",
+    promise: "把想吃、排隊耐受與預算排成一整天不膩的吃法。",
+    shareLead: "我排了一張旅行味覺路線"
+  },
+  microPlanner: {
+    label: "短逃計畫",
+    action: "生成快閃方案",
+    resultName: "短逃行程卡",
+    promise: "把少量時間、預算與交通限制變成真的能出門的方案。",
+    shareLead: "我做了一張短時間也能出發的旅行卡"
+  },
+  memoryMaker: {
+    label: "回憶生成器",
+    action: "做出回憶素材",
+    resultName: "回憶分享卡",
+    promise: "把照片、片段或情緒整理成標題、文案與下一趟線索。",
+    shareLead: "我把這趟旅行整理成一張回憶卡"
+  }
+};
+
+const categorySamples = {
+  social: ["IG 收藏店家", "朋友丟的 Reels", "小紅書截圖", "咖啡廳名單", "夜景口袋清單", "想去但沒排的景點", "朋友群組連結"],
+  quiz: ["慢慢晃", "一天塞滿", "拍照優先", "餐廳優先", "突然改行程", "安靜探索", "朋友一起玩"],
+  group: ["早起時間", "美食預算", "拍照耐心", "各自放風", "交通分工", "房型偏好", "最後決策權"],
+  night: ["日落前集合", "晚餐後散步", "夜景拍照", "宵夜收尾", "安全返程", "雨備室內點", "末班車時間"],
+  detour: ["熱門景點", "排隊名店", "人潮路口", "交通轉乘", "替代小巷", "附近咖啡", "備案公園"],
+  wellness: ["早上留白", "咖啡恢復", "自然散步", "螢幕暫停", "泡湯或按摩", "安靜晚餐", "提早回飯店"],
+  culture: ["一本書", "一部電影", "一首歌", "一個角色", "一間書店", "一座博物館", "一段城市傳說"],
+  food: ["第一杯咖啡", "市場小吃", "排隊名店", "甜點散步", "晚餐主菜", "宵夜備案", "伴手禮"],
+  micro: ["三小時空檔", "半天快閃", "24 小時逃跑", "請假一天", "單包出發", "雨天備案", "車站周邊"],
+  memory: ["最喜歡的一張照片", "旅伴一句話", "難忘的一餐", "一段路上的聲音", "飯店窗景", "下次想再去的地方", "買回家的小物"]
+};
+
+const modeVariants = ["極簡卡片", "時間線", "三欄分流", "票券介面", "任務板", "雷達圖", "清單桌面", "手冊頁"];
+
+function rotateItems(items, offset, count = 6) {
+  return Array.from({ length: count }, (_, i) => items[(offset + i) % items.length]);
+}
+
+function inputSpecFor(tool, category, mode, index) {
+  const samples = rotateItems(categorySamples[tool.category], index, 7);
+  const focus = tool.chips[0] || tool.name;
+  const placePlaceholder = samples.slice(0, 3).join("、");
+  const text = (key, label, placeholder = placePlaceholder) => ({ type: "text", key, label, placeholder });
+  const range = (key, label, value, left, right) => ({ type: "range", key, label, min: 1, max: 100, value, left, right });
+  const choice = (key, label, choices) => ({ type: "choice", key, label, choices });
+
+  const specs = {
+    sorter: [
+      text("rawList", `${focus}素材`, `貼上或輸入：${placePlaceholder}`),
+      range("urgency", "這次真的想去的程度", 62 + (index % 18), "只是收藏", "馬上想排"),
+      choice("filter", "整理優先規則", samples.slice(0, 5)),
+      range("shareNeed", "想分享給朋友的程度", 55 + (index % 23), "自己用", "想發限動")
+    ],
+    quiz: [
+      choice("pace", "旅行節奏", ["慢慢晃", "重點精準", "一天塞滿", "看心情改"]),
+      choice("anchor", "最在意的錨點", samples.slice(0, 5)),
+      choice("risk", "臨時改行程接受度", ["完全不行", "可接受一點", "越即興越好"]),
+      range("social", "社交能量", 46 + (index % 32), "安靜旅行", "認識新朋友")
+    ],
+    pact: [
+      text("people", "旅伴名單", "例如：我、阿哲、小雨、Mia"),
+      range("budgetGap", "預算差距", 38 + (index % 36), "很一致", "落差很大"),
+      choice("conflict", "最容易吵的點", samples.slice(0, 5)),
+      range("aloneTime", "各自放風需求", 35 + (index % 42), "全程黏著", "需要獨處")
+    ],
+    nightRoute: [
+      text("city", "目的地城市", "例如：首爾、東京、台南、曼谷"),
+      choice("time", "出門時段", ["日落前", "晚餐後", "午夜前", "清晨前"]),
+      choice("nightMood", "夜晚主題", samples.slice(0, 5)),
+      range("safety", "安全保守度", 64 + (index % 24), "敢冒險", "保守安全")
+    ],
+    decision: [
+      text("target", "要判斷的選項", `例如：${samples[0]}、${samples[1]}`),
+      range("crowd", "可忍受人潮", 32 + (index % 44), "完全不要", "可以排隊"),
+      choice("backup", "偏好的替代方向", samples.slice(2, 7)),
+      range("effort", "願意多花的移動成本", 36 + (index % 35), "越近越好", "繞路也行")
+    ],
+    wellnessPlan: [
+      choice("energy", "目前能量", ["快沒電", "想躺著", "需要自然", "可以慢慢走"]),
+      range("screen", "想離線程度", 54 + (index % 30), "照常滑", "想關機"),
+      choice("comfort", "恢復來源", samples.slice(0, 5)),
+      range("activity", "每日活動量", 28 + (index % 34), "只做一件事", "可以排滿一點")
+    ],
+    cultureMission: [
+      text("reference", "靈感作品或主題", `例如：${samples[0]}、${samples[1]}`),
+      choice("scene", "想進入的場景", samples.slice(1, 6)),
+      range("immersion", "沉浸程度", 58 + (index % 34), "輕體驗", "角色扮演"),
+      choice("souvenir", "想帶走什麼", ["照片", "票根", "故事", "伴手禮", "一句台詞"])
+    ],
+    foodRoute: [
+      text("craving", "今天想吃喝什麼", `例如：${placePlaceholder}`),
+      range("queue", "排隊耐受度", 30 + (index % 42), "零排隊", "名店也等"),
+      choice("flavor", "味覺主題", samples.slice(0, 5)),
+      range("budget", "單日美食預算", 44 + (index % 31), "省一點", "吃好一點")
+    ],
+    microPlanner: [
+      choice("window", "可用時間", ["3 小時", "半天", "24 小時", "週末", "請一天假"]),
+      range("budget", "預算彈性", 36 + (index % 34), "很小", "可加碼"),
+      choice("transport", "交通方式", ["走路", "捷運", "火車", "自駕", "廉航"]),
+      range("spontaneous", "即興程度", 56 + (index % 34), "要先訂好", "現在就走")
+    ],
+    memoryMaker: [
+      text("memory", "最想留下的一幕", `例如：${samples[0]}、${samples[1]}`),
+      choice("format", "分享格式", ["IG 貼文", "限動", "回憶錄", "明信片", "短影音"]),
+      range("emotion", "情緒濃度", 48 + (index % 42), "淡淡的", "很想哭"),
+      choice("next", "下一趟線索", samples.slice(2, 7))
+    ]
+  };
+
+  return specs[mode] || category.inputs;
+}
+
+function resolveMode(tool) {
+  const key = `${tool.slug} ${tool.name}`.toLowerCase();
+
+  if (tool.category === "group") return "pact";
+  if (/mbti|personality|archetype|type|persona|soulmate|villain|比例尺|能量測驗|儀式測驗|早餐人格|淡季適配/.test(key)) return "quiz";
+  if (/fit-check|worth-it|值得|filter|switcher|detour|veto|否決|popular-place|hotel-restaurant|繞路值|過濾器|切換器/.test(key)) return "decision";
+  if (/night|midnight|夜|宵夜/.test(key)) return "nightRoute";
+  if (/jomo|detox|forest|sleep|low-energy|quiet|healing|burnout|no-posting|comfort|療癒|離線|森林|睡|低電量|安靜|倦怠|安心/.test(key)) return "wellnessPlan";
+  if (/book|movie|character|playlist|anime|museum|sports|festival|passport|scene|文化|書|電影|角色|歌單|博物館|球賽|節慶/.test(key)) return "cultureMission";
+  if (/cover|photo|wrapped|memory|postcard|gratitude|badges|oracle|taste-memory|one-photo|title|souvenir|回憶|照片|明信片|徽章|感謝|預言|伴手禮/.test(key)) return "memoryMaker";
+  if (/coffee|dessert|market|food|spicy|snack|restaurant|taste|menu|早餐|甜點|市場|辣|餐廳|味覺|美食/.test(key)) return "foodRoute";
+  if (/hour|budget|bag|leave|spinner|train|three-hour|little-treat|buffer|escape|weather|小時|預算|一包|請假|輪盤|車窗|緩衝|逃跑/.test(key)) return "microPlanner";
+
+  return modeByCategory[tool.category] || "sorter";
+}
+
+function buildToolSpec(tool, category, id, index) {
+  const mode = resolveMode(tool);
+  const meta = modeMeta[mode];
+  const sampleItems = rotateItems(categorySamples[tool.category], index, 7);
+  const variant = modeVariants[index % modeVariants.length];
+  const scoreSeed = 58 + (index % 27);
+  return {
+    mode,
+    modeLabel: meta.label,
+    modeVariant: variant,
+    interfaceTitle: `${tool.name}操作台`,
+    actionLabel: meta.action,
+    resultName: meta.resultName,
+    modePromise: meta.promise,
+    shareLead: meta.shareLead,
+    sampleItems,
+    scoreSeed,
+    playSteps: [
+      `輸入 ${sampleItems[0]} 或這次最想解決的旅行條件。`,
+      `調整 ${tool.chips[0] || meta.label}、${tool.chips[1] || "節奏"} 與 ${tool.chips[2] || "分享"} 的優先順序。`,
+      `複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。`
+    ],
+    inputs: inputSpecFor(tool, category, mode, index)
+  };
+}
+
 const tools = toolSeeds.map((tool, index) => {
   const category = categories[tool.category];
   const id = `T${String(index + 1).padStart(3, "0")}`;
+  const spec = buildToolSpec(tool, category, id, index);
   return {
     ...tool,
+    ...spec,
     id,
     categoryLabel: category.label,
     categoryTone: category.tone,
     primary: category.primary,
-    accent: category.accent,
-    deep: category.deep,
-    inputs: category.inputs,
+    accent: category.primary,
+    deep: "#1C1915",
     appUrl: `${appStoreUrl}?ct=tool_${tool.slug}`,
     pageUrl: `https://chillout-marketing-dashboard.vercel.app/tools/${tool.slug}.html`
   };
@@ -330,9 +552,9 @@ function pageTemplate(tool) {
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="${escapeAttr(tool.pageUrl)}">
   <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525b">
+  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
 </head>
-<body class="tool-product-page layout-${layout}" style="--tool-accent:${tool.primary}">
+<body class="tool-product-page layout-${layout} mode-${tool.mode}" style="--tool-accent:${tool.primary}">
   <header class="product-nav">
     <a class="product-brand" href="../travel-microtools-100.html">
       <span class="brand-mark">C</span>
@@ -365,7 +587,7 @@ function pageTemplate(tool) {
       <div class="workbench-intro">
         <p class="product-kicker">玩法</p>
         <h2>${escapeHtml(tool.mechanic)}</h2>
-        <p>${escapeHtml(tool.audience)}可以在 30 秒內得到一張可分享的結果卡，再把結果丟進 ChillOut 生成完整行程。</p>
+        <p>${escapeHtml(tool.audience)}可以在 30 秒內得到一張可分享的結果卡。${escapeHtml(tool.modePromise)}最後把結果丟進 ChillOut 生成完整行程。</p>
       </div>
       <div class="tool-console" data-tool-console></div>
       <aside class="result-panel" data-result-panel>
@@ -428,7 +650,7 @@ function galleryTemplate() {
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/travel-microtools-100.html">
   <link rel="stylesheet" href="assets/styles.css?v=base">
-  <link rel="stylesheet" href="assets/tool-products.css?v=20260525b">
+  <link rel="stylesheet" href="assets/tool-products.css?v=20260525c">
 </head>
 <body class="tool-gallery-page">
   <header class="product-nav gallery-nav">
@@ -546,165 +768,7 @@ function catalogScript() {
 }
 
 function runtimeScript() {
-  return `(() => {
-  const dataNode = document.getElementById("tool-data");
-  const consoleNode = document.querySelector("[data-tool-console]");
-  if (!dataNode || !consoleNode) return;
-
-  const tool = JSON.parse(dataNode.textContent);
-  const state = {};
-
-  function escapeHtml(value) {
-    return String(value)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;");
-  }
-
-  function inputHtml(input, index) {
-    if (input.type === "text") {
-      state[input.key] = "";
-      return \`
-        <label class="console-field text-field">
-          <span>\${escapeHtml(input.label)}</span>
-          <input type="text" data-input-key="\${input.key}" placeholder="\${escapeHtml(input.placeholder || "")}" autocomplete="off">
-        </label>\`;
-    }
-    if (input.type === "choice") {
-      state[input.key] = input.choices[0];
-      return \`
-        <div class="console-field choice-field">
-          <span>\${escapeHtml(input.label)}</span>
-          <div class="choice-grid">
-            \${input.choices.map((choice, choiceIndex) => \`
-              <button type="button" class="\${choiceIndex === 0 ? "active" : ""}" data-choice-key="\${input.key}" data-choice-value="\${escapeHtml(choice)}">\${escapeHtml(choice)}</button>
-            \`).join("")}
-          </div>
-        </div>\`;
-    }
-    const value = input.value ?? Math.round((input.min + input.max) / 2);
-    state[input.key] = value;
-    return \`
-      <label class="console-field range-field">
-        <span>\${escapeHtml(input.label)} <strong data-range-value="\${input.key}">\${value}</strong></span>
-        <input type="range" min="\${input.min}" max="\${input.max}" value="\${value}" data-input-key="\${input.key}">
-        <small><em>\${escapeHtml(input.left || "")}</em><em>\${escapeHtml(input.right || "")}</em></small>
-      </label>\`;
-  }
-
-  function scoreFromState() {
-    const values = Object.entries(state).map(([key, value], index) => {
-      if (typeof value === "number") return value;
-      if (!value) return 28 + index * 8;
-      return Math.min(96, 35 + String(value).length * 4 + index * 7);
-    });
-    const seed = Number(tool.id.replace("T", "")) % 17;
-    return Math.max(18, Math.min(99, Math.round(values.reduce((sum, value) => sum + value, 0) / values.length + seed - 6)));
-  }
-
-  function resultTitle(score) {
-    if (score >= 86) return "爆發型靈感，可以直接出發";
-    if (score >= 68) return "高潛力玩法，適合做成第一版行程";
-    if (score >= 48) return "需要整理，但已經有清楚方向";
-    return "低壓版本更適合你現在的狀態";
-  }
-
-  function buildPrompt(score) {
-    const readableState = Object.entries(state)
-      .map(([key, value]) => \`\${key}: \${value || "未填"}\`)
-      .join("；");
-    return \`請用 ChillOut 幫我把「\${tool.name}」的結果排成 1 天旅行：\${tool.result} 我的條件是 \${readableState}。請給我路線、餐廳/景點類型、備案與可分享標題。\`;
-  }
-
-  function updateResult() {
-    const score = scoreFromState();
-    const prompt = buildPrompt(score);
-    const copy = \`\${tool.name} 測出我的旅行結果：\${score}/100，\${resultTitle(score)}。\${tool.result} 我準備丟進 ChillOut 生成完整行程：\${tool.appUrl}\`;
-    document.querySelector("[data-result-score]").textContent = score;
-    document.querySelector("[data-result-title]").textContent = resultTitle(score);
-    document.querySelector("[data-result-copy]").textContent = tool.result;
-    document.querySelector("[data-result-prompt]").textContent = prompt;
-    document.querySelector("[data-result-chips]").innerHTML = tool.chips.map((chip) => \`<span>\${escapeHtml(chip)}</span>\`).join("");
-    document.querySelector("[data-copy-result]").dataset.copy = copy;
-    document.querySelector("[data-app-link]").href = \`\${tool.appUrl}_score_\${score}\`;
-  }
-
-  consoleNode.innerHTML = \`
-    <div class="console-head">
-      <div>
-        <p>\${tool.categoryLabel}</p>
-        <h2>30 秒生成你的結果卡</h2>
-      </div>
-      <button type="button" data-randomize>隨機試玩</button>
-    </div>
-    <div class="console-fields">
-      \${tool.inputs.map(inputHtml).join("")}
-    </div>
-    <button type="button" class="product-button primary wide" data-generate>生成結果卡</button>
-  \`;
-
-  consoleNode.addEventListener("input", (event) => {
-    const key = event.target.dataset.inputKey;
-    if (!key) return;
-    const input = tool.inputs.find((item) => item.key === key);
-    state[key] = input?.type === "range" ? Number(event.target.value) : event.target.value;
-    const output = document.querySelector(\`[data-range-value="\${key}"]\`);
-    if (output) output.textContent = state[key];
-    updateResult();
-  });
-
-  consoleNode.addEventListener("click", (event) => {
-    const choice = event.target.closest("[data-choice-key]");
-    if (choice) {
-      const key = choice.dataset.choiceKey;
-      state[key] = choice.dataset.choiceValue;
-      consoleNode.querySelectorAll(\`[data-choice-key="\${key}"]\`).forEach((button) => button.classList.remove("active"));
-      choice.classList.add("active");
-      updateResult();
-      return;
-    }
-    if (event.target.matches("[data-randomize]")) {
-      tool.inputs.forEach((input) => {
-        if (input.type === "range") {
-          const value = Math.floor(input.min + Math.random() * (input.max - input.min));
-          state[input.key] = value;
-          const range = consoleNode.querySelector(\`[data-input-key="\${input.key}"]\`);
-          const output = document.querySelector(\`[data-range-value="\${input.key}"]\`);
-          if (range) range.value = value;
-          if (output) output.textContent = value;
-        } else if (input.type === "choice") {
-          const value = input.choices[Math.floor(Math.random() * input.choices.length)];
-          state[input.key] = value;
-          consoleNode.querySelectorAll(\`[data-choice-key="\${input.key}"]\`).forEach((button) => {
-            button.classList.toggle("active", button.dataset.choiceValue === value);
-          });
-        } else {
-          const sample = ["首爾咖啡店", "東京夜景", "台南巷弄", "曼谷週末", "京都書店"][Math.floor(Math.random() * 5)];
-          state[input.key] = sample;
-          const text = consoleNode.querySelector(\`[data-input-key="\${input.key}"]\`);
-          if (text) text.value = sample;
-        }
-      });
-      updateResult();
-    }
-    if (event.target.matches("[data-generate]")) updateResult();
-  });
-
-  document.querySelector("[data-copy-result]")?.addEventListener("click", async (event) => {
-    const text = event.currentTarget.dataset.copy || "";
-    try {
-      await navigator.clipboard.writeText(text);
-      event.currentTarget.textContent = "已複製";
-      setTimeout(() => { event.currentTarget.textContent = "複製分享文案"; }, 1400);
-    } catch {
-      window.prompt("複製分享文案", text);
-    }
-  });
-
-  updateResult();
-})();
-`;
+  return fs.readFileSync(path.join(root, "scripts", "independent-tool-runtime.template.js"), "utf8");
 }
 
 function ensureCleanGeneratedDirectory() {

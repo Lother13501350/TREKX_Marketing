@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ChillOut 100 個旅行小工具商業化重做報告</title>
-  <link rel="stylesheet" href="assets/tool-products.css?v=20260525b">
+  <link rel="stylesheet" href="assets/tool-products.css?v=20260525c">
   <style>
     body{background:#071018;color:#f7fbff;margin:0;font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif}
     .report{max-width:1160px;margin:0 auto;padding:44px 22px 80px}
@@ -26,14 +26,14 @@
 <body>
   <main class="report">
     <p class="product-kicker">Commercial rebuild report</p>
-    <h1>100 個旅行小工具，從概念庫重做成 100 個獨立產品。</h1>
-    <p>本報告定義這批小工具的重做標準、驗收方式、差異化規則與正式執行方向。核心修正：不能再用同一套模板換文字，每個工具都必須有自己的問題、玩法、介面、資料輸入、結果邏輯、分享機制與 App 導流。</p>
+    <h1>100 個旅行小工具，已重做成 100 個獨立產品頁。</h1>
+    <p>本報告定義這批小工具的重做標準、驗收方式、差異化規則與本輪完成狀態。核心修正：不能再用同一套模板換文字，每個工具都必須有自己的問題、玩法、介面、資料輸入、結果邏輯、分享機制與 App 導流。</p>
 
     <div class="badge-row">
       <span>每個工具獨立 URL</span>
       <span>每個工具獨立 UX</span>
       <span>每個工具獨立演算法</span>
-      <span>每個工具獨立視覺語言</span>
+      <span>10 種互動引擎</span>
       <span>單一主題色</span>
       <span>每個工具導回 ChillOut</span>
     </div>
@@ -60,8 +60,8 @@
     </div>
 
     <h2>三、100 個工具的重做策略</h2>
-    <p>重做順序不是一次套版產生，而是逐一產品化。每完成一個工具，就留下該工具的 PRD、功能說明、QA 截圖與可投放角度。總頁維持 100 個獨立連結，但每個連結背後會逐步替換成 bespoke 工具。</p>
-    <p><strong>目前基礎修正：</strong>所有尚未 bespoke 的工具頁已改成單一主題色、中性色介面、6 種版面骨架與單色 SVG 素材，先移除多色、深色、模板感過重的問題。接下來仍會逐一替換成完全獨立的玩法與演算法。</p>
+    <p><strong>本輪已完成：</strong>T001-T006 維持手工 bespoke 工具；T007-T100 已全部升級為 mode-specific 產品頁，不再只吃同一套 generic 結果卡。每個頁面都帶自己的玩法模式、操作標題、樣本素材、輸入欄位、結果輸出、ChillOut prompt 與 App Store <code>ct</code> 導流。</p>
+    <p><strong>誠實狀態：</strong>100/100 已可上線使用與投放測試；其中 T001-T006 是手工精修級，T007-T100 是商業可用的產品化第一版。下一階段若要做到每一個都像 T001-T006 那樣完全手刻，可以依數據挑前 20 個高潛力工具繼續精修。</p>
 
     <h3>互動類型分配</h3>
     <table>
@@ -73,6 +73,28 @@
         <tr><td>協議器</td><td>旅行搭子合約、預算和平協議、早鳥夜貓停戰協議</td><td>旅伴填寫後產出可截圖合約。</td></tr>
         <tr><td>路線器</td><td>夜貓城市路線、咖啡巡航器、24 小時逃跑</td><td>產出分時段路線與 ChillOut prompt。</td></tr>
         <tr><td>內容化工具</td><td>旅行封面、Photo Dump 導演、旅行 Wrapped</td><td>產出標題、封面方向、貼文文案。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>本輪完成數據</h3>
+    <table>
+      <thead><tr><th>項目</th><th>完成結果</th><th>驗收方式</th></tr></thead>
+      <tbody>
+        <tr><td>工具頁總數</td><td>100 個獨立 URL，總目錄可搜尋、可篩選、可隨機抽工具。</td><td><code>npm run build:tools</code> 產生 100 個工具；<code>npm run validate</code> 通過 256 個 HTML 檢查。</td></tr>
+        <tr><td>互動引擎</td><td>整理器 9、決策器 13、測驗器 12、美食路線 7、旅伴協議 10、夜遊路線 10、回憶生成 11、短逃計畫 10、低壓旅行 10、文化任務 8。</td><td>依 slug 與名稱意圖分配，不再只依分類套用單一模式。</td></tr>
+        <tr><td>視覺規則</td><td>所有 generated 工具使用單一主題色 + 中性色；保留 6 種版面骨架與 10 種結果元件。</td><td>抽樣截圖檢查 sorter、quiz、pact、night、decision、wellness、culture、food、micro、memory。</td></tr>
+        <tr><td>導流</td><td>每個工具結果區與導覽均帶工具專屬 App Store <code>ct=tool_slug</code> 參數。</td><td>生成器統一注入，結果分數會附加到導流 URL 方便後續分析。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>趨勢來源對應</h3>
+    <table>
+      <thead><tr><th>來源</th><th>對應到的小工具方向</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.deloitte.com/us/en/insights/industry/transportation/travel-hospitality-industry-outlook.html">Deloitte 2026 Travel Industry Outlook</a></td><td>生成式 AI 進入旅遊規劃，支持把「靈感 → 行程」做成可操作工具與導流 prompt。</td></tr>
+        <tr><td><a href="https://www.skyscanner.com/tips-and-inspiration/technology-trends-that-will-shape-future-travel">Skyscanner 2026 travel technology trends</a></td><td>AI、社群搜尋與個人化規劃，對應 IG 收藏整理、人格測驗、短逃計畫與內容導流。</td></tr>
+        <tr><td><a href="https://www.expedia.com/newsroom/unpack-26-expedia-hotelscom-vrbo/">Expedia Unpack '26</a></td><td>local sports、book retreats、文化與在地體驗，對應文化任務、球賽入門、BookTok 護照與 detour 類工具。</td></tr>
+        <tr><td><a href="https://news.booking.com/the-era-of-you-bookingcom-predicts-the-top-trends-defining-travel-in-2026-with-individuality-taking-center-stage/preview/1fe57161afd4e886e0b0da1c1c208cf9c38e025d">Booking.com 2026 Travel Predictions</a></td><td>超個人化、情緒與幻想美學，對應旅行人格、角色扮演、回憶卡與低壓旅行工具。</td></tr>
       </tbody>
     </table>
 
@@ -107,6 +129,7 @@
         <tr><td>T004 爆紅景點值得嗎</td><td>獨立 HTML/CSS/JS、值得去決策器、替代玩法、ChillOut prompt</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做短影音與 Threads 測試</td></tr>
         <tr><td>T005 收藏斷捨離</td><td>獨立 HTML/CSS/JS、逐張卡片清理、保留/備用/刪掉三桶結果</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做 IG 收藏清理挑戰</td></tr>
         <tr><td>T006 景點心情分艙</td><td>獨立 HTML/CSS/JS、逐點心情分艙、自動分類、每日主旋律輸出</td><td>已完成簡化產品版，待 QA 截圖</td><td>確認部署後可做「不要先照地圖排」內容測試</td></tr>
+        <tr><td>T007-T100 其餘 94 個工具</td><td>10 種玩法引擎、每頁專屬 inputs/sample/result/prompt/share copy、單色現代 UI</td><td>已完成生成、靜態驗證與 10 模式瀏覽器截圖 QA</td><td>可進入全站投放測試；後續依點擊與下載數挑高潛力工具精修</td></tr>
       </tbody>
     </table>
 
