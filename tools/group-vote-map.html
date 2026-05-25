@@ -3,93 +3,114 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>群組目的地決策器｜ChillOut 旅行小工具</title>
-  <meta name="description" content="讓群組不用再投票投到消失。輸入候選地、預算差距與偏好，輸出共識最高的前三名。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="群組目的地決策器｜ChillOut 旅行小工具">
-  <meta property="og:description" content="讓群組不用再投票投到消失。">
+  <title>群組目的地決策器｜ChillOut 旅行小工具 T023</title>
+  <meta name="description" content="把多人旅行候選目的地變成可比較的決策表，輸出排名、共識風險、群組訊息與 ChillOut 行程 prompt。">
+  <meta property="og:title" content="群組目的地決策器｜ChillOut">
+  <meta property="og:description" content="主揪不用再追問大家想去哪，把候選地放進表格，直接算出最容易成行的前三名。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/group-vote-map.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/group-vote-map.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/group-vote-map.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/group-vote-map.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-5 mode-pact" style="--tool-accent:#EF476F">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="gv-app">
+  <header class="gv-topbar">
+    <a class="gv-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="gv-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T023 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_group-vote-map_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_group_vote_map_nav">下載 App</a>
     </nav>
   </header>
 
   <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T023 · 搭子與關係工具</p>
-        <h1>群組目的地決策器</h1>
-        <p class="product-lead">讓群組不用再投票投到消失。</p>
-        <div class="product-pills">
-          <span>群組投票</span><span>目的地決策</span><span>主揪工具</span>
-        </div>
+    <section class="gv-hero">
+      <div class="gv-hero-copy">
+        <p class="gv-eyebrow">Group decision board</p>
+        <h1>群組旅行，先把「想去哪」變成可以決定的表。</h1>
+        <p>主揪最累的不是找資料，是每個人都說「都可以」。這個工具把候選目的地拆成期待、預算、交通、內容偏好與全員接受度，直接算出最容易成行的選項。</p>
       </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/group-vote-map.svg" alt="群組目的地決策器 互動工具視覺">
-      </figure>
+      <div class="gv-hero-panel" aria-label="工具用途摘要">
+        <span>適合</span>
+        <strong>朋友旅行、畢旅、家族旅遊、多人週末快閃</strong>
+        <p>30 秒得到目的地排名、共識風險、群組投票文案與 ChillOut 行程 prompt。</p>
+      </div>
     </section>
 
-    <section class="product-workbench" aria-label="群組目的地決策器 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>輸入候選地、預算差距與偏好，輸出共識最高的前三名。</h2>
-        <p>多人旅遊的主揪可以在 30 秒內得到一張可分享的結果卡。把出發前最容易吵的點變成可以截圖討論的協議。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_group-vote-map_result">丟進 ChillOut</a>
-          </div>
-        </div>
-      </aside>
-    </section>
+    <section class="gv-board" aria-label="群組目的地決策器">
+      <div class="gv-controls">
+        <form class="gv-form" data-form>
+          <label class="gv-field">
+            <span>這團叫什麼？</span>
+            <input data-group-name value="七月好友小旅行" autocomplete="off">
+          </label>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+          <div class="gv-row-2">
+            <label class="gv-field">
+              <span>人數</span>
+              <input data-people type="number" min="2" max="20" value="5">
+            </label>
+            <label class="gv-field">
+              <span>天數</span>
+              <input data-days type="number" min="1" max="14" value="3">
+            </label>
+          </div>
+
+          <label class="gv-field">
+            <span>這次最不能妥協的是</span>
+            <select data-priority>
+              <option value="consensus" selected>大家都願意去</option>
+              <option value="budget">預算不要爆</option>
+              <option value="transport">交通不要太累</option>
+              <option value="content">內容要有記憶點</option>
+            </select>
+          </label>
+
+          <label class="gv-range">
+            <span>群組拖延程度 <strong data-delay-value>62</strong></span>
+            <input data-delay type="range" min="0" max="100" value="62">
+          </label>
+
+          <div class="gv-actions">
+            <button type="button" class="gv-button" data-sample>載入示範</button>
+            <button type="button" class="gv-button" data-add>加入候選地</button>
+          </div>
+        </form>
+
+        <section class="gv-how">
+          <h2>玩法</h2>
+          <ol>
+            <li>填入候選目的地。</li>
+            <li>每個目的地調整五個分數。</li>
+            <li>按下生成，將結果丟回群組做最後確認。</li>
+          </ol>
+        </section>
+      </div>
+
+      <div class="gv-workspace">
+        <div class="gv-candidate-head">
+          <div>
+            <p class="gv-eyebrow">Candidates</p>
+            <h2>候選目的地</h2>
+          </div>
+          <button type="button" class="gv-button gv-primary" data-generate>生成決策結果</button>
+        </div>
+
+        <div class="gv-candidates" data-candidates></div>
+
+        <section class="gv-result" data-result aria-live="polite"></section>
+      </div>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"group-vote-map","category":"group","name":"群組目的地決策器","tagline":"讓群組不用再投票投到消失。","audience":"多人旅遊的主揪","mechanic":"輸入候選地、預算差距與偏好，輸出共識最高的前三名。","result":"群組需要的不是更多討論，是更容易決定。","chips":["群組投票","目的地決策","主揪工具"],"mode":"pact","modeLabel":"旅伴協議","modeVariant":"清單桌面","interfaceTitle":"群組目的地決策器操作台","actionLabel":"產生旅伴共識","resultName":"旅伴協議書","modePromise":"把出發前最容易吵的點變成可以截圖討論的協議。","shareLead":"我做了一份旅行前共識協議","sampleItems":["美食預算","拍照耐心","各自放風","交通分工","房型偏好","最後決策權","早起時間"],"scoreSeed":80,"executionPack":{"actions":["先把 群組投票 寫成旅伴共識，而不是出發後才吵。","把 目的地決策 設成行前必談條款。","把協議截圖丟群組，確認每個人都接受。"],"hooks":["旅行前先簽這張，不然出發後很容易爆。","真正的旅伴默契是先講清楚。","把最容易吵的點變成可以截圖的協議。"],"qa":["旅伴名單可空白也能生成","至少輸出 4 條協議","Prompt 要包含預算與放風需求"]},"playSteps":["輸入 美食預算 或這次最想解決的旅行條件。","調整 群組投票、目的地決策 與 主揪工具 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"people","label":"旅伴名單","placeholder":"例如：我、阿哲、小雨、Mia"},{"type":"range","key":"budgetGap","label":"預算差距","min":1,"max":100,"value":60,"left":"很一致","right":"落差很大"},{"type":"choice","key":"conflict","label":"最容易吵的點","choices":["美食預算","拍照耐心","各自放風","交通分工","房型偏好"]},{"type":"range","key":"aloneTime","label":"各自放風需求","min":1,"max":100,"value":57,"left":"全程黏著","right":"需要獨處"}],"id":"T023","categoryLabel":"搭子與關係工具","categoryTone":"把旅行前最容易吵的事情變成可以討論、投票、截圖分享的協議。","primary":"#EF476F","accent":"#EF476F","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_group-vote-map","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/group-vote-map.html"}</script>
-  <script src="../assets/tool-scripts/group-vote-map.js?v=20260525d"></script>
+  <div class="gv-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/group-vote-map.js?v=20260525manual1"></script>
 </body>
 </html>
