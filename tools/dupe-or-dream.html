@@ -3,22 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>爆紅景點值得嗎｜ChillOut 旅行小工具 T004</title>
-  <meta name="description" content="輸入想去的爆紅景點、人潮耐受、期待值與替代意願，30 秒判斷要去、換時段去或改去替代點。">
-  <meta property="og:title" content="爆紅景點值得嗎">
+  <title>爆紅景點值不值得｜ChillOut 旅行小工具 T004</title>
+  <meta name="description" content="輸入想去的爆紅景點、人潮耐受、排隊成本與替代意願，30 秒判斷要去、換時段去，或改找同氛圍替代點。">
+  <meta property="og:title" content="爆紅景點值不值得｜ChillOut">
   <meta property="og:description" content="不要被熱門照片綁架。先判斷這個景點值不值得排進你的旅行。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/dupe-or-dream.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/dupe-or-dream.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/dupe-or-dream.html">
-  <link rel="stylesheet" href="../assets/dupe-dream.css?v=20260525simple">
+  <link rel="stylesheet" href="../assets/dupe-dream.css?v=20260525manual2">
 </head>
 <body class="dupe-dream-app">
-  <header class="dd-nav">
-    <a class="dd-brand" href="../travel-microtools-100.html">
-      <span class="dd-mark">C</span>
-      <span><strong>ChillOut</strong><small>T004 爆紅景點值得嗎</small></span>
+  <header class="dd-topbar">
+    <a class="dd-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="dd-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T004 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
@@ -27,57 +30,61 @@
     </nav>
   </header>
 
-  <main class="dd-page">
+  <main class="dd-shell">
     <section class="dd-hero">
-      <p class="dd-kicker">T004 · Popular spot decision</p>
-      <h1>先別急著衝爆紅景點。</h1>
-      <p>把期待值、人潮、排隊和替代意願填進來，工具會直接告訴你：值得去、改時段去，還是把位置留給更適合你的地方。</p>
+      <p class="dd-eyebrow">Popular spot truth check</p>
+      <h1>先判斷：這個爆紅景點，真的值得排嗎？</h1>
+      <p>把期待值、人潮耐受、排隊成本和替代意願填進來。工具會直接告訴你：值得去、換時段去，還是把位置留給更適合你的地方。</p>
     </section>
 
-    <section class="dd-tool">
-      <section class="dd-inputs" aria-label="景點判斷輸入">
-        <h2>1. 填入景點</h2>
+    <section class="dd-lab" aria-label="爆紅景點判斷操作區">
+      <form class="dd-controls" data-form>
         <label class="dd-field">
           <span>爆紅景點</span>
-          <input data-place value="聖水洞熱門咖啡街">
+          <input data-place value="聖水洞熱門咖啡街" autocomplete="off">
         </label>
+
         <label class="dd-field">
-          <span>你想要的是</span>
+          <span>你真正想得到的是</span>
           <select data-goal>
-            <option>拍照</option>
-            <option>美食</option>
-            <option>故事感</option>
-            <option>放空</option>
+            <option value="拍照">拍照</option>
+            <option value="美食">美食</option>
+            <option value="故事感">故事感</option>
+            <option value="放空">放空</option>
           </select>
         </label>
-        <label class="dd-slider">
-          <span>期待值 <strong data-expectation-label>82</strong></span>
-          <input data-expectation type="range" min="0" max="100" value="82">
-          <small>只是好奇 / 真的很想去</small>
-        </label>
-        <label class="dd-slider">
-          <span>人潮耐受 <strong data-crowd-label>36</strong></span>
-          <input data-crowd type="range" min="0" max="100" value="36">
-          <small>看到人就累 / 排隊也可以</small>
-        </label>
-        <label class="dd-slider">
-          <span>排隊成本 <strong data-wait-label>70</strong></span>
-          <input data-wait type="range" min="0" max="100" value="70">
-          <small>幾乎不用等 / 很可能耗掉半天</small>
-        </label>
-        <label class="dd-slider">
-          <span>替代意願 <strong data-detour-label>64</strong></span>
-          <input data-detour type="range" min="0" max="100" value="64">
-          <small>一定要原點 / 願意找同氛圍替代</small>
-        </label>
-        <button class="dd-button primary" data-calc>2. 判斷值得嗎</button>
-      </section>
 
-      <section class="dd-ticket" data-result aria-label="景點判斷結果"></section>
+        <div class="dd-slider-grid">
+          <label class="dd-slider">
+            <span>期待值 <strong data-expectation-label>82</strong></span>
+            <input data-expectation type="range" min="0" max="100" value="82">
+            <small><b>只是好奇</b><b>真的很想去</b></small>
+          </label>
+          <label class="dd-slider">
+            <span>人潮耐受 <strong data-crowd-label>36</strong></span>
+            <input data-crowd type="range" min="0" max="100" value="36">
+            <small><b>看到人就累</b><b>排隊也可以</b></small>
+          </label>
+          <label class="dd-slider">
+            <span>排隊成本 <strong data-wait-label>70</strong></span>
+            <input data-wait type="range" min="0" max="100" value="70">
+            <small><b>幾乎不用等</b><b>可能耗半天</b></small>
+          </label>
+          <label class="dd-slider">
+            <span>替代意願 <strong data-detour-label>64</strong></span>
+            <input data-detour type="range" min="0" max="100" value="64">
+            <small><b>一定要原點</b><b>可找替代</b></small>
+          </label>
+        </div>
+
+        <button class="dd-button dd-primary" type="submit">判斷值不值得</button>
+      </form>
+
+      <section class="dd-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
   <div class="dd-toast" data-toast role="status" aria-live="polite"></div>
-  <script src="../assets/dupe-dream.js?v=20260525simple"></script>
+  <script src="../assets/dupe-dream.js?v=20260525manual2"></script>
 </body>
 </html>
