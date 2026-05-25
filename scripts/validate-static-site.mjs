@@ -30,6 +30,8 @@ const requiredFiles = [
   "assets/dupe-dream.js",
   "assets/saved-cleanse.css",
   "assets/saved-cleanse.js",
+  "assets/mood-cabin.css",
+  "assets/mood-cabin.js",
   "assets/styles.css",
   "vercel.json",
 ];
