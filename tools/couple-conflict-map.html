@@ -3,93 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>情侶旅行雷區圖｜ChillOut 旅行小工具</title>
-  <meta name="description" content="先標出會吵的點，再排不容易爆炸的路線。選出拍照、吃飯、早起、預算等雷區，生成避雷協議。 完成後可複製分享文案，並導回 ChillOut App 生成完整行程。">
-  <meta property="og:title" content="情侶旅行雷區圖｜ChillOut 旅行小工具">
-  <meta property="og:description" content="先標出會吵的點，再排不容易爆炸的路線。">
+  <title>情侶旅行雷區圖｜ChillOut 旅行小工具 T022</title>
+  <meta name="description" content="評估情侶旅行的起床、拍照、吃飯、預算、放風、決策、浪漫與節奏雷區，產生避雷協議與 ChillOut 路線 prompt。">
+  <meta property="og:title" content="情侶旅行雷區圖｜ChillOut">
+  <meta property="og:description" content="浪漫不是不規劃，是把爆點移除。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chillout-marketing-dashboard.vercel.app/tools/couple-conflict-map.html">
   <meta property="og:image" content="https://chillout-marketing-dashboard.vercel.app/assets/tool-posters/couple-conflict-map.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://chillout-marketing-dashboard.vercel.app/tools/couple-conflict-map.html">
-  <link rel="stylesheet" href="../assets/styles.css?v=base">
-  <link rel="stylesheet" href="../assets/tool-products.css?v=20260525c">
+  <link rel="stylesheet" href="../assets/couple-conflict-map.css?v=20260525manual1">
 </head>
-<body class="tool-product-page layout-4 mode-pact" style="--tool-accent:#EF476F">
-  <header class="product-nav">
-    <a class="product-brand" href="../travel-microtools-100.html">
-      <span class="brand-mark">C</span>
-      <span><strong>ChillOut</strong><small>Travel Microtools</small></span>
+<body class="couple-app">
+  <header class="cm-topbar">
+    <a class="cm-brand" href="../travel-microtools-100.html" aria-label="回到 100 個旅行小工具">
+      <span class="cm-logo">C</span>
+      <span>
+        <strong>ChillOut</strong>
+        <small>T022 手寫版</small>
+      </span>
     </a>
     <nav aria-label="主要導覽">
       <a href="../travel-microtools-100.html">100 小工具</a>
-      <a href="../ig-chaos-index.html">混亂指數</a>
-      <a href="../ig-travel-planner.html">IG 排行程</a>
-      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_couple-conflict-map_nav">下載 App</a>
+      <a href="../microtools-commercial-rebuild-report.html">重做報告</a>
+      <a href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_couple_conflict_map_nav">下載 App</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-hero">
-      <div class="product-copy">
-        <p class="product-kicker">T022 · 搭子與關係工具</p>
-        <h1>情侶旅行雷區圖</h1>
-        <p class="product-lead">先標出會吵的點，再排不容易爆炸的路線。</p>
-        <div class="product-pills">
-          <span>情侶旅行</span><span>避雷協議</span><span>溝通卡</span>
-        </div>
-      </div>
-      <figure class="product-poster">
-        <img src="../assets/tool-posters/couple-conflict-map.svg" alt="情侶旅行雷區圖 互動工具視覺">
-      </figure>
+  <main class="cm-page">
+    <section class="cm-hero">
+      <p class="cm-eyebrow">Couple conflict map</p>
+      <h1>浪漫不是不規劃，是把爆點移除。</h1>
+      <p>情侶旅行最怕不是行程不好，是兩個人期待沒有講清楚。先把八個雷區標出來，再讓 ChillOut 排一條比較不容易吵的路線。</p>
     </section>
 
-    <section class="product-workbench" aria-label="情侶旅行雷區圖 互動操作區">
-      <div class="workbench-intro">
-        <p class="product-kicker">玩法</p>
-        <h2>選出拍照、吃飯、早起、預算等雷區，生成避雷協議。</h2>
-        <p>情侶旅行前想降低摩擦的人可以在 30 秒內得到一張可分享的結果卡。把出發前最容易吵的點變成可以截圖討論的協議。最後把結果丟進 ChillOut 生成完整行程。</p>
-      </div>
-      <div class="tool-console" data-tool-console></div>
-      <aside class="result-panel" data-result-panel>
-        <div class="result-card" data-result-card>
-          <span>Result Card</span>
-          <strong data-result-score>--</strong>
-          <h2 data-result-title>先完成左側設定</h2>
-          <p data-result-copy>輸入你的旅行條件，這裡會生成一張可分享、可導回 ChillOut 的結果卡。</p>
-          <div class="result-chip-row" data-result-chips></div>
-          <div class="result-prompt">
-            <small>ChillOut Prompt</small>
-            <p data-result-prompt>完成後自動產生。</p>
-          </div>
-          <div class="result-actions">
-            <button type="button" class="product-button" data-copy-result>複製分享文案</button>
-            <a class="product-button primary" data-app-link href="https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_couple-conflict-map_result">丟進 ChillOut</a>
-          </div>
+    <section class="cm-tool" aria-label="情侶旅行雷區圖操作區">
+      <form class="cm-form" data-form>
+        <div class="cm-grid">
+          <label class="cm-field">
+            <span>你</span>
+            <input data-me value="我" autocomplete="off">
+          </label>
+          <label class="cm-field">
+            <span>對方</span>
+            <input data-partner value="另一半" autocomplete="off">
+          </label>
         </div>
-      </aside>
-    </section>
 
-    <section class="product-usage">
-      <article>
-        <span>01</span>
-        <h2>社群鉤子</h2>
-        <p>把測驗結果做成限動、Threads、Dcard 或小紅書圖文，讓使用者願意貼自己的分數。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>App 導流</h2>
-        <p>結果卡的 prompt 會直接把使用者帶到 ChillOut，下一步就是生成行程、分享手冊或回憶錄。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>行銷組操作</h2>
-        <p>每個工具都有獨立網址，可單獨投放、做 SEO、找創作者拍短片或加入活動頁。</p>
-      </article>
+        <label class="cm-range"><span>起床時間落差 <strong data-value="wake">66</strong></span><input data-wake type="range" min="0" max="100" value="66"></label>
+        <label class="cm-range"><span>拍照耐心落差 <strong data-value="photo">74</strong></span><input data-photo type="range" min="0" max="100" value="74"></label>
+        <label class="cm-range"><span>吃飯期待落差 <strong data-value="food">58</strong></span><input data-food type="range" min="0" max="100" value="58"></label>
+        <label class="cm-range"><span>預算觀念落差 <strong data-value="budget">52</strong></span><input data-budget type="range" min="0" max="100" value="52"></label>
+        <label class="cm-range"><span>各自放風需求 <strong data-value="alone">48</strong></span><input data-alone type="range" min="0" max="100" value="48"></label>
+        <label class="cm-range"><span>誰做決定敏感度 <strong data-value="decision">64</strong></span><input data-decision type="range" min="0" max="100" value="64"></label>
+        <label class="cm-range"><span>浪漫期待落差 <strong data-value="romance">70</strong></span><input data-romance type="range" min="0" max="100" value="70"></label>
+        <label class="cm-range"><span>行程密度落差 <strong data-value="pace">62</strong></span><input data-pace type="range" min="0" max="100" value="62"></label>
+
+        <label class="cm-field">
+          <span>這趟最想保住什麼</span>
+          <select data-goal>
+            <option value="mood" selected>不要吵架</option>
+            <option value="photo">漂亮回憶</option>
+            <option value="food">好好吃飯</option>
+            <option value="rest">放鬆休息</option>
+          </select>
+        </label>
+
+        <div class="cm-actions">
+          <button class="cm-button" type="button" data-sample>載入示範</button>
+          <button class="cm-button cm-primary" type="submit">生成雷區圖</button>
+        </div>
+      </form>
+
+      <section class="cm-result" data-result aria-live="polite"></section>
     </section>
   </main>
 
-  <script type="application/json" id="tool-data">{"slug":"couple-conflict-map","category":"group","name":"情侶旅行雷區圖","tagline":"先標出會吵的點，再排不容易爆炸的路線。","audience":"情侶旅行前想降低摩擦的人","mechanic":"選出拍照、吃飯、早起、預算等雷區，生成避雷協議。","result":"浪漫不是不規劃，是把爆點移除。","chips":["情侶旅行","避雷協議","溝通卡"],"mode":"pact","modeLabel":"旅伴協議","modeVariant":"雷達圖","interfaceTitle":"情侶旅行雷區圖操作台","actionLabel":"產生旅伴共識","resultName":"旅伴協議書","modePromise":"把出發前最容易吵的點變成可以截圖討論的協議。","shareLead":"我做了一份旅行前共識協議","sampleItems":["早起時間","美食預算","拍照耐心","各自放風","交通分工","房型偏好","最後決策權"],"scoreSeed":79,"executionPack":{"actions":["先把 情侶旅行 寫成旅伴共識，而不是出發後才吵。","把 避雷協議 設成行前必談條款。","把協議截圖丟群組，確認每個人都接受。"],"hooks":["旅行前先簽這張，不然出發後很容易爆。","真正的旅伴默契是先講清楚。","把最容易吵的點變成可以截圖的協議。"],"qa":["旅伴名單可空白也能生成","至少輸出 4 條協議","Prompt 要包含預算與放風需求"]},"playSteps":["輸入 早起時間 或這次最想解決的旅行條件。","調整 情侶旅行、避雷協議 與 溝通卡 的優先順序。","複製結果卡，丟進 ChillOut 生成完整行程或回憶錄。"],"inputs":[{"type":"text","key":"people","label":"旅伴名單","placeholder":"例如：我、阿哲、小雨、Mia"},{"type":"range","key":"budgetGap","label":"預算差距","min":1,"max":100,"value":59,"left":"很一致","right":"落差很大"},{"type":"choice","key":"conflict","label":"最容易吵的點","choices":["早起時間","美食預算","拍照耐心","各自放風","交通分工"]},{"type":"range","key":"aloneTime","label":"各自放風需求","min":1,"max":100,"value":56,"left":"全程黏著","right":"需要獨處"}],"id":"T022","categoryLabel":"搭子與關係工具","categoryTone":"把旅行前最容易吵的事情變成可以討論、投票、截圖分享的協議。","primary":"#EF476F","accent":"#EF476F","deep":"#1C1915","appUrl":"https://apps.apple.com/tw/app/chillout/id6760571567?ct=tool_couple-conflict-map","pageUrl":"https://chillout-marketing-dashboard.vercel.app/tools/couple-conflict-map.html"}</script>
-  <script src="../assets/tool-scripts/couple-conflict-map.js?v=20260525d"></script>
+  <div class="cm-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="../assets/couple-conflict-map.js?v=20260525manual1"></script>
 </body>
 </html>
